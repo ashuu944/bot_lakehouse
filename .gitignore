@@ -1,0 +1,19 @@
+# secrets
+.env
+.claude
+minio/minio.license
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# spark / delta
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+_delta_log/
+
+# docker volumes mounted locally (if any)
+data/

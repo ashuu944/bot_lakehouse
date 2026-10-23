@@ -1,0 +1,112 @@
+[2026-10-20T14:04:33.054+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-10-20T14:04:33.068+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openmetadata_lakehouse_ingestion.profile_gold scheduled__2026-10-19T05:00:00+00:00 [queued]>
+[2026-10-20T14:04:33.076+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openmetadata_lakehouse_ingestion.profile_gold scheduled__2026-10-19T05:00:00+00:00 [queued]>
+[2026-10-20T14:04:33.077+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2026-10-20T14:04:33.089+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): profile_gold> on 2026-10-19 05:00:00+00:00
+[2026-10-20T14:04:33.093+0000] {standard_task_runner.py:72} INFO - Started process 13902 to run task
+[2026-10-20T14:04:33.096+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'openmetadata_lakehouse_ingestion', 'profile_gold', 'scheduled__2026-10-19T05:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/openmetadata_ingestion_dag.py', '--cfg-path', '/tmp/tmpex5p83q0']
+[2026-10-20T14:04:33.099+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask profile_gold
+[2026-10-20T14:04:33.163+0000] {task_command.py:467} INFO - Running <TaskInstance: openmetadata_lakehouse_ingestion.profile_gold scheduled__2026-10-19T05:00:00+00:00 [running]> on host c722b3213d78
+[2026-10-20T14:04:33.234+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lakehouse-platform' AIRFLOW_CTX_DAG_ID='openmetadata_lakehouse_ingestion' AIRFLOW_CTX_TASK_ID='profile_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-10-19T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-10-19T05:00:00+00:00'
+[2026-10-20T14:04:33.236+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-10-20T14:04:33.301+0000] {docker.py:367} INFO - Starting docker container from image bot_lakehouse-openmetadata-ingestion
+[2026-10-20T14:04:39.904+0000] {docker.py:438} INFO - /usr/local/lib/python3.10/site-packages/google/api_core/_python_version_support.py:223: FutureWarning: You are using a non-supported Python version (3.10.22). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.11, and then update google.api_core.
+[2026-10-20T14:04:39.907+0000] {docker.py:438} INFO -   warnings.warn(message, FutureWarning)
+[2026-10-20T14:04:40.402+0000] {docker.py:438} INFO - /usr/local/lib/python3.10/site-packages/metadata/ingestion/source/database/postgres/models.py:20: UserWarning: Field name "schema" in "PostgresStoredProcedure" shadows an attribute in parent "BaseModel"
+[2026-10-20T14:04:40.403+0000] {docker.py:438} INFO -   class PostgresStoredProcedure(BaseModel):
+[2026-10-20T14:04:40.594+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.OMetaAPI:server_mixin:159} - OpenMetadata client running with Server version [2.0.5] and Client version [2.0.5.0]
+[2026-10-20T14:04:40.625+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:199} - Running CheckAccess...
+[2026-10-20T14:04:40.642+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:199} - Running GetDatabases...
+[2026-10-20T14:04:40.660+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:199} - Running GetSchemas...
+[2026-10-20T14:04:40.682+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:199} - Running GetTables...
+[2026-10-20T14:04:40.717+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:199} - Running GetViews...
+[2026-10-20T14:04:40.745+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:224} - Test connection results:
+[2026-10-20T14:04:40.747+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Metadata:test_connections:225} - lastUpdatedAt=None status=<StatusType.Running: 'Running'> steps=[TestConnectionStepResult(name='CheckAccess', mandatory=True, passed=True, message=None, errorLog=None, status=None, skipReason=None, diagnosis=None, durationMs=None, executedCommand=None, resultSummary=None), TestConnectionStepResult(name='GetDatabases', mandatory=True, passed=True, message=None, errorLog=None, status=None, skipReason=None, diagnosis=None, durationMs=None, executedCommand=None, resultSummary=None), TestConnectionStepResult(name='GetSchemas', mandatory=True, passed=True, message=None, errorLog=None, status=None, skipReason=None, diagnosis=None, durationMs=None, executedCommand=None, resultSummary=None), TestConnectionStepResult(name='GetTables', mandatory=True, passed=True, message=None, errorLog=None, status=None, skipReason=None, diagnosis=None, durationMs=None, executedCommand=None, resultSummary=None), TestConnectionStepResult(name='GetViews', mandatory=False, passed=True, message=None, errorLog=None, status=None, skipReason=None, diagnosis=None, durationMs=None, executedCommand=None, resultSummary=None)]
+[2026-10-20T14:04:40.750+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] ERROR    {metadata.Utils:logger:223} - [31;1m
+[2026-10-20T14:04:40.751+0000] {docker.py:438} INFO - Error initializing metadata: 'DatabaseServiceProfilerPipeline' object has no attribute 'threads'[0m
+[2026-10-20T14:04:40.751+0000] {docker.py:438} INFO - [2026-10-20 14:04:40] INFO     {metadata.Utils:logger:223} - 
+[2026-10-20T14:04:40.752+0000] {docker.py:438} INFO - For more information, please visit: https://docs.open-metadata.org/connectors/ingestion/workflows/metadata
+[2026-10-20T14:04:40.753+0000] {docker.py:438} INFO - Or join us in Slack: https://slack.open-metadata.org/[0m
+[2026-10-20T14:04:43.943+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 512, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2026-10-20T14:04:43.953+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=openmetadata_lakehouse_ingestion, task_id=profile_gold, run_id=scheduled__2026-10-19T05:00:00+00:00, execution_date=20261019T050000, start_date=20261020T140433, end_date=20261020T140443
+[2026-10-20T14:04:43.966+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-10-20T14:04:43.968+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 12 for task profile_gold (Docker container failed: {'StatusCode': 1}; 13902)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 512, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2026-10-20T14:04:44.012+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-10-20T14:04:44.025+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-10-20T14:04:44.028+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

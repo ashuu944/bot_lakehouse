@@ -1,0 +1,4795 @@
+{
+  "generated_at": "2026-10-20T13:11:23.401007+00:00",
+  "layers": {
+    "bronze": {
+      "bsis": [
+        {
+          "name": "asset_quality",
+          "description": "Monthly asset quality rating and related metrics.",
+          "suggested_analysis": "Asset quality trend analysis -- CAMELS 'A'.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/asset_quality",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "CORE_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "NPL",
+              "type": "double"
+            },
+            {
+              "name": "PROVISIONS",
+              "type": "double"
+            },
+            {
+              "name": "NPL_NET",
+              "type": "double"
+            },
+            {
+              "name": "LARGE_EXPOSURES",
+              "type": "double"
+            },
+            {
+              "name": "GROSS_LOANS",
+              "type": "double"
+            },
+            {
+              "name": "RATIO_NPL_TO_LOANS",
+              "type": "double"
+            },
+            {
+              "name": "RATIO_LE_TO_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "RATIO_NPL_NET_TO_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "ASSETS_QUALITY_RATING",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "balance_sheet",
+          "description": "Monthly full balance sheet, one column per line item (pivoted from Oracle's long format).",
+          "suggested_analysis": "Balance sheet structure analysis, peer comparison.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/balance_sheet",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 28372,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "BSH_DESCRIPTIONNO",
+              "type": "double"
+            },
+            {
+              "name": "BSH_PARTICULARS",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "BSH_SHILLINGACCOUNTS",
+              "type": "double"
+            },
+            {
+              "name": "BSH_FOREXACCTSINUSD",
+              "type": "double"
+            },
+            {
+              "name": "BSH_FOREXACCTSSHSEQUIV",
+              "type": "double"
+            },
+            {
+              "name": "TOTAL_TSHS",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "capital_adequacy",
+          "description": "Monthly capital adequacy ratios (Tier 1, Total Capital, Leverage).",
+          "suggested_analysis": "Solvency/capital-strength trend analysis -- CAMELS 'C'.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/capital_adequacy",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "AVAILABLE_TIER1_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "COMMON_EQUITY_TIER1",
+              "type": "double"
+            },
+            {
+              "name": "TIER1_CAPITAL_RATIO",
+              "type": "double"
+            },
+            {
+              "name": "TOTAL_CAPITAL_RATIO",
+              "type": "double"
+            },
+            {
+              "name": "CAPITAL_CONSERVATION_BUFFER",
+              "type": "double"
+            },
+            {
+              "name": "LEVERAGE_RATIO",
+              "type": "double"
+            },
+            {
+              "name": "TOTAL_CAPITAL_TO_RWA_OBSE",
+              "type": "double"
+            },
+            {
+              "name": "CORE_LEVERAGE_TO_AVERAGE_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "CORE_CAPITAL_TO_RWA_OBSE",
+              "type": "double"
+            },
+            {
+              "name": "CAPITAL_ADEQUACY_RATING",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "credit_exposure",
+          "description": "Monthly credit exposure by economic sector, with performing/non-performing breakdown.",
+          "suggested_analysis": "Sector concentration risk, NPL-by-sector, institution-sector exposure graphs.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/credit_exposure",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 12975,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "SCH_DESCRIPTIONNO",
+              "type": "double"
+            },
+            {
+              "name": "PARTICULARS",
+              "type": "string"
+            },
+            {
+              "name": "OUTSTANDING_LOCAL",
+              "type": "double"
+            },
+            {
+              "name": "OUTSTANDING_FOREIGN",
+              "type": "double"
+            },
+            {
+              "name": "CURRENT_LOCAL",
+              "type": "double"
+            },
+            {
+              "name": "CURRENT_FOREIGN",
+              "type": "double"
+            },
+            {
+              "name": "ESM_LOCAL",
+              "type": "double"
+            },
+            {
+              "name": "ESM_FOREIGN",
+              "type": "double"
+            },
+            {
+              "name": "SUBSTANDARD_LOCAL",
+              "type": "double"
+            },
+            {
+              "name": "SUBSTANDARD_FOREIGN",
+              "type": "double"
+            },
+            {
+              "name": "DOUBTFUL_LOCAL",
+              "type": "double"
+            },
+            {
+              "name": "DOUBTFUL_FOREIGN",
+              "type": "double"
+            },
+            {
+              "name": "LOSS_LOCAL",
+              "type": "double"
+            },
+            {
+              "name": "LOSS_FOREIGN",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "earnings",
+          "description": "Monthly earnings/profitability metrics.",
+          "suggested_analysis": "Profitability trend analysis -- CAMELS 'E'.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/earnings",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 168,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "RETURN_ON_AVERAGE_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "NET_INTEREST_INCOME_TO_AVG_EARNING_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "NON_INTEREST_EXPENSES_TO_AVG_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "EARNINGS_RATING",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 42
+        },
+        {
+          "name": "income_statement",
+          "description": "Monthly income statement, monthly + year-to-date amount per line item (pivoted).",
+          "suggested_analysis": "P&L trend analysis, revenue/expense breakdown.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/income_statement",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 9342,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "SIE_DESCRIPTIONNO",
+              "type": "double"
+            },
+            {
+              "name": "SIE_ACCOUNTDESCRIPTION",
+              "type": "string"
+            },
+            {
+              "name": "SIE_MONTHLYAMOUNT",
+              "type": "double"
+            },
+            {
+              "name": "SIE_YEARTODATEAMOUNT",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "lcr",
+          "description": "Monthly Liquidity Coverage Ratio (Basel III).",
+          "suggested_analysis": "Liquidity risk trend analysis, regulatory threshold breaches.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/lcr",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "HIGH_QUALITY_LIQUID_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "CASH_OUTFLOWS",
+              "type": "double"
+            },
+            {
+              "name": "CASH_INFLOWS",
+              "type": "double"
+            },
+            {
+              "name": "NET_CASH_OUTFLOWS",
+              "type": "double"
+            },
+            {
+              "name": "LCR",
+              "type": "double"
+            },
+            {
+              "name": "EXCESS",
+              "type": "double"
+            },
+            {
+              "name": "PENALTY",
+              "type": "double"
+            },
+            {
+              "name": "CORE_DEPOSITS_TOTAL_FUNDING",
+              "type": "double"
+            },
+            {
+              "name": "GROSS_LOANS_TOTAL_DEPOSITS",
+              "type": "double"
+            },
+            {
+              "name": "LIQUID_ASSETS_DEMAND_LIAB",
+              "type": "double"
+            },
+            {
+              "name": "LIQUIDITY_RATING",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "liquidity_compliance",
+          "description": "Daily liquid-assets-to-demand-liabilities compliance ratio.",
+          "suggested_analysis": "Daily liquidity compliance trend, breach alerts.",
+          "cadence": "daily",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 4193,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "AVAILABLE_LIQUID_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "DEMAND_LIABILITIES",
+              "type": "double"
+            },
+            {
+              "name": "REQUIRED_MINIMUM_LIQUID_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "EXCESS_DEFICIENCY_LIQUID_ASSETS",
+              "type": "double"
+            },
+            {
+              "name": "ASSET_LIABILITY_RATIO_PERCENT",
+              "type": "double"
+            },
+            {
+              "name": "PENALTY",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-01",
+            "max": "2026-10-19"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "net_open_position",
+          "description": "Daily net open foreign-exchange position.",
+          "suggested_analysis": "FX risk exposure monitoring.",
+          "cadence": "daily",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/net_open_position",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 3771,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "NOP",
+              "type": "double"
+            },
+            {
+              "name": "CORE_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "MAX_NOP",
+              "type": "double"
+            },
+            {
+              "name": "NOP_CORE_CAP",
+              "type": "double"
+            },
+            {
+              "name": "EXCESS",
+              "type": "double"
+            },
+            {
+              "name": "PENALTY",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-01",
+            "max": "2026-10-16"
+          },
+          "institution_count": 41
+        },
+        {
+          "name": "nsfr",
+          "description": "Monthly Net Stable Funding Ratio (Basel III).",
+          "suggested_analysis": "Funding stability trend analysis.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/nsfr",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "AVAILABLE_STABLE_FUNDING",
+              "type": "double"
+            },
+            {
+              "name": "REQUIRED_STABLE_FUNDING",
+              "type": "double"
+            },
+            {
+              "name": "NET_STABLE_FUNDING",
+              "type": "double"
+            },
+            {
+              "name": "EXCESS",
+              "type": "double"
+            },
+            {
+              "name": "PENALTY",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "sensitivity_market_risk",
+          "description": "Monthly market risk sensitivity measures.",
+          "suggested_analysis": "Interest-rate / market-risk exposure analysis.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/sensitivity_market_risk",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "CORE_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "NOP",
+              "type": "double"
+            },
+            {
+              "name": "INT_BEARING_ASSET",
+              "type": "double"
+            },
+            {
+              "name": "INT_BEARING_LIAB",
+              "type": "double"
+            },
+            {
+              "name": "FX_INCOME",
+              "type": "double"
+            },
+            {
+              "name": "RATIO_NOP_TO_CAPITAL",
+              "type": "double"
+            },
+            {
+              "name": "RATIO_INT_SENSITIVITY",
+              "type": "double"
+            },
+            {
+              "name": "RATIO_FX_INCOME",
+              "type": "double"
+            },
+            {
+              "name": "MARKET_RISK_RATING",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30",
+            "max": "2026-09-30"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "smr_daily_compliance",
+          "description": "Daily statutory minimum reserve (SMR) compliance per institution.",
+          "suggested_analysis": "Day-to-day SMR breach detection, compliance trend.",
+          "cadence": "daily",
+          "format": "delta",
+          "path": "s3a://lakehouse/bronze/DFSS/BSIS/smr_daily_compliance",
+          "last_updated": "2026-10-20 12:56:04.032998",
+          "row_count": 5224,
+          "columns": [
+            {
+              "name": "INSTITUTIONCODE",
+              "type": "string"
+            },
+            {
+              "name": "INSTITUTIONNAME",
+              "type": "string"
+            },
+            {
+              "name": "DATEVAL",
+              "type": "timestamp"
+            },
+            {
+              "name": "REQUIRED_SMR",
+              "type": "double"
+            },
+            {
+              "name": "REQUIRED_SMR_90",
+              "type": "double"
+            },
+            {
+              "name": "AVAILABLE_SMR",
+              "type": "double"
+            },
+            {
+              "name": "EXCESS_AVAILABLE_CLEARING_DEFICIENCY_DAILY",
+              "type": "double"
+            },
+            {
+              "name": "PERCENTAGE",
+              "type": "double"
+            },
+            {
+              "name": "PENALTY",
+              "type": "double"
+            },
+            {
+              "name": "MOVING_AVERAGE_SMR",
+              "type": "double"
+            },
+            {
+              "name": "MOVING_AVERAGE_REQUIRED_SMR",
+              "type": "double"
+            },
+            {
+              "name": "DAY_SEQUENCE",
+              "type": "double"
+            },
+            {
+              "name": "START_DATE",
+              "type": "timestamp"
+            },
+            {
+              "name": "END_DATE",
+              "type": "timestamp"
+            },
+            {
+              "name": "EXCESS_DEFICIENCY",
+              "type": "double"
+            },
+            {
+              "name": "EXCESS_AVAILABLE_CLEARING_DEFICIENCY_AVERAGE",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-01",
+            "max": "2026-10-19"
+          },
+          "institution_count": 38
+        }
+      ],
+      "master": [
+        {
+          "name": "institutions",
+          "description": "Registered financial institutions (code, name, status) -- the join key for every BSIS fact table.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/institutions",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 83,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institution_name",
+              "type": "string"
+            },
+            {
+              "name": "short_name",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "status",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "minimum_required_capital",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": 83
+        },
+        {
+          "name": "institution_categories",
+          "description": "Institution category reference (e.g. commercial bank, community bank).",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/institution_categories",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 5,
+          "columns": [
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "category_name",
+              "type": "string"
+            },
+            {
+              "name": "category_code",
+              "type": "string"
+            },
+            {
+              "name": "has_types",
+              "type": "boolean"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "institution_types",
+          "description": "Institution type reference.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/institution_types",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 2,
+          "columns": [
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "type_name",
+              "type": "string"
+            },
+            {
+              "name": "type_code",
+              "type": "timestamp"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "sectors",
+          "description": "Economic sector reference -- joined against credit_exposure.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/sectors",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 23,
+          "columns": [
+            {
+              "name": "sector_id",
+              "type": "string"
+            },
+            {
+              "name": "sector_name",
+              "type": "string"
+            },
+            {
+              "name": "sector_code",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "risk_types",
+          "description": "Risk type reference used across risk datasets.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/risk_types",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 4,
+          "columns": [
+            {
+              "name": "risk_id",
+              "type": "string"
+            },
+            {
+              "name": "risk_name",
+              "type": "string"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "regulatory_thresholds",
+          "description": "Regulatory minimum/maximum thresholds per ratio (e.g. minimum LCR).",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/regulatory_thresholds",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 12,
+          "columns": [
+            {
+              "name": "threshold_id",
+              "type": "string"
+            },
+            {
+              "name": "indicator_name",
+              "type": "string"
+            },
+            {
+              "name": "indicator_code",
+              "type": "string"
+            },
+            {
+              "name": "report_type",
+              "type": "string"
+            },
+            {
+              "name": "threshold_value",
+              "type": "double"
+            },
+            {
+              "name": "unit",
+              "type": "string"
+            },
+            {
+              "name": "direction",
+              "type": "string"
+            },
+            {
+              "name": "effective_from",
+              "type": "string"
+            },
+            {
+              "name": "effective_to",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "reporting_frequencies",
+          "description": "Reference for how often each BSIS report is submitted.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/reporting_frequencies",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 6,
+          "columns": [
+            {
+              "name": "frequency_id",
+              "type": "string"
+            },
+            {
+              "name": "frequency_name",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "reporting_obligations",
+          "description": "Which institutions must submit which reports.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/reporting_obligations",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 39,
+          "columns": [
+            {
+              "name": "obligation_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "dataset_type_id",
+              "type": "string"
+            },
+            {
+              "name": "effective_from",
+              "type": "string"
+            },
+            {
+              "name": "effective_to",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "dataset_types",
+          "description": "BSIS dataset/report type reference.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/dataset_types",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 12,
+          "columns": [
+            {
+              "name": "dataset_type_id",
+              "type": "string"
+            },
+            {
+              "name": "dataset_type_name",
+              "type": "string"
+            },
+            {
+              "name": "dataset_type_code",
+              "type": "string"
+            },
+            {
+              "name": "return_type",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "camels_rating_criteria",
+          "description": "CAMELS rating scale/criteria reference.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/camels_rating_criteria",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 16,
+          "columns": [
+            {
+              "name": "criterion_id",
+              "type": "string"
+            },
+            {
+              "name": "component",
+              "type": "string"
+            },
+            {
+              "name": "component_name",
+              "type": "string"
+            },
+            {
+              "name": "metric_label",
+              "type": "string"
+            },
+            {
+              "name": "metric_field",
+              "type": "string"
+            },
+            {
+              "name": "weight",
+              "type": "double"
+            },
+            {
+              "name": "higher_is_better",
+              "type": "boolean"
+            },
+            {
+              "name": "r1_label",
+              "type": "string"
+            },
+            {
+              "name": "r2_label",
+              "type": "string"
+            },
+            {
+              "name": "r3_label",
+              "type": "string"
+            },
+            {
+              "name": "r4_label",
+              "type": "string"
+            },
+            {
+              "name": "r5_label",
+              "type": "string"
+            },
+            {
+              "name": "r12_boundary",
+              "type": "int"
+            },
+            {
+              "name": "r23_boundary",
+              "type": "int"
+            },
+            {
+              "name": "r34_boundary",
+              "type": "int"
+            },
+            {
+              "name": "r45_boundary",
+              "type": "int"
+            },
+            {
+              "name": "unit",
+              "type": "string"
+            },
+            {
+              "name": "notes",
+              "type": "string"
+            },
+            {
+              "name": "effective_from",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "holidays",
+          "description": "Bank holiday calendar -- relevant for daily-report date logic.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "parquet",
+          "path": "s3a://lakehouse/bronze/master/holidays",
+          "last_updated": "2026-10-07 13:30:13.972774",
+          "row_count": 11,
+          "columns": [
+            {
+              "name": "holiday_id",
+              "type": "string"
+            },
+            {
+              "name": "holiday_name",
+              "type": "string"
+            },
+            {
+              "name": "holiday_type",
+              "type": "string"
+            },
+            {
+              "name": "month",
+              "type": "int"
+            },
+            {
+              "name": "day_of_month",
+              "type": "int"
+            },
+            {
+              "name": "holiday_date",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        }
+      ]
+    },
+    "silver": {
+      "bsis": [
+        {
+          "name": "asset_quality",
+          "description": "Monthly asset quality rating and related metrics.",
+          "suggested_analysis": "Asset quality trend analysis -- CAMELS 'A'.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/credit_risk/asset_quality",
+          "last_updated": "2026-10-20 13:09:50",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "core_capital",
+              "type": "double"
+            },
+            {
+              "name": "npl",
+              "type": "double"
+            },
+            {
+              "name": "provisions",
+              "type": "double"
+            },
+            {
+              "name": "npl_net",
+              "type": "double"
+            },
+            {
+              "name": "large_exposures",
+              "type": "double"
+            },
+            {
+              "name": "gross_loans",
+              "type": "double"
+            },
+            {
+              "name": "ratio_npl_to_loans",
+              "type": "double"
+            },
+            {
+              "name": "ratio_le_to_capital",
+              "type": "double"
+            },
+            {
+              "name": "ratio_npl_net_to_capital",
+              "type": "double"
+            },
+            {
+              "name": "assets_quality_rating",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "balance_sheet",
+          "description": "Monthly full balance sheet, one column per line item (pivoted from Oracle's long format).",
+          "suggested_analysis": "Balance sheet structure analysis, peer comparison.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/financial_statements/balance_sheet",
+          "last_updated": "2026-10-20 13:09:55",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "001_cash",
+              "type": "double"
+            },
+            {
+              "name": "002_balances_with_bank_of_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "003_statutory_minimum_reserve",
+              "type": "double"
+            },
+            {
+              "name": "004_current_account",
+              "type": "double"
+            },
+            {
+              "name": "005_others_specify",
+              "type": "double"
+            },
+            {
+              "name": "006_balances_with_other_banks_financial_institutions_net_sum_a_b_minus_c",
+              "type": "double"
+            },
+            {
+              "name": "007_banks_in_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "008_banks_abroad_sum_i_ii",
+              "type": "double"
+            },
+            {
+              "name": "009_fixed_deposit_investment_a_c",
+              "type": "double"
+            },
+            {
+              "name": "010_other_a_c",
+              "type": "double"
+            },
+            {
+              "name": "011_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "012_cheques_and_items_for_clearing",
+              "type": "double"
+            },
+            {
+              "name": "013_investment_in_debt_securities_net_sum_a_d_minus_e",
+              "type": "double"
+            },
+            {
+              "name": "014_treasury_bills",
+              "type": "double"
+            },
+            {
+              "name": "015_other_government_securities",
+              "type": "double"
+            },
+            {
+              "name": "016_private_securities",
+              "type": "double"
+            },
+            {
+              "name": "017_others_specify",
+              "type": "double"
+            },
+            {
+              "name": "018_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "019_interbank_loans_receivable_net_sum_a_c_minus_d",
+              "type": "double"
+            },
+            {
+              "name": "020_interbank_call_loans_in_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "021_other_interbank_loans_in_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "022_interbank_loans_abroad",
+              "type": "double"
+            },
+            {
+              "name": "023_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "024_loans_advances_and_overdraft_net_sum_a_d_minus_e_f",
+              "type": "double"
+            },
+            {
+              "name": "025_loans_and_advances",
+              "type": "double"
+            },
+            {
+              "name": "026_overdrafts",
+              "type": "double"
+            },
+            {
+              "name": "027_restructured_loans",
+              "type": "double"
+            },
+            {
+              "name": "028_accrued_interest_on_loans_and_advances",
+              "type": "double"
+            },
+            {
+              "name": "029_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "030_interest_in_suspense_deduction",
+              "type": "double"
+            },
+            {
+              "name": "031_commercial_other_bills_purchased_discounted_net_sum_a_e_minus_f",
+              "type": "double"
+            },
+            {
+              "name": "032_export_bills",
+              "type": "double"
+            },
+            {
+              "name": "033_import_bills",
+              "type": "double"
+            },
+            {
+              "name": "034_domestic_bills",
+              "type": "double"
+            },
+            {
+              "name": "035_clean_bills_foreign_bills_purchased",
+              "type": "double"
+            },
+            {
+              "name": "036_domestic_acceptances_discounted",
+              "type": "double"
+            },
+            {
+              "name": "037_own",
+              "type": "double"
+            },
+            {
+              "name": "038_other_banks",
+              "type": "double"
+            },
+            {
+              "name": "039_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "040_customers_liabilities_for_acceptances",
+              "type": "double"
+            },
+            {
+              "name": "041_underwriting_accounts_net_sum_a_b_minus_c",
+              "type": "double"
+            },
+            {
+              "name": "042_underwritten_securities_purchased",
+              "type": "double"
+            },
+            {
+              "name": "043_receivables_arising_from_sale_of_underwritten_securities",
+              "type": "double"
+            },
+            {
+              "name": "044_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "045_equity_investment_net_sum_a_b_minus_c",
+              "type": "double"
+            },
+            {
+              "name": "046_equity_investment_subsidiaries",
+              "type": "double"
+            },
+            {
+              "name": "047_equity_investment_others",
+              "type": "double"
+            },
+            {
+              "name": "048_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "049_claims_on_the_treasury",
+              "type": "double"
+            },
+            {
+              "name": "050_bank_premises_furniture_and_equipment_net_sum_a_b_minus_c",
+              "type": "double"
+            },
+            {
+              "name": "051_banking_facilities",
+              "type": "double"
+            },
+            {
+              "name": "052_staff_housing_and_furnishing",
+              "type": "double"
+            },
+            {
+              "name": "053_accumulated_depreciation_deduction",
+              "type": "double"
+            },
+            {
+              "name": "054_other_property_and_assets_owned_or_acquired_net_sum_a_b_minus_c",
+              "type": "double"
+            },
+            {
+              "name": "055_held_for_less_than_3_years",
+              "type": "double"
+            },
+            {
+              "name": "056_held_for_3_years_or_more",
+              "type": "double"
+            },
+            {
+              "name": "057_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "058_inter_branch_float_items_net_sum_a_e_minus_f",
+              "type": "double"
+            },
+            {
+              "name": "059_outstanding_for_30_days_or_less",
+              "type": "double"
+            },
+            {
+              "name": "060_outstanding_for_31_to_60_days",
+              "type": "double"
+            },
+            {
+              "name": "061_outstanding_for_61_to_90_days",
+              "type": "double"
+            },
+            {
+              "name": "062_outstanding_for_91_to_180_days",
+              "type": "double"
+            },
+            {
+              "name": "063_outstanding_for_more_than_180_days",
+              "type": "double"
+            },
+            {
+              "name": "064_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "065_other_assets_net_sum_a_j_minus_k",
+              "type": "double"
+            },
+            {
+              "name": "066_gold",
+              "type": "double"
+            },
+            {
+              "name": "067_stamp_account",
+              "type": "double"
+            },
+            {
+              "name": "068_returned_cheques_and_other_clearing_items",
+              "type": "double"
+            },
+            {
+              "name": "069_accrued_interest_not_related_to_loans_and_advances",
+              "type": "double"
+            },
+            {
+              "name": "070_sundry_debtors",
+              "type": "double"
+            },
+            {
+              "name": "071_prepaid_expenses",
+              "type": "double"
+            },
+            {
+              "name": "072_deffered_charges",
+              "type": "double"
+            },
+            {
+              "name": "073_shortages_misapropriation_and_forgeries",
+              "type": "double"
+            },
+            {
+              "name": "074_intangible_assets_specify",
+              "type": "double"
+            },
+            {
+              "name": "075_miscellaneous_assets",
+              "type": "double"
+            },
+            {
+              "name": "076_allowance_for_probable_losses_deduction",
+              "type": "double"
+            },
+            {
+              "name": "077_total_assets",
+              "type": "double"
+            },
+            {
+              "name": "078_deposit_liabilities_other_than_banks_sum_a_e",
+              "type": "double"
+            },
+            {
+              "name": "079_current_account",
+              "type": "double"
+            },
+            {
+              "name": "080_savings_deposits",
+              "type": "double"
+            },
+            {
+              "name": "081_time_deposits",
+              "type": "double"
+            },
+            {
+              "name": "082_matured_term_deposits",
+              "type": "double"
+            },
+            {
+              "name": "083_dormant_accounts",
+              "type": "double"
+            },
+            {
+              "name": "084_special_deposit_accounts_sum_a_c",
+              "type": "double"
+            },
+            {
+              "name": "085_special_financing_programme",
+              "type": "double"
+            },
+            {
+              "name": "086_customers_margin_deposits_on_bills_guarantees_and_letters_of_credit_etc",
+              "type": "double"
+            },
+            {
+              "name": "087_others_specify",
+              "type": "double"
+            },
+            {
+              "name": "088_deposits_from_banks_and_financial_institution",
+              "type": "double"
+            },
+            {
+              "name": "089_in_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "090_banks_abroad",
+              "type": "double"
+            },
+            {
+              "name": "091_bankers_cheques_and_drafts_issued",
+              "type": "double"
+            },
+            {
+              "name": "092_payment_orders_transfers_payable",
+              "type": "double"
+            },
+            {
+              "name": "093_borrowings_sum_a_e",
+              "type": "double"
+            },
+            {
+              "name": "094_bank_of_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "095_rediscount",
+              "type": "double"
+            },
+            {
+              "name": "096_borrowings",
+              "type": "double"
+            },
+            {
+              "name": "097_borrowings_from_other_banks_and_financial_institutions_in_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "098_other_borrowings_in_tanzania",
+              "type": "double"
+            },
+            {
+              "name": "099_borrowings_from_banks_abroad",
+              "type": "double"
+            },
+            {
+              "name": "100_other_borrowings_abroad",
+              "type": "double"
+            },
+            {
+              "name": "101_subordinated_debt",
+              "type": "double"
+            },
+            {
+              "name": "102_accrued_taxes_and_other_expenses_not_paid_sum_a_g",
+              "type": "double"
+            },
+            {
+              "name": "103_accrued_income_tax_payable",
+              "type": "double"
+            },
+            {
+              "name": "104_accrued_other_taxes_payable",
+              "type": "double"
+            },
+            {
+              "name": "105_accrued_interest_payable_deposits",
+              "type": "double"
+            },
+            {
+              "name": "106_accrued_interest_payable_borrowings",
+              "type": "double"
+            },
+            {
+              "name": "107_accrued_interest_payable_others",
+              "type": "double"
+            },
+            {
+              "name": "108_accrued_deposit_insurance_premium_payable",
+              "type": "double"
+            },
+            {
+              "name": "109_accrued_other_expenses_payable",
+              "type": "double"
+            },
+            {
+              "name": "110_unearned_income_and_other_deferred_credits",
+              "type": "double"
+            },
+            {
+              "name": "111_outstanding_acceptances_executed_by_or_for_account_of_the_bank",
+              "type": "double"
+            },
+            {
+              "name": "112_inter_branch_float_items_sum_a_e",
+              "type": "double"
+            },
+            {
+              "name": "113_outstanding_for_30_days_or_less",
+              "type": "double"
+            },
+            {
+              "name": "114_outstanding_for_31_to_60_days",
+              "type": "double"
+            },
+            {
+              "name": "115_outstanding_for_61_to_90_days",
+              "type": "double"
+            },
+            {
+              "name": "116_outstanding_for_91_to_180_days",
+              "type": "double"
+            },
+            {
+              "name": "117_outstanding_for_more_than_180_days",
+              "type": "double"
+            },
+            {
+              "name": "118_other_liabilities_sum_a_f",
+              "type": "double"
+            },
+            {
+              "name": "119_accounts_payable",
+              "type": "double"
+            },
+            {
+              "name": "120_dividends_payable",
+              "type": "double"
+            },
+            {
+              "name": "121_subscriptions_payable_on_equity_investment",
+              "type": "double"
+            },
+            {
+              "name": "122_withholding_tax_payable",
+              "type": "double"
+            },
+            {
+              "name": "123_miscellaneous_liabilities",
+              "type": "double"
+            },
+            {
+              "name": "124_sundry_credits",
+              "type": "double"
+            },
+            {
+              "name": "125_total_liabilities",
+              "type": "double"
+            },
+            {
+              "name": "126_total_capital_sum_32_33",
+              "type": "double"
+            },
+            {
+              "name": "127_paid_up_share_capital_sum_a_c",
+              "type": "double"
+            },
+            {
+              "name": "128_ordinary_share_capital",
+              "type": "double"
+            },
+            {
+              "name": "129_irredeemable_non_cummulative_preference_shares",
+              "type": "double"
+            },
+            {
+              "name": "130_other_preference_shares",
+              "type": "double"
+            },
+            {
+              "name": "131_other_capital_accounts_sum_a_g",
+              "type": "double"
+            },
+            {
+              "name": "132_share_premium",
+              "type": "double"
+            },
+            {
+              "name": "133_capital_grants",
+              "type": "double"
+            },
+            {
+              "name": "134_general_reserves",
+              "type": "double"
+            },
+            {
+              "name": "135_retained_earnings",
+              "type": "double"
+            },
+            {
+              "name": "136_profit_loss",
+              "type": "double"
+            },
+            {
+              "name": "137_fixed_asset_revaluation_reserves",
+              "type": "double"
+            },
+            {
+              "name": "138_other_specify",
+              "type": "double"
+            },
+            {
+              "name": "139_total_liabilities_and_capital_sum_30_31",
+              "type": "double"
+            },
+            {
+              "name": "140_outstanding_letters_of_credit_sum_a_f",
+              "type": "double"
+            },
+            {
+              "name": "141_sight_import_letters_of_credit",
+              "type": "double"
+            },
+            {
+              "name": "142_usance_import_letters_of_credit",
+              "type": "double"
+            },
+            {
+              "name": "143_deferred_letters_of_credit",
+              "type": "double"
+            },
+            {
+              "name": "144_domestic_letters_of_credit",
+              "type": "double"
+            },
+            {
+              "name": "145_stand_by_letters_of_credit_specify_time_in_footnote",
+              "type": "double"
+            },
+            {
+              "name": "146_other_letters_of_credit",
+              "type": "double"
+            },
+            {
+              "name": "147_export_letters_of_credit_confirmed",
+              "type": "double"
+            },
+            {
+              "name": "148_outstanding_guarantees_and_indemnities",
+              "type": "double"
+            },
+            {
+              "name": "149_inward_bills_for_collection",
+              "type": "double"
+            },
+            {
+              "name": "150_outward_bills_for_collection",
+              "type": "double"
+            },
+            {
+              "name": "151_foward_exchange_bought",
+              "type": "double"
+            },
+            {
+              "name": "152_foward_exchange_sold",
+              "type": "double"
+            },
+            {
+              "name": "153_trust_and_other_fiduciary_accounts",
+              "type": "double"
+            },
+            {
+              "name": "154_items_held_for_safekeeping",
+              "type": "double"
+            },
+            {
+              "name": "155_underwriting_accounts_unsold",
+              "type": "double"
+            },
+            {
+              "name": "156_late_deposits_payments_received",
+              "type": "double"
+            },
+            {
+              "name": "157_travellers_cheques_unsold",
+              "type": "double"
+            },
+            {
+              "name": "158_securities_sold_under_repurchase_agreement",
+              "type": "double"
+            },
+            {
+              "name": "159_securities_purchased_under_resale_agreement",
+              "type": "double"
+            },
+            {
+              "name": "160_undrawn_balances_of",
+              "type": "double"
+            },
+            {
+              "name": "161_unexpired_overdraft_lines",
+              "type": "double"
+            },
+            {
+              "name": "162_term_loans_and_other_advances",
+              "type": "double"
+            },
+            {
+              "name": "163_others",
+              "type": "double"
+            },
+            {
+              "name": "164_total_contingent_accounts",
+              "type": "double"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "capital_adequacy",
+          "description": "Monthly capital adequacy ratios (Tier 1, Total Capital, Leverage).",
+          "suggested_analysis": "Solvency/capital-strength trend analysis -- CAMELS 'C'.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/capital_adequacy/capital_adequacy",
+          "last_updated": "2026-10-20 13:09:57",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "available_tier1_capital",
+              "type": "double"
+            },
+            {
+              "name": "common_equity_tier1",
+              "type": "double"
+            },
+            {
+              "name": "tier1_capital_ratio",
+              "type": "double"
+            },
+            {
+              "name": "total_capital_ratio",
+              "type": "double"
+            },
+            {
+              "name": "capital_conservation_buffer",
+              "type": "double"
+            },
+            {
+              "name": "leverage_ratio",
+              "type": "double"
+            },
+            {
+              "name": "total_capital_to_rwa_obse",
+              "type": "double"
+            },
+            {
+              "name": "core_leverage_to_average_assets",
+              "type": "double"
+            },
+            {
+              "name": "core_capital_to_rwa_obse",
+              "type": "double"
+            },
+            {
+              "name": "capital_adequacy_rating",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "credit_exposure",
+          "description": "Monthly credit exposure by economic sector, with performing/non-performing breakdown.",
+          "suggested_analysis": "Sector concentration risk, NPL-by-sector, institution-sector exposure graphs.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/credit_risk/credit_exposure",
+          "last_updated": "2026-10-20 13:10:00",
+          "row_count": 3979,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "sch_descriptionno",
+              "type": "double"
+            },
+            {
+              "name": "outstanding_local",
+              "type": "double"
+            },
+            {
+              "name": "outstanding_foreign",
+              "type": "double"
+            },
+            {
+              "name": "current_local",
+              "type": "double"
+            },
+            {
+              "name": "current_foreign",
+              "type": "double"
+            },
+            {
+              "name": "esm_local",
+              "type": "double"
+            },
+            {
+              "name": "esm_foreign",
+              "type": "double"
+            },
+            {
+              "name": "substandard_local",
+              "type": "double"
+            },
+            {
+              "name": "substandard_foreign",
+              "type": "double"
+            },
+            {
+              "name": "doubtful_local",
+              "type": "double"
+            },
+            {
+              "name": "doubtful_foreign",
+              "type": "double"
+            },
+            {
+              "name": "loss_local",
+              "type": "double"
+            },
+            {
+              "name": "loss_foreign",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "sector_id",
+              "type": "string"
+            },
+            {
+              "name": "sector_code",
+              "type": "string"
+            },
+            {
+              "name": "sector_name",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "earnings",
+          "description": "Monthly earnings/profitability metrics.",
+          "suggested_analysis": "Profitability trend analysis -- CAMELS 'E'.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/financial_statements/earnings",
+          "last_updated": "2026-10-20 13:10:01",
+          "row_count": 168,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "return_on_average_assets",
+              "type": "double"
+            },
+            {
+              "name": "net_interest_income_to_avg_earning_assets",
+              "type": "double"
+            },
+            {
+              "name": "non_interest_expenses_to_avg_assets",
+              "type": "double"
+            },
+            {
+              "name": "earnings_rating",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 42
+        },
+        {
+          "name": "income_statement",
+          "description": "Monthly income statement, monthly + year-to-date amount per line item (pivoted).",
+          "suggested_analysis": "P&L trend analysis, revenue/expense breakdown.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/financial_statements/income_statement",
+          "last_updated": "2026-10-20 13:10:04",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "001_interest_income_monthly",
+              "type": "double"
+            },
+            {
+              "name": "001_interest_income_ytd",
+              "type": "double"
+            },
+            {
+              "name": "002_interest_loans_advances_overdraft_monthly",
+              "type": "double"
+            },
+            {
+              "name": "002_interest_loans_advances_overdraft_ytd",
+              "type": "double"
+            },
+            {
+              "name": "003_interest_inter_bank_loans_receivable_monthly",
+              "type": "double"
+            },
+            {
+              "name": "003_interest_inter_bank_loans_receivable_ytd",
+              "type": "double"
+            },
+            {
+              "name": "004_interest_investments_in_debt_securities_monthly",
+              "type": "double"
+            },
+            {
+              "name": "004_interest_investments_in_debt_securities_ytd",
+              "type": "double"
+            },
+            {
+              "name": "005_interest_other_govt_obligations_monthly",
+              "type": "double"
+            },
+            {
+              "name": "005_interest_other_govt_obligations_ytd",
+              "type": "double"
+            },
+            {
+              "name": "006_interest_balances_with_bot_monthly",
+              "type": "double"
+            },
+            {
+              "name": "006_interest_balances_with_bot_ytd",
+              "type": "double"
+            },
+            {
+              "name": "007_interest_balances_with_banks_monthly",
+              "type": "double"
+            },
+            {
+              "name": "007_interest_balances_with_banks_ytd",
+              "type": "double"
+            },
+            {
+              "name": "008_interest_others_describe_monthly",
+              "type": "double"
+            },
+            {
+              "name": "008_interest_others_describe_ytd",
+              "type": "double"
+            },
+            {
+              "name": "009_interest_expense_monthly",
+              "type": "double"
+            },
+            {
+              "name": "009_interest_expense_ytd",
+              "type": "double"
+            },
+            {
+              "name": "010_interest_deposits_from_the_public_monthly",
+              "type": "double"
+            },
+            {
+              "name": "010_interest_deposits_from_the_public_ytd",
+              "type": "double"
+            },
+            {
+              "name": "011_interest_government_deposits_monthly",
+              "type": "double"
+            },
+            {
+              "name": "011_interest_government_deposits_ytd",
+              "type": "double"
+            },
+            {
+              "name": "012_interest_deposits_from_banks_monthly",
+              "type": "double"
+            },
+            {
+              "name": "012_interest_deposits_from_banks_ytd",
+              "type": "double"
+            },
+            {
+              "name": "013_interest_borrowings_from_rediscounts_with_bot_monthly",
+              "type": "double"
+            },
+            {
+              "name": "013_interest_borrowings_from_rediscounts_with_bot_ytd",
+              "type": "double"
+            },
+            {
+              "name": "014_interest_borrowings_from_other_banks_monthly",
+              "type": "double"
+            },
+            {
+              "name": "014_interest_borrowings_from_other_banks_ytd",
+              "type": "double"
+            },
+            {
+              "name": "015_interest_other_borrowed_funds_monthly",
+              "type": "double"
+            },
+            {
+              "name": "015_interest_other_borrowed_funds_ytd",
+              "type": "double"
+            },
+            {
+              "name": "016_interest_others_describe_monthly",
+              "type": "double"
+            },
+            {
+              "name": "016_interest_others_describe_ytd",
+              "type": "double"
+            },
+            {
+              "name": "017_net_interest_income_1_less_2_monthly",
+              "type": "double"
+            },
+            {
+              "name": "017_net_interest_income_1_less_2_ytd",
+              "type": "double"
+            },
+            {
+              "name": "018_bad_debts_written_off_not_provided_for_monthly",
+              "type": "double"
+            },
+            {
+              "name": "018_bad_debts_written_off_not_provided_for_ytd",
+              "type": "double"
+            },
+            {
+              "name": "019_provision_for_bad_and_doubtful_debts_monthly",
+              "type": "double"
+            },
+            {
+              "name": "019_provision_for_bad_and_doubtful_debts_ytd",
+              "type": "double"
+            },
+            {
+              "name": "020_non_interest_income_monthly",
+              "type": "double"
+            },
+            {
+              "name": "020_non_interest_income_ytd",
+              "type": "double"
+            },
+            {
+              "name": "021_foreign_exchange_trading_profit_loss_monthly",
+              "type": "double"
+            },
+            {
+              "name": "021_foreign_exchange_trading_profit_loss_ytd",
+              "type": "double"
+            },
+            {
+              "name": "022_commisions_and_fees_foreign_operations_monthly",
+              "type": "double"
+            },
+            {
+              "name": "022_commisions_and_fees_foreign_operations_ytd",
+              "type": "double"
+            },
+            {
+              "name": "023_current_account_charges_monthly",
+              "type": "double"
+            },
+            {
+              "name": "023_current_account_charges_ytd",
+              "type": "double"
+            },
+            {
+              "name": "024_other_commissions_services_charges_monthly",
+              "type": "double"
+            },
+            {
+              "name": "024_other_commissions_services_charges_ytd",
+              "type": "double"
+            },
+            {
+              "name": "025_securities_trading_gain_loss_monthly",
+              "type": "double"
+            },
+            {
+              "name": "025_securities_trading_gain_loss_ytd",
+              "type": "double"
+            },
+            {
+              "name": "026_income_from_trust_custody_accounts_monthly",
+              "type": "double"
+            },
+            {
+              "name": "026_income_from_trust_custody_accounts_ytd",
+              "type": "double"
+            },
+            {
+              "name": "027_gold_trading_gain_loss_monthly",
+              "type": "double"
+            },
+            {
+              "name": "027_gold_trading_gain_loss_ytd",
+              "type": "double"
+            },
+            {
+              "name": "028_other_income_monthly",
+              "type": "double"
+            },
+            {
+              "name": "028_other_income_ytd",
+              "type": "double"
+            },
+            {
+              "name": "029_rental_income_on_premises_monthly",
+              "type": "double"
+            },
+            {
+              "name": "029_rental_income_on_premises_ytd",
+              "type": "double"
+            },
+            {
+              "name": "030_devidends_on_equity_investment_monthly",
+              "type": "double"
+            },
+            {
+              "name": "030_devidends_on_equity_investment_ytd",
+              "type": "double"
+            },
+            {
+              "name": "031_non_interest_expenses_monthly",
+              "type": "double"
+            },
+            {
+              "name": "031_non_interest_expenses_ytd",
+              "type": "double"
+            },
+            {
+              "name": "032_officers_salaries_and_benefits_monthly",
+              "type": "double"
+            },
+            {
+              "name": "032_officers_salaries_and_benefits_ytd",
+              "type": "double"
+            },
+            {
+              "name": "033_employees_salaries_and_benefits_monthly",
+              "type": "double"
+            },
+            {
+              "name": "033_employees_salaries_and_benefits_ytd",
+              "type": "double"
+            },
+            {
+              "name": "034_rental_expense_on_premises_and_equipment_monthly",
+              "type": "double"
+            },
+            {
+              "name": "034_rental_expense_on_premises_and_equipment_ytd",
+              "type": "double"
+            },
+            {
+              "name": "035_depreciation_premises_and_equipment_monthly",
+              "type": "double"
+            },
+            {
+              "name": "035_depreciation_premises_and_equipment_ytd",
+              "type": "double"
+            },
+            {
+              "name": "036_amortization_leasehold_rights_and_improvements_monthly",
+              "type": "double"
+            },
+            {
+              "name": "036_amortization_leasehold_rights_and_improvements_ytd",
+              "type": "double"
+            },
+            {
+              "name": "037_foreclosure_and_litigation_expenses_monthly",
+              "type": "double"
+            },
+            {
+              "name": "037_foreclosure_and_litigation_expenses_ytd",
+              "type": "double"
+            },
+            {
+              "name": "038_management_fees_monthly",
+              "type": "double"
+            },
+            {
+              "name": "038_management_fees_ytd",
+              "type": "double"
+            },
+            {
+              "name": "039_auditors_fees_monthly",
+              "type": "double"
+            },
+            {
+              "name": "039_auditors_fees_ytd",
+              "type": "double"
+            },
+            {
+              "name": "040_other_professional_fees_monthly",
+              "type": "double"
+            },
+            {
+              "name": "040_other_professional_fees_ytd",
+              "type": "double"
+            },
+            {
+              "name": "041_supervision_and_inspection_fees_bot_charges_penalties_monthly",
+              "type": "double"
+            },
+            {
+              "name": "041_supervision_and_inspection_fees_bot_charges_penalties_ytd",
+              "type": "double"
+            },
+            {
+              "name": "042_taxes_and_license_fees_monthly",
+              "type": "double"
+            },
+            {
+              "name": "042_taxes_and_license_fees_ytd",
+              "type": "double"
+            },
+            {
+              "name": "043_insurance_monthly",
+              "type": "double"
+            },
+            {
+              "name": "043_insurance_ytd",
+              "type": "double"
+            },
+            {
+              "name": "044_utilities_expenses_monthly",
+              "type": "double"
+            },
+            {
+              "name": "044_utilities_expenses_ytd",
+              "type": "double"
+            },
+            {
+              "name": "045_other_non_interest_expenses_specify_monthly",
+              "type": "double"
+            },
+            {
+              "name": "045_other_non_interest_expenses_specify_ytd",
+              "type": "double"
+            },
+            {
+              "name": "046_operating_income_3_less_4_less_5_plus_6_less_7_monthly",
+              "type": "double"
+            },
+            {
+              "name": "046_operating_income_3_less_4_less_5_plus_6_less_7_ytd",
+              "type": "double"
+            },
+            {
+              "name": "047_non_core_credits_charges_monthly",
+              "type": "double"
+            },
+            {
+              "name": "047_non_core_credits_charges_ytd",
+              "type": "double"
+            },
+            {
+              "name": "048_recovery_on_charged_off_assets_monthly",
+              "type": "double"
+            },
+            {
+              "name": "048_recovery_on_charged_off_assets_ytd",
+              "type": "double"
+            },
+            {
+              "name": "049_income_from_assets_acquired_monthly",
+              "type": "double"
+            },
+            {
+              "name": "049_income_from_assets_acquired_ytd",
+              "type": "double"
+            },
+            {
+              "name": "050_profit_losses_from_assets_sold_or_exchanged_monthly",
+              "type": "double"
+            },
+            {
+              "name": "050_profit_losses_from_assets_sold_or_exchanged_ytd",
+              "type": "double"
+            },
+            {
+              "name": "051_extraordinary_credits_and_charges_specify_monthly",
+              "type": "double"
+            },
+            {
+              "name": "051_extraordinary_credits_and_charges_specify_ytd",
+              "type": "double"
+            },
+            {
+              "name": "052_net_income_loss_before_income_tax_8_plus_9_monthly",
+              "type": "double"
+            },
+            {
+              "name": "052_net_income_loss_before_income_tax_8_plus_9_ytd",
+              "type": "double"
+            },
+            {
+              "name": "053_income_tax_provision_monthly",
+              "type": "double"
+            },
+            {
+              "name": "053_income_tax_provision_ytd",
+              "type": "double"
+            },
+            {
+              "name": "054_net_income_loss_after_income_tax_11_less_12_monthly",
+              "type": "double"
+            },
+            {
+              "name": "054_net_income_loss_after_income_tax_11_less_12_ytd",
+              "type": "double"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "lcr",
+          "description": "Monthly Liquidity Coverage Ratio (Basel III).",
+          "suggested_analysis": "Liquidity risk trend analysis, regulatory threshold breaches.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/liquidity_risk/lcr",
+          "last_updated": "2026-10-20 13:10:06",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "high_quality_liquid_assets",
+              "type": "double"
+            },
+            {
+              "name": "cash_outflows",
+              "type": "double"
+            },
+            {
+              "name": "cash_inflows",
+              "type": "double"
+            },
+            {
+              "name": "net_cash_outflows",
+              "type": "double"
+            },
+            {
+              "name": "lcr",
+              "type": "double"
+            },
+            {
+              "name": "excess",
+              "type": "double"
+            },
+            {
+              "name": "penalty",
+              "type": "double"
+            },
+            {
+              "name": "core_deposits_total_funding",
+              "type": "double"
+            },
+            {
+              "name": "gross_loans_total_deposits",
+              "type": "double"
+            },
+            {
+              "name": "liquid_assets_demand_liab",
+              "type": "double"
+            },
+            {
+              "name": "liquidity_rating",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "liquidity_compliance",
+          "description": "Daily liquid-assets-to-demand-liabilities compliance ratio.",
+          "suggested_analysis": "Daily liquidity compliance trend, breach alerts.",
+          "cadence": "daily",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/liquidity_risk/liquidity_compliance",
+          "last_updated": "2026-10-20 13:10:07",
+          "row_count": 4193,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "available_liquid_assets",
+              "type": "double"
+            },
+            {
+              "name": "demand_liabilities",
+              "type": "double"
+            },
+            {
+              "name": "required_minimum_liquid_assets",
+              "type": "double"
+            },
+            {
+              "name": "excess_deficiency_liquid_assets",
+              "type": "double"
+            },
+            {
+              "name": "asset_liability_ratio_percent",
+              "type": "double"
+            },
+            {
+              "name": "penalty",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-01 00:00:00",
+            "max": "2026-10-19 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "net_open_position",
+          "description": "Daily net open foreign-exchange position.",
+          "suggested_analysis": "FX risk exposure monitoring.",
+          "cadence": "daily",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/market_risk/net_open_position",
+          "last_updated": "2026-10-20 13:10:11",
+          "row_count": 3771,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "nop",
+              "type": "double"
+            },
+            {
+              "name": "core_capital",
+              "type": "double"
+            },
+            {
+              "name": "max_nop",
+              "type": "double"
+            },
+            {
+              "name": "nop_core_cap",
+              "type": "double"
+            },
+            {
+              "name": "excess",
+              "type": "double"
+            },
+            {
+              "name": "penalty",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-01 00:00:00",
+            "max": "2026-10-16 00:00:00"
+          },
+          "institution_count": 41
+        },
+        {
+          "name": "nsfr",
+          "description": "Monthly Net Stable Funding Ratio (Basel III).",
+          "suggested_analysis": "Funding stability trend analysis.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/liquidity_risk/nsfr",
+          "last_updated": "2026-10-20 13:10:13",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "available_stable_funding",
+              "type": "double"
+            },
+            {
+              "name": "required_stable_funding",
+              "type": "double"
+            },
+            {
+              "name": "net_stable_funding",
+              "type": "double"
+            },
+            {
+              "name": "excess",
+              "type": "double"
+            },
+            {
+              "name": "penalty",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "sensitivity_market_risk",
+          "description": "Monthly market risk sensitivity measures.",
+          "suggested_analysis": "Interest-rate / market-risk exposure analysis.",
+          "cadence": "monthly",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/market_risk/sensitivity_market_risk",
+          "last_updated": "2026-10-20 13:10:14",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "core_capital",
+              "type": "double"
+            },
+            {
+              "name": "nop",
+              "type": "double"
+            },
+            {
+              "name": "int_bearing_asset",
+              "type": "double"
+            },
+            {
+              "name": "int_bearing_liab",
+              "type": "double"
+            },
+            {
+              "name": "fx_income",
+              "type": "double"
+            },
+            {
+              "name": "ratio_nop_to_capital",
+              "type": "double"
+            },
+            {
+              "name": "ratio_int_sensitivity",
+              "type": "double"
+            },
+            {
+              "name": "ratio_fx_income",
+              "type": "double"
+            },
+            {
+              "name": "market_risk_rating",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "smr_daily_compliance",
+          "description": "Daily statutory minimum reserve (SMR) compliance per institution.",
+          "suggested_analysis": "Day-to-day SMR breach detection, compliance trend.",
+          "cadence": "daily",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/DFSS/liquidity_risk/smr_daily_compliance",
+          "last_updated": "2026-10-20 13:10:16",
+          "row_count": 5224,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "required_smr",
+              "type": "double"
+            },
+            {
+              "name": "required_smr_90",
+              "type": "double"
+            },
+            {
+              "name": "available_smr",
+              "type": "double"
+            },
+            {
+              "name": "excess_available_clearing_deficiency_daily",
+              "type": "double"
+            },
+            {
+              "name": "percentage",
+              "type": "double"
+            },
+            {
+              "name": "penalty",
+              "type": "double"
+            },
+            {
+              "name": "moving_average_smr",
+              "type": "double"
+            },
+            {
+              "name": "moving_average_required_smr",
+              "type": "double"
+            },
+            {
+              "name": "day_sequence",
+              "type": "double"
+            },
+            {
+              "name": "start_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "end_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "excess_deficiency",
+              "type": "double"
+            },
+            {
+              "name": "excess_available_clearing_deficiency_average",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "business_key",
+              "type": "string"
+            },
+            {
+              "name": "silver_id",
+              "type": "string"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-01 00:00:00",
+            "max": "2026-10-19 00:00:00"
+          },
+          "institution_count": 38
+        }
+      ],
+      "master": [
+        {
+          "name": "institutions",
+          "description": "Registered financial institutions (code, name, status) -- the join key for every BSIS fact table.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/institutions",
+          "last_updated": "2026-10-08 06:22:23",
+          "row_count": 83,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institution_name",
+              "type": "string"
+            },
+            {
+              "name": "short_name",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "status",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "minimum_required_capital",
+              "type": "double"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": 83
+        },
+        {
+          "name": "institution_categories",
+          "description": "Institution category reference (e.g. commercial bank, community bank).",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/institution_categories",
+          "last_updated": "2026-10-08 06:22:25",
+          "row_count": 5,
+          "columns": [
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "category_name",
+              "type": "string"
+            },
+            {
+              "name": "category_code",
+              "type": "string"
+            },
+            {
+              "name": "has_types",
+              "type": "boolean"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "institution_types",
+          "description": "Institution type reference.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/institution_types",
+          "last_updated": "2026-10-08 06:22:27",
+          "row_count": 2,
+          "columns": [
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "type_name",
+              "type": "string"
+            },
+            {
+              "name": "type_code",
+              "type": "timestamp"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "sectors",
+          "description": "Economic sector reference -- joined against credit_exposure.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/sectors",
+          "last_updated": "2026-10-08 06:22:28",
+          "row_count": 23,
+          "columns": [
+            {
+              "name": "sector_id",
+              "type": "string"
+            },
+            {
+              "name": "sector_name",
+              "type": "string"
+            },
+            {
+              "name": "sector_code",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "risk_types",
+          "description": "Risk type reference used across risk datasets.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/risk_types",
+          "last_updated": "2026-10-08 06:22:29",
+          "row_count": 4,
+          "columns": [
+            {
+              "name": "risk_id",
+              "type": "string"
+            },
+            {
+              "name": "risk_name",
+              "type": "string"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "regulatory_thresholds",
+          "description": "Regulatory minimum/maximum thresholds per ratio (e.g. minimum LCR).",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/regulatory_thresholds",
+          "last_updated": "2026-10-08 06:22:30",
+          "row_count": 12,
+          "columns": [
+            {
+              "name": "threshold_id",
+              "type": "string"
+            },
+            {
+              "name": "indicator_name",
+              "type": "string"
+            },
+            {
+              "name": "indicator_code",
+              "type": "string"
+            },
+            {
+              "name": "report_type",
+              "type": "string"
+            },
+            {
+              "name": "threshold_value",
+              "type": "double"
+            },
+            {
+              "name": "unit",
+              "type": "string"
+            },
+            {
+              "name": "direction",
+              "type": "string"
+            },
+            {
+              "name": "effective_from",
+              "type": "string"
+            },
+            {
+              "name": "effective_to",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "reporting_frequencies",
+          "description": "Reference for how often each BSIS report is submitted.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/reporting_frequencies",
+          "last_updated": "2026-10-08 06:22:31",
+          "row_count": 6,
+          "columns": [
+            {
+              "name": "frequency_id",
+              "type": "string"
+            },
+            {
+              "name": "frequency_name",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "reporting_obligations",
+          "description": "Which institutions must submit which reports.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/reporting_obligations",
+          "last_updated": "2026-10-08 06:22:32",
+          "row_count": 39,
+          "columns": [
+            {
+              "name": "obligation_id",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "dataset_type_id",
+              "type": "string"
+            },
+            {
+              "name": "effective_from",
+              "type": "string"
+            },
+            {
+              "name": "effective_to",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "dataset_types",
+          "description": "BSIS dataset/report type reference.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/dataset_types",
+          "last_updated": "2026-10-08 06:22:32",
+          "row_count": 12,
+          "columns": [
+            {
+              "name": "dataset_type_id",
+              "type": "string"
+            },
+            {
+              "name": "dataset_type_name",
+              "type": "string"
+            },
+            {
+              "name": "dataset_type_code",
+              "type": "string"
+            },
+            {
+              "name": "return_type",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "camels_rating_criteria",
+          "description": "CAMELS rating scale/criteria reference.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/camels_rating_criteria",
+          "last_updated": "2026-10-08 06:22:35",
+          "row_count": 16,
+          "columns": [
+            {
+              "name": "criterion_id",
+              "type": "string"
+            },
+            {
+              "name": "component",
+              "type": "string"
+            },
+            {
+              "name": "component_name",
+              "type": "string"
+            },
+            {
+              "name": "metric_label",
+              "type": "string"
+            },
+            {
+              "name": "metric_field",
+              "type": "string"
+            },
+            {
+              "name": "weight",
+              "type": "double"
+            },
+            {
+              "name": "higher_is_better",
+              "type": "boolean"
+            },
+            {
+              "name": "r1_label",
+              "type": "string"
+            },
+            {
+              "name": "r2_label",
+              "type": "string"
+            },
+            {
+              "name": "r3_label",
+              "type": "string"
+            },
+            {
+              "name": "r4_label",
+              "type": "string"
+            },
+            {
+              "name": "r5_label",
+              "type": "string"
+            },
+            {
+              "name": "r12_boundary",
+              "type": "int"
+            },
+            {
+              "name": "r23_boundary",
+              "type": "int"
+            },
+            {
+              "name": "r34_boundary",
+              "type": "int"
+            },
+            {
+              "name": "r45_boundary",
+              "type": "int"
+            },
+            {
+              "name": "unit",
+              "type": "string"
+            },
+            {
+              "name": "notes",
+              "type": "string"
+            },
+            {
+              "name": "effective_from",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        },
+        {
+          "name": "holidays",
+          "description": "Bank holiday calendar -- relevant for daily-report date logic.",
+          "suggested_analysis": null,
+          "cadence": "reference (overwritten each run)",
+          "format": "delta",
+          "path": "s3a://lakehouse/silver/master/holidays",
+          "last_updated": "2026-10-08 06:22:36",
+          "row_count": 11,
+          "columns": [
+            {
+              "name": "holiday_id",
+              "type": "string"
+            },
+            {
+              "name": "holiday_name",
+              "type": "string"
+            },
+            {
+              "name": "holiday_type",
+              "type": "string"
+            },
+            {
+              "name": "month",
+              "type": "int"
+            },
+            {
+              "name": "day_of_month",
+              "type": "int"
+            },
+            {
+              "name": "holiday_date",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "source_system",
+              "type": "string"
+            },
+            {
+              "name": "source_dataset",
+              "type": "string"
+            },
+            {
+              "name": "reporting_date",
+              "type": "date"
+            },
+            {
+              "name": "extraction_ts",
+              "type": "timestamp"
+            },
+            {
+              "name": "ingestion_batch_id",
+              "type": "string"
+            }
+          ],
+          "date_range": null,
+          "institution_count": null
+        }
+      ]
+    },
+    "gold": {
+      "bsis": [
+        {
+          "name": "institution_risk_trends",
+          "description": "Institution x month view of LCR, NSFR, and capital-adequacy ratios side by side.",
+          "suggested_analysis": "Power BI trend dashboards: one ratio's trend per institution, or compare institutions.",
+          "cadence": null,
+          "format": "delta",
+          "path": "s3a://lakehouse/gold/bsis/institution_risk_trends",
+          "last_updated": "2026-10-20 13:10:50",
+          "row_count": 173,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "lcr_ratio",
+              "type": "double"
+            },
+            {
+              "name": "liquidity_rating",
+              "type": "double"
+            },
+            {
+              "name": "nsfr_ratio",
+              "type": "double"
+            },
+            {
+              "name": "tier1_capital_ratio",
+              "type": "double"
+            },
+            {
+              "name": "total_capital_ratio",
+              "type": "double"
+            },
+            {
+              "name": "leverage_ratio",
+              "type": "double"
+            },
+            {
+              "name": "capital_adequacy_rating",
+              "type": "double"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        },
+        {
+          "name": "sector_exposure",
+          "description": "Institution x sector x month credit exposure, with total_exposure and npl_ratio derived.",
+          "suggested_analysis": "Sector concentration risk, NPL-by-sector; edge-shaped for a future Neo4j institution-sector graph.",
+          "cadence": null,
+          "format": "delta",
+          "path": "s3a://lakehouse/gold/bsis/sector_exposure",
+          "last_updated": "2026-10-20 13:10:52",
+          "row_count": 3979,
+          "columns": [
+            {
+              "name": "institution_code",
+              "type": "string"
+            },
+            {
+              "name": "institutionname",
+              "type": "string"
+            },
+            {
+              "name": "report_date",
+              "type": "timestamp"
+            },
+            {
+              "name": "category_id",
+              "type": "string"
+            },
+            {
+              "name": "type_id",
+              "type": "string"
+            },
+            {
+              "name": "institution_is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "sector_code",
+              "type": "string"
+            },
+            {
+              "name": "sector_name",
+              "type": "string"
+            },
+            {
+              "name": "outstanding_local",
+              "type": "double"
+            },
+            {
+              "name": "outstanding_foreign",
+              "type": "double"
+            },
+            {
+              "name": "current_local",
+              "type": "double"
+            },
+            {
+              "name": "current_foreign",
+              "type": "double"
+            },
+            {
+              "name": "substandard_local",
+              "type": "double"
+            },
+            {
+              "name": "substandard_foreign",
+              "type": "double"
+            },
+            {
+              "name": "doubtful_local",
+              "type": "double"
+            },
+            {
+              "name": "doubtful_foreign",
+              "type": "double"
+            },
+            {
+              "name": "loss_local",
+              "type": "double"
+            },
+            {
+              "name": "loss_foreign",
+              "type": "double"
+            },
+            {
+              "name": "total_exposure",
+              "type": "double"
+            },
+            {
+              "name": "non_performing_exposure",
+              "type": "double"
+            },
+            {
+              "name": "npl_ratio",
+              "type": "double"
+            }
+          ],
+          "date_range": {
+            "min": "2026-06-30 00:00:00",
+            "max": "2026-09-30 00:00:00"
+          },
+          "institution_count": 44
+        }
+      ]
+    }
+  }
+}

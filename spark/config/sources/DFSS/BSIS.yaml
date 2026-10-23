@@ -1,0 +1,208 @@
+# DFSS (Directorate of Financial Sector Supervision) / BSIS source system.
+#
+# extractor_module must be importable on the Spark image and expose
+# get_extractor(dataset) / get_registry_info() -- see spark/jobs/bronze_ingestion.py.
+#
+# Every dataset below is pipeline_type structured_tabular: normalize_columns
+# -> rename -> extra_steps (dataset-specific, most datasets have none) ->
+# join_dimensions -> business_key -> dedupe_keep_latest -> merge_delta. See
+# spark/jobs/silver_transform.py for the skeleton this config plugs into, and
+# spark/jobs/pipeline_steps/structured.py for what each step name does.
+directorate: DFSS
+source_system: BSIS
+extractor_module: bsis_extractor
+
+datasets:
+  # ---- 9 "wide" datasets: already one row per institution+date as BSIS
+  # returns them, no reshaping needed -- just rename, join institutions,
+  # build a business key, dedupe, merge. ----
+
+  - dataset: smr_daily_compliance
+    domain: liquidity_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: SMR
+      # A single calendar report_date can appear in more than one
+      # maintenance window at the boundary -- these extra fields disambiguate.
+      key_fields: [institution_code, report_date, start_date, end_date, day_sequence]
+
+  - dataset: liquidity_compliance
+    domain: liquidity_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: LIQREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: net_open_position
+    domain: market_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: NOPREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: lcr
+    domain: liquidity_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: LCRREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: nsfr
+    domain: liquidity_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: NSFRREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: capital_adequacy
+    domain: capital_adequacy
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: CAPREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: sensitivity_market_risk
+    domain: market_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: SMREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: asset_quality
+    domain: credit_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: AQREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: earnings
+    domain: financial_statements
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: EARNREP
+      key_fields: [institution_code, report_date]
+
+  # ---- 3 datasets needing an extra_steps entry before the common tail. ----
+
+  - dataset: credit_exposure
+    domain: credit_risk
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    extra_steps:
+      # PARTICULARS alternates between the (pre-aggregated) sector name and
+      # Public/Private breakdown/summary rows -- an inner join on the
+      # normalized sector name both resolves sector_id/sector_code AND drops
+      # everything that isn't a real sector, in one step.
+      - step: resolve_dimension
+        source_col: particulars
+        aliases: {electicity: electricity}  # typo in BSIS's own data
+        lookup: master/sectors
+        lookup_key: sector_name
+        bring_cols: [sector_id, sector_code, sector_name]
+        join_type: inner
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: CREDEXP
+      key_fields: [institution_code, report_date, sector_code]
+
+  - dataset: balance_sheet
+    domain: financial_statements
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    extra_steps:
+      # Genuine one-row-per-line-item report, pivoted to one row per
+      # institution+date, one column per line item.
+      - step: pivot_long_to_wide
+        key_cols: [institution_code, institutionname, report_date, source_system, source_dataset,
+                   extraction_ts, ingestion_batch_id, reporting_date]
+        line_no_col: bsh_descriptionno
+        line_desc_col: bsh_particulars
+        value_cols: {bsh_shillingaccounts: value}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: BSREP
+      key_fields: [institution_code, report_date]
+
+  - dataset: income_statement
+    domain: financial_statements
+    pipeline_type: structured_tabular
+    rename: {institutioncode: institution_code, dateval: report_date}
+    extra_steps:
+      # Same shape as balance_sheet, but two value columns (monthly + YTD)
+      # per line item -- each line item produces two output columns.
+      - step: pivot_long_to_wide
+        key_cols: [institution_code, institutionname, report_date, source_system, source_dataset,
+                   extraction_ts, ingestion_batch_id, reporting_date]
+        line_no_col: sie_descriptionno
+        line_desc_col: sie_accountdescription
+        value_cols: {sie_monthlyamount: monthly, sie_yeartodateamount: ytd}
+    join_dimensions:
+      - lookup: master/institutions
+        join_key: institution_code
+        bring_cols: [category_id, type_id, is_active]
+        rename: {is_active: institution_is_active}
+    business_key:
+      id_prefix: ISREP
+      key_fields: [institution_code, report_date]

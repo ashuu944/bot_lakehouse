@@ -1,0 +1,643 @@
+[2026-10-23T05:54:39.099+0000] {processor.py:186} INFO - Started process (PID=6998) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:54:39.103+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:54:39.110+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:54:39.110+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:54:43.602+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:54:43.701+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:54:43.700+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:54:43.909+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 4.828 seconds
+[2026-10-23T05:55:15.973+0000] {processor.py:186} INFO - Started process (PID=7031) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:55:15.978+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:55:15.982+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:15.981+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:55:19.117+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:55:19.215+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:19.215+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:55:19.306+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 3.372 seconds
+[2026-10-23T05:55:49.926+0000] {processor.py:186} INFO - Started process (PID=7062) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:55:49.929+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:55:49.934+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:49.933+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:55:50.814+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:55:50.871+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:50.870+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:55:50.969+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 1.054 seconds
+[2026-10-23T05:56:21.442+0000] {processor.py:186} INFO - Started process (PID=7087) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:56:21.505+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:56:21.544+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:21.543+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:56:21.863+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:56:21.901+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:21.901+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:56:21.963+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.528 seconds
+[2026-10-23T05:56:52.370+0000] {processor.py:186} INFO - Started process (PID=7112) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:56:52.372+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:56:52.375+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:52.375+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:56:52.649+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:56:52.687+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:52.687+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:56:52.715+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:52.715+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:56:52.740+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.378 seconds
+[2026-10-23T05:57:23.158+0000] {processor.py:186} INFO - Started process (PID=7137) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:57:23.256+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:57:23.278+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:23.278+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:57:23.756+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:57:23.902+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:23.901+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:57:23.927+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:23.926+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:57:23.952+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.800 seconds
+[2026-10-23T05:57:54.036+0000] {processor.py:186} INFO - Started process (PID=7162) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:57:54.037+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:57:54.040+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:54.039+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:57:54.180+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:57:54.206+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:54.206+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:57:54.228+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:54.228+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:57:54.248+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.218 seconds
+[2026-10-23T05:58:24.775+0000] {processor.py:186} INFO - Started process (PID=7187) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:58:24.777+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:58:24.781+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:24.781+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:58:25.061+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:58:25.093+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:25.093+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:58:25.116+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:25.116+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:58:25.158+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.390 seconds
+[2026-10-23T05:58:55.411+0000] {processor.py:186} INFO - Started process (PID=7212) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:58:55.413+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:58:55.415+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:55.415+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:58:55.550+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:58:55.577+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:55.576+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:58:55.602+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:55.601+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:58:55.626+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.221 seconds
+[2026-10-23T05:59:26.043+0000] {processor.py:186} INFO - Started process (PID=7237) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:59:26.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:59:26.048+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:26.047+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:59:26.511+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:59:26.543+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:26.543+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:59:26.564+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:26.564+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:59:26.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.586 seconds
+[2026-10-23T05:59:56.817+0000] {processor.py:186} INFO - Started process (PID=7262) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:59:56.822+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T05:59:56.828+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:56.828+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:59:57.178+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T05:59:57.238+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:57.238+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:59:57.279+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:57.279+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T05:59:57.310+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.500 seconds
+[2026-10-23T06:00:27.436+0000] {processor.py:186} INFO - Started process (PID=7287) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:00:27.517+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:00:27.534+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:27.533+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:00:27.845+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:00:27.877+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:27.877+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:00:27.908+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:27.907+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:00:27.978+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.548 seconds
+[2026-10-23T06:00:58.406+0000] {processor.py:186} INFO - Started process (PID=7313) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:00:58.411+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:00:58.419+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:58.419+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:00:58.902+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:00:58.935+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:58.934+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:00:58.968+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:58.968+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:00:59.030+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.633 seconds
+[2026-10-23T06:01:29.226+0000] {processor.py:186} INFO - Started process (PID=7338) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:01:29.228+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:01:29.245+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:29.244+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:01:29.484+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:01:29.517+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:29.517+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:01:29.562+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:29.562+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:01:29.588+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.371 seconds
+[2026-10-23T06:02:00.328+0000] {processor.py:186} INFO - Started process (PID=7363) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:02:00.329+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:02:00.331+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:00.331+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:02:00.467+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:02:00.501+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:00.501+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:02:00.526+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:00.526+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:02:00.558+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.236 seconds
+[2026-10-23T06:02:30.881+0000] {processor.py:186} INFO - Started process (PID=7388) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:02:30.882+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:02:30.884+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:30.883+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:02:31.113+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:02:31.153+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:31.152+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:02:31.177+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:31.177+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:02:31.245+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.368 seconds
+[2026-10-23T06:03:01.809+0000] {processor.py:186} INFO - Started process (PID=7413) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:03:01.811+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:03:01.814+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:01.814+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:03:02.068+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:03:02.103+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:02.103+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:03:02.132+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:02.132+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:03:02.186+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.383 seconds
+[2026-10-23T06:03:32.833+0000] {processor.py:186} INFO - Started process (PID=7438) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:03:32.834+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:03:32.837+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:32.837+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:03:32.967+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:03:32.997+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:32.996+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:03:33.022+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:33.021+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:03:33.041+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.214 seconds
+[2026-10-23T06:04:03.796+0000] {processor.py:186} INFO - Started process (PID=7463) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:04:03.797+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:04:03.799+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:03.799+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:04:03.946+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:04:03.974+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:03.974+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:04:04.001+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:04.001+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:04:04.020+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.229 seconds
+[2026-10-23T06:04:34.348+0000] {processor.py:186} INFO - Started process (PID=7488) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:04:34.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:04:34.352+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:34.352+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:04:34.616+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:04:34.648+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:34.647+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:04:34.676+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:34.676+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:04:34.703+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.362 seconds
+[2026-10-23T06:05:04.908+0000] {processor.py:186} INFO - Started process (PID=7513) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:05:04.909+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:05:04.912+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:04.912+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:05:05.082+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:05:05.128+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:05.127+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:05:05.167+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:05.167+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:05:05.200+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.298 seconds
+[2026-10-23T06:05:36.123+0000] {processor.py:186} INFO - Started process (PID=7538) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:05:36.124+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:05:36.127+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:36.127+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:05:36.291+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:05:36.326+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:36.326+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:05:36.356+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:36.356+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:05:36.379+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.262 seconds
+[2026-10-23T06:06:07.223+0000] {processor.py:186} INFO - Started process (PID=7566) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:06:07.225+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:06:07.228+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:07.227+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:06:07.390+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:06:07.431+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:07.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:06:07.458+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:07.458+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:06:07.485+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.268 seconds
+[2026-10-23T06:06:37.580+0000] {processor.py:186} INFO - Started process (PID=7588) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:06:37.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:06:37.585+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:37.583+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:06:37.705+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:06:37.726+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:37.726+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:06:37.744+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:37.744+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:06:37.763+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.189 seconds
+[2026-10-23T06:07:08.105+0000] {processor.py:186} INFO - Started process (PID=7616) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:07:08.106+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:07:08.109+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:08.108+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:07:08.404+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:07:08.437+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:08.436+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:07:08.463+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:08.463+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:07:08.502+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.404 seconds
+[2026-10-23T06:07:38.768+0000] {processor.py:186} INFO - Started process (PID=7641) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:07:38.770+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:07:38.772+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:38.772+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:07:38.926+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:07:38.955+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:38.955+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:07:38.986+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:38.986+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:07:39.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.244 seconds
+[2026-10-23T06:08:09.405+0000] {processor.py:186} INFO - Started process (PID=7668) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:08:09.406+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:08:09.410+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:09.409+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:08:09.654+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:08:09.750+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:09.749+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:08:09.777+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:09.777+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:08:09.804+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.405 seconds
+[2026-10-23T06:08:40.431+0000] {processor.py:186} INFO - Started process (PID=7691) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:08:40.434+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:08:40.438+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:40.437+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:08:40.872+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:08:40.942+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:40.942+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:08:40.975+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:40.975+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:08:41.042+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.616 seconds
+[2026-10-23T06:09:11.599+0000] {processor.py:186} INFO - Started process (PID=7716) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:09:11.600+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:09:11.603+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:11.602+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:09:11.898+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:09:11.929+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:11.929+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:09:11.947+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:11.947+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:09:11.961+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.369 seconds
+[2026-10-23T06:09:42.152+0000] {processor.py:186} INFO - Started process (PID=7741) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:09:42.153+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:09:42.156+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:42.155+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:09:42.281+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:09:42.309+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:42.309+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:09:42.338+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:42.337+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:09:42.362+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.216 seconds
+[2026-10-23T06:10:12.799+0000] {processor.py:186} INFO - Started process (PID=7766) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:10:12.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:10:12.804+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:12.803+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:10:12.967+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:10:12.996+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:12.996+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:10:13.021+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:13.020+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:10:13.040+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.247 seconds
+[2026-10-23T06:10:43.716+0000] {processor.py:186} INFO - Started process (PID=7791) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:10:43.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:10:43.721+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:43.721+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:10:43.878+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:10:43.924+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:43.924+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:10:43.963+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:43.962+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:10:43.983+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.272 seconds
+[2026-10-23T06:11:14.597+0000] {processor.py:186} INFO - Started process (PID=7816) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:11:14.598+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:11:14.601+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:14.600+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:11:14.747+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:11:14.776+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:14.776+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:11:14.801+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:14.801+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:11:14.820+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.229 seconds
+[2026-10-23T06:11:45.537+0000] {processor.py:186} INFO - Started process (PID=7841) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:11:45.539+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:11:45.541+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:45.541+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:11:45.676+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:11:45.704+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:45.704+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:11:45.727+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:45.727+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:11:45.750+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.218 seconds
+[2026-10-23T06:12:16.443+0000] {processor.py:186} INFO - Started process (PID=7866) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:12:16.444+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:12:16.446+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:16.446+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:12:16.582+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:12:16.610+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:16.610+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:12:16.635+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:16.635+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:12:16.654+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.217 seconds
+[2026-10-23T06:12:46.806+0000] {processor.py:186} INFO - Started process (PID=7891) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:12:46.808+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:12:46.810+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:46.810+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:12:46.950+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:12:46.982+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:46.981+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:12:47.005+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:47.005+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:12:47.026+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.225 seconds
+[2026-10-23T06:13:17.826+0000] {processor.py:186} INFO - Started process (PID=7916) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:13:17.827+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:13:17.829+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:17.829+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:13:17.963+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:13:17.990+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:17.990+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:13:18.014+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:18.014+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:13:18.034+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.215 seconds
+[2026-10-23T06:13:48.746+0000] {processor.py:186} INFO - Started process (PID=7941) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:13:48.747+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:13:48.750+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:48.750+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:13:48.896+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:13:48.924+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:48.923+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:13:48.947+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:48.947+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:13:48.969+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.231 seconds
+[2026-10-23T06:14:20.215+0000] {processor.py:186} INFO - Started process (PID=7966) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:14:20.217+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:14:20.222+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:20.221+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:14:21.252+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:14:21.283+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:21.283+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:14:21.308+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:21.308+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:14:21.327+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 1.118 seconds
+[2026-10-23T06:14:51.616+0000] {processor.py:186} INFO - Started process (PID=7991) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:14:51.617+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:14:51.619+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:51.619+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:14:51.749+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:14:51.776+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:51.775+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:14:51.800+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:51.799+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:14:51.817+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.207 seconds
+[2026-10-23T06:15:22.219+0000] {processor.py:186} INFO - Started process (PID=8016) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:15:22.221+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:15:22.225+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:22.224+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:15:22.367+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:15:22.397+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:22.397+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:15:22.419+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:22.419+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:15:22.439+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.227 seconds
+[2026-10-23T06:15:52.979+0000] {processor.py:186} INFO - Started process (PID=8041) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:15:52.981+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:15:52.983+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:52.983+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:15:53.115+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:15:53.145+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:53.145+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:15:53.171+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:53.171+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:15:53.191+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.217 seconds
+[2026-10-23T06:16:23.872+0000] {processor.py:186} INFO - Started process (PID=8066) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:16:23.873+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:16:23.875+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:23.875+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:16:24.022+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:16:24.049+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:24.049+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:16:24.071+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:24.071+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:16:24.089+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.223 seconds
+[2026-10-23T06:16:54.795+0000] {processor.py:186} INFO - Started process (PID=8091) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:16:54.796+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:16:54.799+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:54.799+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:16:54.934+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:16:54.963+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:54.963+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:16:54.987+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:54.987+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:16:55.009+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.219 seconds
+[2026-10-23T06:17:25.576+0000] {processor.py:186} INFO - Started process (PID=8116) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:17:25.577+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:17:25.580+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:25.579+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:17:25.730+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:17:25.760+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:25.760+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:17:25.785+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:25.785+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:17:25.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.236 seconds
+[2026-10-23T06:17:56.537+0000] {processor.py:186} INFO - Started process (PID=8141) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:17:56.539+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:17:56.542+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:56.541+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:17:56.694+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:17:56.722+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:56.721+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:17:56.745+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:56.745+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:17:56.771+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.241 seconds
+[2026-10-23T06:18:27.319+0000] {processor.py:186} INFO - Started process (PID=8166) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:18:27.320+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:18:27.322+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:27.322+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:18:27.494+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:18:27.524+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:27.523+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:18:27.547+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:27.547+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:18:27.566+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.253 seconds
+[2026-10-23T06:18:58.196+0000] {processor.py:186} INFO - Started process (PID=8191) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:18:58.197+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:18:58.199+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:58.199+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:18:58.332+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:18:58.361+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:58.360+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:18:58.384+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:58.384+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:18:58.402+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.212 seconds
+[2026-10-23T06:19:28.518+0000] {processor.py:186} INFO - Started process (PID=8216) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:19:28.520+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:19:28.522+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:19:28.521+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:23:53.283+0000] {processor.py:186} INFO - Started process (PID=8237) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:23:53.284+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:23:53.286+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:53.285+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:23:53.363+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:23:53.381+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:53.381+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:23:53.395+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:53.395+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:23:53.408+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.129 seconds
+[2026-10-23T06:24:24.414+0000] {processor.py:186} INFO - Started process (PID=8262) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:24:24.415+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:24:24.417+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:24.416+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:24:24.510+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:24:24.527+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:24.527+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:24:24.544+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:24.544+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:24:24.559+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.149 seconds
+[2026-10-23T06:24:55.238+0000] {processor.py:186} INFO - Started process (PID=8287) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:24:55.239+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:24:55.242+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:55.242+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:24:55.446+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:24:55.475+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:55.475+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:24:55.500+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:55.500+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:24:55.522+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.289 seconds
+[2026-10-23T06:25:26.325+0000] {processor.py:186} INFO - Started process (PID=8312) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:25:26.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:25:26.330+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:26.329+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:25:26.584+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:25:26.618+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:26.618+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:25:26.640+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:26.640+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:25:26.662+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.343 seconds
+[2026-10-23T06:25:57.338+0000] {processor.py:186} INFO - Started process (PID=8342) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:25:57.339+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:25:57.342+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:57.341+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:25:57.479+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:25:57.505+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:57.505+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:25:57.530+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:57.529+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:25:57.553+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.221 seconds
+[2026-10-23T06:26:27.889+0000] {processor.py:186} INFO - Started process (PID=8369) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:26:27.891+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:26:27.893+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:27.893+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:26:28.040+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:26:28.067+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:28.067+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:26:28.089+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:28.089+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:26:28.108+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.225 seconds
+[2026-10-23T06:26:58.168+0000] {processor.py:186} INFO - Started process (PID=8394) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:26:58.170+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:26:58.172+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:58.172+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:26:58.300+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:26:58.326+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:58.326+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:26:58.348+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:58.348+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:26:58.365+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.203 seconds
+[2026-10-23T06:27:29.021+0000] {processor.py:186} INFO - Started process (PID=8417) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:27:29.022+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:27:29.024+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:29.024+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:27:29.163+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:27:29.198+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:29.198+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:27:29.221+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:29.221+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:27:29.245+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.230 seconds
+[2026-10-23T06:28:00.132+0000] {processor.py:186} INFO - Started process (PID=8442) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:28:00.133+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:28:00.136+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:00.136+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:28:00.400+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:28:00.432+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:00.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:28:00.584+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:00.584+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:28:00.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.498 seconds
+[2026-10-23T06:28:31.539+0000] {processor.py:186} INFO - Started process (PID=8467) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:28:31.540+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:28:31.543+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:31.543+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:28:32.485+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:28:32.599+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:32.599+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:28:32.636+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:32.635+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:28:32.658+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 1.125 seconds
+[2026-10-23T06:29:03.126+0000] {processor.py:186} INFO - Started process (PID=8492) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:29:03.143+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:29:03.152+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:03.151+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:29:03.484+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:29:03.519+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:03.519+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:29:03.544+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:03.543+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:29:03.599+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.479 seconds
+[2026-10-23T06:29:34.662+0000] {processor.py:186} INFO - Started process (PID=8517) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:29:34.668+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:29:34.673+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:34.673+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:29:35.295+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:29:35.336+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:35.336+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:29:35.364+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:35.364+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:29:35.397+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.740 seconds
+[2026-10-23T06:30:05.660+0000] {processor.py:186} INFO - Started process (PID=8544) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:30:05.662+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:30:05.664+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:05.664+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:30:05.803+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:30:05.830+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:05.830+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:30:05.852+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:05.852+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:30:05.871+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.217 seconds
+[2026-10-23T06:30:36.011+0000] {processor.py:186} INFO - Started process (PID=8567) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:30:36.013+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:30:36.015+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:36.015+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:30:36.274+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:30:36.303+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:36.303+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:30:36.328+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:36.328+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:30:36.376+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.370 seconds
+[2026-10-23T06:31:06.469+0000] {processor.py:186} INFO - Started process (PID=8592) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:31:06.470+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:31:06.473+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:06.472+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:31:06.717+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:31:06.746+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:06.746+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:31:06.772+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:06.772+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:31:06.795+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.333 seconds
+[2026-10-23T06:31:37.720+0000] {processor.py:186} INFO - Started process (PID=8617) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:31:37.721+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:31:37.723+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:37.723+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:31:37.960+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:31:37.991+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:37.991+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:31:38.016+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:38.016+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:31:38.137+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.423 seconds
+[2026-10-23T06:32:09.227+0000] {processor.py:186} INFO - Started process (PID=8649) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:32:09.228+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:32:09.231+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:09.231+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:32:09.374+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:32:09.420+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:09.420+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:32:09.452+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:09.452+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:32:09.480+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.258 seconds
+[2026-10-23T06:32:39.819+0000] {processor.py:186} INFO - Started process (PID=8672) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:32:39.821+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:32:39.824+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:39.824+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:32:40.034+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:32:40.058+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:40.058+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:32:40.079+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:40.079+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:32:40.098+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.284 seconds
+[2026-10-23T06:33:11.313+0000] {processor.py:186} INFO - Started process (PID=8704) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:33:11.314+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:33:11.317+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:11.316+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:33:11.462+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:33:11.488+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:11.488+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:33:11.511+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:11.511+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:33:11.531+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.225 seconds
+[2026-10-23T06:33:42.402+0000] {processor.py:186} INFO - Started process (PID=8729) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:33:42.404+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:33:42.408+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:42.408+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:33:42.679+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:33:42.712+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:42.712+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:33:42.741+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:42.740+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:33:42.763+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.370 seconds
+[2026-10-23T06:34:12.962+0000] {processor.py:186} INFO - Started process (PID=8754) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:34:12.963+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:34:12.965+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:12.965+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:34:13.094+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:34:13.121+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:13.121+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:34:13.143+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:13.143+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:34:13.161+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.206 seconds
+[2026-10-23T06:34:44.093+0000] {processor.py:186} INFO - Started process (PID=8779) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:34:44.094+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:34:44.098+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:44.097+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:34:44.257+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:34:44.282+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:44.282+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:34:44.307+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:44.306+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:34:44.325+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.239 seconds
+[2026-10-23T06:35:15.026+0000] {processor.py:186} INFO - Started process (PID=8804) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:35:15.028+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:35:15.030+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:15.030+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:35:15.159+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:35:15.184+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:15.184+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:35:15.207+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:15.207+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:35:15.226+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.206 seconds
+[2026-10-23T06:35:45.408+0000] {processor.py:186} INFO - Started process (PID=8829) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:35:45.409+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:35:45.413+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:45.412+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:35:45.595+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:35:45.625+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:45.625+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:35:45.648+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:45.647+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:35:45.667+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.264 seconds
+[2026-10-23T06:36:16.165+0000] {processor.py:186} INFO - Started process (PID=8854) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:36:16.167+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:36:16.169+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:16.169+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:36:16.319+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:36:16.350+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:16.350+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:36:16.376+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:16.376+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:36:16.396+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.238 seconds
+[2026-10-23T06:36:46.517+0000] {processor.py:186} INFO - Started process (PID=8879) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:36:46.519+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:36:46.521+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:46.521+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:36:46.650+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:36:46.677+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:46.677+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:36:46.699+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:46.699+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:36:46.718+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.206 seconds
+[2026-10-23T06:37:16.801+0000] {processor.py:186} INFO - Started process (PID=8904) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:37:16.802+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:37:16.805+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:16.804+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:37:16.935+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:37:16.961+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:16.961+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:37:16.982+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:16.982+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:37:17.000+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.206 seconds
+[2026-10-23T06:37:47.222+0000] {processor.py:186} INFO - Started process (PID=8929) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:37:47.223+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:37:47.225+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:47.225+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:37:47.361+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:37:47.391+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:47.390+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:37:47.414+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:47.414+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:37:47.435+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.220 seconds
+[2026-10-23T06:38:17.997+0000] {processor.py:186} INFO - Started process (PID=8952) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:38:17.998+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:38:18.001+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:18.000+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:38:18.125+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:38:18.150+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:18.150+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:38:18.171+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:18.170+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:38:18.189+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.198 seconds
+[2026-10-23T06:38:49.330+0000] {processor.py:186} INFO - Started process (PID=8979) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:38:49.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:38:49.333+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:49.333+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:38:49.470+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:38:49.498+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:49.498+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:38:49.522+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:49.522+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:38:49.541+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.217 seconds
+[2026-10-23T06:39:19.786+0000] {processor.py:186} INFO - Started process (PID=9004) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:39:19.787+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:39:19.789+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:19.789+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:39:19.941+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:39:19.968+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:19.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:39:19.990+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:19.990+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:39:20.009+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.230 seconds
+[2026-10-23T06:39:50.768+0000] {processor.py:186} INFO - Started process (PID=9027) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:39:50.769+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:39:50.772+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:50.772+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:39:50.919+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:39:50.951+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:50.951+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:39:50.978+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:50.978+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:39:50.999+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.238 seconds
+[2026-10-23T06:40:21.808+0000] {processor.py:186} INFO - Started process (PID=9052) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:40:21.810+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:40:21.812+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:21.811+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:40:21.932+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:40:21.959+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:21.959+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:40:21.983+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:21.983+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:40:22.003+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.200 seconds
+[2026-10-23T06:40:53.151+0000] {processor.py:186} INFO - Started process (PID=9079) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:40:53.152+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:40:53.155+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:53.154+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:40:53.274+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:40:53.302+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:53.302+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:40:53.324+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:53.324+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:40:53.342+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.197 seconds
+[2026-10-23T06:41:23.599+0000] {processor.py:186} INFO - Started process (PID=9104) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:41:23.600+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:41:23.603+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:23.602+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:41:23.721+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:41:23.746+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:23.745+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:41:23.769+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:23.769+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:41:23.799+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.206 seconds
+[2026-10-23T06:41:53.929+0000] {processor.py:186} INFO - Started process (PID=9129) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:41:53.930+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:41:53.932+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:53.932+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:41:54.046+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:41:54.076+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:54.075+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:41:54.098+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:54.098+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:41:54.136+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.213 seconds
+[2026-10-23T06:42:24.312+0000] {processor.py:186} INFO - Started process (PID=9154) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:42:24.313+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:42:24.316+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:24.316+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:42:24.451+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:42:24.478+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:24.478+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:42:24.500+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:24.499+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:42:24.518+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.213 seconds
+[2026-10-23T06:42:54.652+0000] {processor.py:186} INFO - Started process (PID=9179) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:42:54.654+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:42:54.656+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:54.656+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:42:54.779+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:42:54.811+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:54.811+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:42:54.833+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:54.833+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:42:54.850+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.204 seconds
+[2026-10-23T06:43:25.086+0000] {processor.py:186} INFO - Started process (PID=9204) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:43:25.087+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:43:25.090+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:25.090+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:43:25.228+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:43:25.256+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:25.256+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:43:25.281+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:25.281+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:43:25.302+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.222 seconds
+[2026-10-23T06:43:55.401+0000] {processor.py:186} INFO - Started process (PID=9229) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:43:55.403+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:43:55.405+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:55.405+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:43:55.539+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:43:55.566+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:55.565+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:43:55.586+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:55.586+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:43:55.605+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.209 seconds
+[2026-10-23T06:44:25.702+0000] {processor.py:186} INFO - Started process (PID=9252) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:44:25.703+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:44:25.705+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:25.705+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:44:25.845+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:44:25.873+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:25.873+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:44:25.897+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:25.897+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:44:25.916+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.219 seconds
+[2026-10-23T06:44:56.816+0000] {processor.py:186} INFO - Started process (PID=9279) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:44:56.819+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:44:56.821+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:56.821+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:44:56.980+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:44:57.005+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:57.005+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:44:57.028+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:57.027+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:44:57.059+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.249 seconds
+[2026-10-23T06:45:27.878+0000] {processor.py:186} INFO - Started process (PID=9304) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:45:27.879+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:45:27.882+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:27.881+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:45:28.011+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:45:28.036+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:28.035+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:45:28.056+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:28.056+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:45:28.075+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.203 seconds
+[2026-10-23T06:45:58.260+0000] {processor.py:186} INFO - Started process (PID=9329) to work on /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:45:58.262+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/daily_bsis_pipeline_dag.py for tasks to queue
+[2026-10-23T06:45:58.264+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:58.264+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:45:58.400+0000] {processor.py:925} INFO - DAG(s) 'dfss_bsis_daily_pipeline' retrieved from /opt/airflow/dags/daily_bsis_pipeline_dag.py
+[2026-10-23T06:45:58.425+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:58.425+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:45:58.446+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:58.445+0000] {dag.py:4180} INFO - Setting next_dagrun for dfss_bsis_daily_pipeline to 2026-10-23 03:00:00+00:00, run_after=2026-10-24 03:00:00+00:00
+[2026-10-23T06:45:58.463+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/daily_bsis_pipeline_dag.py took 0.208 seconds

@@ -1,0 +1,399 @@
+# Shared by every airflow-* service below (postgres excluded -- it isn't an
+# Airflow process) so the metastore connection string, admin credentials, and
+# the env/volumes DockerOperator needs are declared once, not duplicated
+# across airflow-init/webserver/scheduler. Same pattern
+# bank_profiling_risk_analysis's own docker-compose.yml uses.
+# Split from x-airflow-common below so airflow-init can merge this AND add
+# its own extra vars (AIRFLOW_ADMIN_USER/PASSWORD) -- a service that both
+# does `<<: *airflow-common` and redeclares `environment:` would otherwise
+# replace this whole map instead of extending it (YAML merge keys don't
+# deep-merge nested maps).
+x-airflow-env: &airflow-common-env
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
+  AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+  AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+  AIRFLOW__CORE__DEFAULT_TIMEZONE: Africa/Dar_es_Salaam
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${AIRFLOW_POSTGRES_USER}:${AIRFLOW_POSTGRES_PASSWORD}@airflow-postgres/${AIRFLOW_POSTGRES_DB}
+  AIRFLOW__WEBSERVER__DEFAULT_UI_TIMEZONE: Africa/Dar_es_Salaam
+  # Forwarded into the one-off Spark containers DockerOperator spawns
+  # (Docker-outside-of-Docker) -- those are independent containers, not the
+  # running `spark` service, so they don't inherit its env block and need
+  # these passed through explicitly.
+  MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+  MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+  MINIO_ENDPOINT: ${MINIO_ENDPOINT}
+  MINIO_BUCKET: ${MINIO_BUCKET}
+  DB_USER: ${DB_USER:-}
+  DB_PASSWORD: ${DB_PASSWORD:-}
+  DB_DSN: ${DB_DSN:-}
+  BSIS_ENV: ${BSIS_ENV:-dev}
+  # DockerOperator talks to the HOST's Docker daemon via the socket mounted
+  # below, so the volume mounts it creates must be HOST paths, not paths
+  # inside this container -- see airflow/dags/bsis_pipeline_helpers.py.
+  HOST_PROJECT_DIR: ${HOST_PROJECT_DIR}
+  # Forwarded into the one-off OpenMetadata ingestion containers DockerOperator
+  # spawns -- see airflow/dags/om_ingestion_helpers.py.
+  OM_INGESTION_BOT_TOKEN: ${OM_INGESTION_BOT_TOKEN:-}
+  OM_SERVER_HOST_PORT: ${OM_SERVER_HOST_PORT:-http://om-server:8585/api}
+  TRINO_USERNAME: ${TRINO_USERNAME:-lakehouse_ingestion}
+
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: airflow/Dockerfile
+  user: "${AIRFLOW_UID:-50000}:0"
+  environment:
+    <<: *airflow-common-env
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    # Read-only: DAGs import bsis_frequency.py for the daily/monthly dataset
+    # split instead of keeping a second, driftable copy of that list here.
+    - ./spark/jobs:/opt/spark-jobs:ro
+    # Docker-outside-of-Docker: lets DockerOperator launch one-off Spark
+    # containers on the host instead of needing its own Spark runtime.
+    - /var/run/docker.sock:/var/run/docker.sock
+  depends_on:
+    airflow-postgres:
+      condition: service_healthy
+
+services:
+
+  minio:
+    # MinIO AIStor -- the vendor's own licensed distribution (replaces the
+    # bitnami community image). Requires a license file; see
+    # minio/minio.license (gitignored, path from docs.min.io/aistor/installation/
+    # container/install/) and the MINIO_LICENSE comment in .env.example for
+    # where to get one. Root credentials still work the same way as community
+    # MinIO (MINIO_ROOT_USER/MINIO_ROOT_PASSWORD) -- AIStor is the same core
+    # server, the license only unlocks the extra enterprise features.
+    image: quay.io/minio/aistor/minio:latest
+    container_name: lakehouse-minio
+    ports:
+      - "9000:9000"   # S3 API
+      - "9001:9001"   # Web console
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio_data:/mnt/data
+      - ./minio/minio.license:/minio.license:ro
+    command: ["minio", "server", "--address", ":9000", "--console-address", ":9001", "/mnt/data", "--license", "/minio.license"]
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  minio-init:
+    image: bitnamilegacy/minio-client:latest
+    container_name: lakehouse-minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local http://minio:9000 $$MINIO_ROOT_USER $$MINIO_ROOT_PASSWORD &&
+      mc mb -p local/$$MINIO_BUCKET/bronze local/$$MINIO_BUCKET/silver local/$$MINIO_BUCKET/gold &&
+      mc ls local/$$MINIO_BUCKET
+      "
+    restart: "no"
+
+  spark:
+    build:
+      context: ./spark
+      secrets:
+        - github_token
+    container_name: lakehouse-spark
+    depends_on:
+      - minio
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      # bsis_extractor (pydantic-settings) reads these directly from the environment.
+      DB_USER: ${DB_USER:-}
+      DB_PASSWORD: ${DB_PASSWORD:-}
+      DB_DSN: ${DB_DSN:-}
+      BSIS_ENV: ${BSIS_ENV:-dev}
+    volumes:
+      - ./spark/jobs:/opt/spark-jobs
+      - ./spark/notebooks:/opt/spark-notebooks
+      - spark_ivy:/tmp/.ivy2
+      - ${MASTER_DATA_PATH}:/opt/master-data:ro
+      - ./catalog:/opt/catalog
+      # Per-directorate/source-system dataset configs (source_config.py) --
+      # what replaces hardcoded "DFSS"/"BSIS" literals in the Spark jobs.
+      - ./spark/config:/opt/spark-config:ro
+    tty: true
+    stdin_open: true
+
+  catalog-portal:
+    image: nginx:alpine
+    container_name: lakehouse-catalog-portal
+    ports:
+      - "8890:80"   # Data portal -- what's in bronze/silver/gold, for demos
+    volumes:
+      - ./catalog:/usr/share/nginx/html:ro
+
+  trino:
+    image: trinodb/trino:latest
+    container_name: lakehouse-trino
+    depends_on:
+      - minio
+    # Host port moved off the default 8080 -- the sibling bank_profiling_risk_analysis
+    # (airflow on 8081) and user_access_review (airflow on 8091) projects run
+    # alongside this one and both already claim ports in the 80xx range; 88xx
+    # is this project's own block (also used by catalog-portal on 8890) so
+    # nothing collides when all three stacks are up at once.
+    ports:
+      - "8880:8080"   # Trino UI + client (JDBC/ODBC for Power BI)
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - ./trino/catalog:/etc/trino/catalog
+
+  spark-thriftserver:
+    build:
+      context: ./spark
+      secrets:
+        - github_token
+    container_name: lakehouse-spark-thriftserver
+    depends_on:
+      - minio
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+    volumes:
+      - ./spark/jobs:/opt/spark-jobs
+      - spark_thrift_metastore:/opt/spark-thriftserver
+    working_dir: /opt/spark-thriftserver
+    ports:
+      - "8810:10000"   # HiveServer2 thrift JDBC/ODBC port (Power BI "Spark" connector)
+    # register_gold_tables.py runs once (idempotent CREATE TABLE IF NOT EXISTS)
+    # into the local Hive metastore before the server starts, so clients can
+    # query gold_sector_exposure by name instead of by S3 path. Needs `exec`
+    # so the JVM becomes PID 1 and receives docker's stop signal directly.
+    command:
+      - bash
+      - -c
+      - >
+        spark-submit /opt/spark-jobs/register_gold_tables.py &&
+        exec spark-submit
+        --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2
+        --name ThriftServer
+        --master local[*]
+        --conf spark.hadoop.fs.s3a.endpoint=$MINIO_ENDPOINT
+        --conf spark.hadoop.fs.s3a.access.key=$MINIO_ROOT_USER
+        --conf spark.hadoop.fs.s3a.secret.key=$MINIO_ROOT_PASSWORD
+        --conf spark.hadoop.fs.s3a.path.style.access=true
+        --conf spark.hadoop.fs.s3a.connection.ssl.enabled=false
+        --conf spark.sql.warehouse.dir=/opt/spark-thriftserver/spark-warehouse
+        --hiveconf hive.server2.thrift.port=10000
+        --hiveconf hive.server2.thrift.bind.host=0.0.0.0
+        spark-internal
+
+  airflow-postgres:
+    image: postgres:15.7
+    container_name: lakehouse-airflow-postgres
+    environment:
+      POSTGRES_USER: ${AIRFLOW_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${AIRFLOW_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${AIRFLOW_POSTGRES_DB}
+    volumes:
+      - airflow_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${AIRFLOW_POSTGRES_USER} -d ${AIRFLOW_POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # One-shot: migrates the metastore schema and creates/refreshes the admin
+  # user, then exits. webserver/scheduler wait for it to finish successfully
+  # rather than racing it (both would otherwise try to migrate the same
+  # Postgres schema concurrently on first start).
+  airflow-init:
+    <<: *airflow-common
+    container_name: lakehouse-airflow-init
+    restart: "no"
+    command:
+      - bash
+      - -c
+      - >
+        airflow db migrate &&
+        airflow users delete --username "$$AIRFLOW_ADMIN_USER" >/dev/null 2>&1;
+        airflow users create
+        --username "$$AIRFLOW_ADMIN_USER" --password "$$AIRFLOW_ADMIN_PASSWORD"
+        --firstname Lakehouse --lastname Admin --role Admin --email admin@lakehouse.local
+    environment:
+      <<: *airflow-common-env
+      AIRFLOW_ADMIN_USER: ${AIRFLOW_ADMIN_USER:-admin}
+      AIRFLOW_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD:-admin}
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: lakehouse-airflow-webserver
+    restart: unless-stopped
+    depends_on:
+      airflow-postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    command: webserver
+    ports:
+      - "8895:8080"   # Airflow webserver -- this project's 88xx port block
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: lakehouse-airflow-scheduler
+    restart: unless-stopped
+    depends_on:
+      airflow-postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    
+    command: scheduler
+
+  # Image only -- DockerOperator (airflow/dags/om_ingestion_helpers.py) spawns
+  # one-off containers from this image directly, same as `spark` for the
+  # Bronze/Silver jobs. No reason to keep a container running continuously,
+  # so this service is never included in `docker compose up` by name; it
+  # exists so `docker compose build openmetadata-ingestion` has something to build.
+  openmetadata-ingestion:
+    build:
+      context: .
+      dockerfile: openmetadata-ingestion/Dockerfile
+    image: bot_lakehouse-openmetadata-ingestion
+    profiles: ["build-only"]
+
+  # ============================================================
+  # OpenMetadata -- catalog, lineage, data quality, governance.
+  # Deliberately NOT using OpenMetadata's own bundled "ingestion" (Airflow)
+  # container from the official docker-compose -- we already run a real,
+  # Postgres-backed Airflow above, and ingestion is scheduled from there
+  # (airflow/dags/openmetadata_ingestion_dag.py), not from a second Airflow.
+  # Config below is trimmed from OpenMetadata's official 2.0.5
+  # docker-compose-postgres.yml to what this deployment actually uses --
+  # every key left out has a safe built-in default in the image (SAML/LDAP/
+  # OIDC/SMTP/AWS secrets-manager are all off by default), not a missing
+  # feature.
+  # ============================================================
+
+  om-postgres:
+    image: docker.getcollate.io/openmetadata/postgresql:2.0.5
+    container_name: lakehouse-om-postgres
+    restart: always
+    command: "--work_mem=10MB"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${OM_POSTGRES_SUPERUSER_PASSWORD}
+      DB_USER: ${OM_DB_USER}
+      DB_USER_PASSWORD: ${OM_DB_USER_PASSWORD}
+      OM_DATABASE: ${OM_DATABASE}
+    volumes:
+      - om_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "psql -U postgres -tAc 'select 1' -d ${OM_DATABASE}"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  om-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.3.0
+    container_name: lakehouse-om-elasticsearch
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xms1024m -Xmx1024m"
+      xpack.security.enabled: "false"
+    ports:
+      - "9200:9200"
+    healthcheck:
+      test: "curl -s http://localhost:9200/_cluster/health?pretty | grep status | grep -qE 'green|yellow' || exit 1"
+      interval: 15s
+      timeout: 10s
+      retries: 10
+    volumes:
+      - om_es_data:/usr/share/elasticsearch/data
+
+  # One-shot: runs DB migrations, then exits. om-server waits for it rather
+  # than racing it on first start.
+  om-migrate:
+    image: docker.getcollate.io/openmetadata/server:2.0.5
+    container_name: lakehouse-om-migrate
+    command: "./bootstrap/openmetadata-ops.sh migrate"
+    environment:
+      DB_DRIVER_CLASS: org.postgresql.Driver
+      DB_SCHEME: postgresql
+      DB_USER: ${OM_DB_USER}
+      DB_USER_PASSWORD: ${OM_DB_USER_PASSWORD}
+      DB_HOST: om-postgres
+      DB_PORT: 5432
+      OM_DATABASE: ${OM_DATABASE}
+      ELASTICSEARCH_HOST: om-elasticsearch
+      ELASTICSEARCH_PORT: 9200
+      SEARCH_TYPE: elasticsearch
+    depends_on:
+      om-elasticsearch:
+        condition: service_healthy
+      om-postgres:
+        condition: service_healthy
+
+  om-server:
+    image: docker.getcollate.io/openmetadata/server:2.0.5
+    container_name: lakehouse-om-server
+    restart: always
+    environment:
+      DB_DRIVER_CLASS: org.postgresql.Driver
+      DB_SCHEME: postgresql
+      DB_USER: ${OM_DB_USER}
+      DB_USER_PASSWORD: ${OM_DB_USER_PASSWORD}
+      DB_HOST: om-postgres
+      DB_PORT: 5432
+      OM_DATABASE: ${OM_DATABASE}
+      ELASTICSEARCH_HOST: om-elasticsearch
+      ELASTICSEARCH_PORT: 9200
+      SEARCH_TYPE: elasticsearch
+      # No bundled ingestion-Airflow to talk to -- our own Airflow pushes
+      # ingestion results to the REST API below directly instead of OM
+      # pulling pipeline status from an AirflowRESTClient.
+      PIPELINE_SERVICE_CLIENT_ENABLED: "false"
+      OPENMETADATA_HEAP_OPTS: "-Xmx1G -Xms1G"
+    ports:
+      - "8585:8585"   # UI + REST API
+      - "8586:8586"   # admin/health
+    depends_on:
+      om-elasticsearch:
+        condition: service_healthy
+      om-postgres:
+        condition: service_healthy
+      om-migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8586/healthcheck"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+volumes:
+  minio_data:
+  spark_ivy:
+  spark_thrift_metastore:
+  airflow_postgres_data:
+  om_postgres_data:
+  om_es_data:
+
+secrets:
+  github_token:
+    environment: GIT_HUB_TOKEN

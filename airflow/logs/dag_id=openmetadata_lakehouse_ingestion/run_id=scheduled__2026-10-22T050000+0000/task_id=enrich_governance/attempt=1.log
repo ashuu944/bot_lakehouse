@@ -1,0 +1,48 @@
+[2026-10-23T05:54:57.605+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-10-23T05:54:57.687+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openmetadata_lakehouse_ingestion.enrich_governance scheduled__2026-10-22T05:00:00+00:00 [queued]>
+[2026-10-23T05:54:57.731+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openmetadata_lakehouse_ingestion.enrich_governance scheduled__2026-10-22T05:00:00+00:00 [queued]>
+[2026-10-23T05:54:57.757+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2026-10-23T05:54:57.797+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): enrich_governance> on 2026-10-22 05:00:00+00:00
+[2026-10-23T05:54:57.834+0000] {standard_task_runner.py:72} INFO - Started process 7006 to run task
+[2026-10-23T05:54:57.839+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'openmetadata_lakehouse_ingestion', 'enrich_governance', 'scheduled__2026-10-22T05:00:00+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/openmetadata_ingestion_dag.py', '--cfg-path', '/tmp/tmpt2drzso6']
+[2026-10-23T05:54:57.855+0000] {standard_task_runner.py:105} INFO - Job 55: Subtask enrich_governance
+[2026-10-23T05:54:58.043+0000] {task_command.py:467} INFO - Running <TaskInstance: openmetadata_lakehouse_ingestion.enrich_governance scheduled__2026-10-22T05:00:00+00:00 [running]> on host c722b3213d78
+[2026-10-23T05:54:58.209+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lakehouse-platform' AIRFLOW_CTX_DAG_ID='openmetadata_lakehouse_ingestion' AIRFLOW_CTX_TASK_ID='enrich_governance' AIRFLOW_CTX_EXECUTION_DATE='2026-10-22T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-10-22T05:00:00+00:00'
+[2026-10-23T05:54:58.268+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-10-23T05:54:58.441+0000] {docker.py:367} INFO - Starting docker container from image bot_lakehouse-openmetadata-ingestion
+[2026-10-23T05:55:05.164+0000] {docker.py:438} INFO - /usr/local/lib/python3.10/site-packages/google/api_core/_python_version_support.py:223: FutureWarning: You are using a non-supported Python version (3.10.22). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.11, and then update google.api_core.
+[2026-10-23T05:55:05.182+0000] {docker.py:438} INFO -   warnings.warn(message, FutureWarning)
+[2026-10-23T05:55:06.419+0000] {docker.py:438} INFO - /usr/local/lib/python3.10/site-packages/metadata/ingestion/source/database/postgres/models.py:20: UserWarning: Field name "schema" in "PostgresStoredProcedure" shadows an attribute in parent "BaseModel"
+[2026-10-23T05:55:06.441+0000] {docker.py:438} INFO -   class PostgresStoredProcedure(BaseModel):
+[2026-10-23T05:55:07.381+0000] {docker.py:438} INFO - 2026-10-23 05:55:07,379 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.smr_daily_compliance -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:07.705+0000] {docker.py:438} INFO - 2026-10-23 05:55:07,574 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.smr_daily_compliance -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:07.815+0000] {docker.py:438} INFO - 2026-10-23 05:55:07,788 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.liquidity_compliance -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:08.043+0000] {docker.py:438} INFO - 2026-10-23 05:55:08,029 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.liquidity_compliance -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:08.291+0000] {docker.py:438} INFO - 2026-10-23 05:55:08,270 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.net_open_position -> owner=root='DFSS' domains=["root='market_risk'"]
+[2026-10-23T05:55:08.445+0000] {docker.py:438} INFO - 2026-10-23 05:55:08,437 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.net_open_position -> owner=root='DFSS' domains=["root='market_risk'"]
+[2026-10-23T05:55:08.641+0000] {docker.py:438} INFO - 2026-10-23 05:55:08,638 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.lcr -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:08.859+0000] {docker.py:438} INFO - 2026-10-23 05:55:08,857 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.lcr -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:09.057+0000] {docker.py:438} INFO - 2026-10-23 05:55:09,055 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.nsfr -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:09.238+0000] {docker.py:438} INFO - 2026-10-23 05:55:09,232 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.nsfr -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:09.512+0000] {docker.py:438} INFO - 2026-10-23 05:55:09,510 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.capital_adequacy -> owner=root='DFSS' domains=["root='capital_adequacy'"]
+[2026-10-23T05:55:09.737+0000] {docker.py:438} INFO - 2026-10-23 05:55:09,734 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.capital_adequacy -> owner=root='DFSS' domains=["root='capital_adequacy'"]
+[2026-10-23T05:55:09.959+0000] {docker.py:438} INFO - 2026-10-23 05:55:09,951 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.sensitivity_market_risk -> owner=root='DFSS' domains=["root='market_risk'"]
+[2026-10-23T05:55:10.159+0000] {docker.py:438} INFO - 2026-10-23 05:55:10,156 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.sensitivity_market_risk -> owner=root='DFSS' domains=["root='market_risk'"]
+[2026-10-23T05:55:10.532+0000] {docker.py:438} INFO - 2026-10-23 05:55:10,529 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.asset_quality -> owner=root='DFSS' domains=["root='credit_risk'"]
+[2026-10-23T05:55:10.827+0000] {docker.py:438} INFO - 2026-10-23 05:55:10,823 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.asset_quality -> owner=root='DFSS' domains=["root='credit_risk'"]
+[2026-10-23T05:55:11.047+0000] {docker.py:438} INFO - 2026-10-23 05:55:11,044 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.earnings -> owner=root='DFSS' domains=["root='financial_statements'"]
+[2026-10-23T05:55:11.232+0000] {docker.py:438} INFO - 2026-10-23 05:55:11,230 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.earnings -> owner=root='DFSS' domains=["root='financial_statements'"]
+[2026-10-23T05:55:11.556+0000] {docker.py:438} INFO - 2026-10-23 05:55:11,554 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.credit_exposure -> owner=root='DFSS' domains=["root='credit_risk'"]
+[2026-10-23T05:55:11.775+0000] {docker.py:438} INFO - 2026-10-23 05:55:11,773 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.credit_exposure -> owner=root='DFSS' domains=["root='credit_risk'"]
+[2026-10-23T05:55:11.964+0000] {docker.py:438} INFO - 2026-10-23 05:55:11,956 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.balance_sheet -> owner=root='DFSS' domains=["root='financial_statements'"]
+[2026-10-23T05:55:12.306+0000] {docker.py:438} INFO - 2026-10-23 05:55:12,304 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.balance_sheet -> owner=root='DFSS' domains=["root='financial_statements'"]
+[2026-10-23T05:55:12.488+0000] {docker.py:438} INFO - 2026-10-23 05:55:12,485 INFO set_governance: Governed lakehouse-trino-bronze.delta.bronze.income_statement -> owner=root='DFSS' domains=["root='financial_statements'"]
+[2026-10-23T05:55:12.792+0000] {docker.py:438} INFO - 2026-10-23 05:55:12,789 INFO set_governance: Governed lakehouse-trino-silver.delta.silver.income_statement -> owner=root='DFSS' domains=["root='financial_statements'"]
+[2026-10-23T05:55:13.080+0000] {docker.py:438} INFO - 2026-10-23 05:55:13,046 INFO set_governance: Governed lakehouse-trino-gold.delta.gold.sector_exposure -> owner=root='DFSS' domains=["root='credit_risk'"]
+[2026-10-23T05:55:13.495+0000] {docker.py:438} INFO - 2026-10-23 05:55:13,463 INFO set_governance: Governed lakehouse-trino-gold.delta.gold.institution_risk_trends -> owner=root='DFSS' domains=["root='liquidity_risk'"]
+[2026-10-23T05:55:14.052+0000] {docker.py:438} INFO - 2026-10-23 05:55:13,463 INFO set_governance: Governance applied.
+[2026-10-23T05:55:17.516+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-10-23T05:55:17.547+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=openmetadata_lakehouse_ingestion, task_id=enrich_governance, run_id=scheduled__2026-10-22T05:00:00+00:00, execution_date=20261022T050000, start_date=20261023T055457, end_date=20261023T055517
+[2026-10-23T05:55:17.859+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-10-23T05:55:17.964+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-10-23T05:55:18.039+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

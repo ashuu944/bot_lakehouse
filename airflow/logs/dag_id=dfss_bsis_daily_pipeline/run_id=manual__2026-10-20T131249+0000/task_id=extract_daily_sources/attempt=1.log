@@ -1,0 +1,104 @@
+[2026-10-20T13:48:54.520+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-10-20T13:48:54.533+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dfss_bsis_daily_pipeline.extract_daily_sources manual__2026-10-20T13:12:49+00:00 [queued]>
+[2026-10-20T13:48:54.538+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dfss_bsis_daily_pipeline.extract_daily_sources manual__2026-10-20T13:12:49+00:00 [queued]>
+[2026-10-20T13:48:54.539+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2026-10-20T13:48:54.548+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): extract_daily_sources> on 2026-10-20 13:12:49+00:00
+[2026-10-20T13:48:54.553+0000] {standard_task_runner.py:72} INFO - Started process 12975 to run task
+[2026-10-20T13:48:54.555+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dfss_bsis_daily_pipeline', 'extract_daily_sources', 'manual__2026-10-20T13:12:49+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/daily_bsis_pipeline_dag.py', '--cfg-path', '/tmp/tmp8eb_fh2_']
+[2026-10-20T13:48:54.558+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask extract_daily_sources
+[2026-10-20T13:48:54.612+0000] {task_command.py:467} INFO - Running <TaskInstance: dfss_bsis_daily_pipeline.extract_daily_sources manual__2026-10-20T13:12:49+00:00 [running]> on host c722b3213d78
+[2026-10-20T13:48:54.671+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='dfss-bsis' AIRFLOW_CTX_DAG_ID='dfss_bsis_daily_pipeline' AIRFLOW_CTX_TASK_ID='extract_daily_sources' AIRFLOW_CTX_EXECUTION_DATE='2026-10-20T13:12:49+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-10-20T13:12:49+00:00'
+[2026-10-20T13:48:54.673+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-10-20T13:48:54.740+0000] {docker.py:367} INFO - Starting docker container from image bot_lakehouse-spark
+[2026-10-20T13:48:58.969+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m13:48:58.96 [0m[38;5;2mINFO [0m ==>
+[2026-10-20T13:48:58.973+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m13:48:58.97 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami spark container[0m
+[2026-10-20T13:48:58.977+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m13:48:58.97 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[2026-10-20T13:48:58.983+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m13:48:58.98 [0m[38;5;2mINFO [0m ==> Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami/ for more information.
+[2026-10-20T13:48:58.986+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m13:48:58.98 [0m[38;5;2mINFO [0m ==>
+[2026-10-20T13:48:58.999+0000] {docker.py:438} INFO - 
+[2026-10-20T13:49:01.220+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkContext: Running Spark version 3.5.6
+[2026-10-20T13:49:01.222+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-10-20T13:49:01.223+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkContext: Java version 17.0.15
+[2026-10-20T13:49:01.240+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO ResourceUtils: ==============================================================
+[2026-10-20T13:49:01.241+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-10-20T13:49:01.242+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO ResourceUtils: ==============================================================
+[2026-10-20T13:49:01.243+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkContext: Submitted application: bronze-ingestion
+[2026-10-20T13:49:01.253+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-10-20T13:49:01.257+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO ResourceProfile: Limiting resource is cpu
+[2026-10-20T13:49:01.258+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-10-20T13:49:01.287+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SecurityManager: Changing view acls to: root,spark
+[2026-10-20T13:49:01.288+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SecurityManager: Changing modify acls to: root,spark
+[2026-10-20T13:49:01.289+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SecurityManager: Changing view acls groups to:
+[2026-10-20T13:49:01.290+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SecurityManager: Changing modify acls groups to:
+[2026-10-20T13:49:01.291+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+[2026-10-20T13:49:01.333+0000] {docker.py:438} INFO - 26/10/20 13:49:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-10-20T13:49:01.492+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Utils: Successfully started service 'sparkDriver' on port 35097.
+[2026-10-20T13:49:01.511+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkEnv: Registering MapOutputTracker
+[2026-10-20T13:49:01.535+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkEnv: Registering BlockManagerMaster
+[2026-10-20T13:49:01.545+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-10-20T13:49:01.546+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-10-20T13:49:01.549+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-10-20T13:49:01.562+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a3029089-c0ed-44fd-920a-996bb69a631d
+[2026-10-20T13:49:01.572+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2026-10-20T13:49:01.583+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-10-20T13:49:01.659+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-10-20T13:49:01.698+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-10-20T13:49:01.757+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Executor: Starting executor ID driver on host 1a7abdb3a7f8
+[2026-10-20T13:49:01.759+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-10-20T13:49:01.760+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Executor: Java version 17.0.15
+[2026-10-20T13:49:01.762+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-10-20T13:49:01.764+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@298d042f for default.
+[2026-10-20T13:49:01.784+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37621.
+[2026-10-20T13:49:01.785+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO NettyBlockTransferService: Server created on 1a7abdb3a7f8:37621
+[2026-10-20T13:49:01.786+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-10-20T13:49:01.788+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 1a7abdb3a7f8, 37621, None)
+[2026-10-20T13:49:01.791+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManagerMasterEndpoint: Registering block manager 1a7abdb3a7f8:37621 with 434.4 MiB RAM, BlockManagerId(driver, 1a7abdb3a7f8, 37621, None)
+[2026-10-20T13:49:01.792+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 1a7abdb3a7f8, 37621, None)
+[2026-10-20T13:49:01.793+0000] {docker.py:438} INFO - 26/10/20 13:49:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 1a7abdb3a7f8, 37621, None)
+[2026-10-20T13:49:02.027+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,025 INFO bronze_ingestion: Batch f2405554-e240-4b0b-a114-5d6d77e062e4 starting for datasets: liquidity_compliance, net_open_position, smr_daily_compliance
+[2026-10-20T13:49:02.587+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,585 INFO bronze_ingestion: Extracting DFSS/BSIS/liquidity_compliance (date=2026-10-20)
+[2026-10-20T13:49:02.793+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,791 INFO bsis_extractor.extractors.base: liquidity_compliance | date=2026-10-20 | 0 rows | 137.3ms
+[2026-10-20T13:49:02.794+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,792 WARNING bsis_extractor.extractors.base: [liquidity_compliance] [WARNING] EmptyResultCheck: No rows returned — dataset may not exist for this date (rows affected: 0)
+[2026-10-20T13:49:02.796+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,792 INFO bronze_ingestion: liquidity_compliance: Dataset : liquidity_compliance
+[2026-10-20T13:49:02.797+0000] {docker.py:438} INFO - Date    : 2026-10-20
+[2026-10-20T13:49:02.798+0000] {docker.py:438} INFO - Rows    : 0 total | 0 valid | 0 filtered
+[2026-10-20T13:49:02.799+0000] {docker.py:438} INFO - Issues  :
+[2026-10-20T13:49:02.800+0000] {docker.py:438} INFO -   [WARNING] EmptyResultCheck: No rows returned — dataset may not exist for this date (rows affected: 0)
+[2026-10-20T13:49:02.801+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,793 WARNING bronze_ingestion: No rows for liquidity_compliance date=2026-10-20, skipping write
+[2026-10-20T13:49:02.802+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,793 INFO bronze_ingestion: Extracting DFSS/BSIS/net_open_position (date=2026-10-20)
+[2026-10-20T13:49:02.807+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,806 INFO bsis_extractor.extractors.base: net_open_position | date=2026-10-20 | 0 rows | 12.8ms
+[2026-10-20T13:49:02.809+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,806 WARNING bsis_extractor.extractors.base: [net_open_position] [WARNING] EmptyResultCheck: No rows returned — dataset may not exist for this date (rows affected: 0)
+[2026-10-20T13:49:02.810+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,807 INFO bronze_ingestion: net_open_position: Dataset : net_open_position
+[2026-10-20T13:49:02.811+0000] {docker.py:438} INFO - Date    : 2026-10-20
+[2026-10-20T13:49:02.812+0000] {docker.py:438} INFO - Rows    : 0 total | 0 valid | 0 filtered
+[2026-10-20T13:49:02.812+0000] {docker.py:438} INFO - Issues  :
+[2026-10-20T13:49:02.814+0000] {docker.py:438} INFO -   [WARNING] EmptyResultCheck: No rows returned — dataset may not exist for this date (rows affected: 0)
+[2026-10-20T13:49:02.815+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,807 WARNING bronze_ingestion: No rows for net_open_position date=2026-10-20, skipping write
+[2026-10-20T13:49:02.816+0000] {docker.py:438} INFO - 2026-10-20 13:49:02,807 INFO bronze_ingestion: Extracting DFSS/BSIS/smr_daily_compliance (date=2026-10-20)
+[2026-10-20T13:49:03.084+0000] {docker.py:438} INFO - 2026-10-20 13:49:03,083 INFO bsis_extractor.extractors.base: smr_daily_compliance | date=2026-10-20 | 0 rows | 276.2ms
+[2026-10-20T13:49:03.086+0000] {docker.py:438} INFO - 2026-10-20 13:49:03,084 WARNING bsis_extractor.extractors.base: [smr_daily_compliance] [WARNING] EmptyResultCheck: No rows returned — dataset may not exist for this date (rows affected: 0)
+[2026-10-20T13:49:03.098+0000] {docker.py:438} INFO - 2026-10-20 13:49:03,084 INFO bronze_ingestion: smr_daily_compliance: Dataset : smr_daily_compliance
+[2026-10-20T13:49:03.100+0000] {docker.py:438} INFO - Date    : 2026-10-20
+[2026-10-20T13:49:03.102+0000] {docker.py:438} INFO - Rows    : 0 total | 0 valid | 0 filtered
+[2026-10-20T13:49:03.103+0000] {docker.py:438} INFO - Issues  :
+[2026-10-20T13:49:03.104+0000] {docker.py:438} INFO -   [WARNING] EmptyResultCheck: No rows returned — dataset may not exist for this date (rows affected: 0)
+[2026-10-20T13:49:03.106+0000] {docker.py:438} INFO - 2026-10-20 13:49:03,084 WARNING bronze_ingestion: No rows for smr_daily_compliance date=2026-10-20, skipping write
+[2026-10-20T13:49:03.107+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2026-10-20T13:49:03.109+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO SparkUI: Stopped Spark web UI at http://1a7abdb3a7f8:4040
+[2026-10-20T13:49:03.110+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2026-10-20T13:49:03.120+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO MemoryStore: MemoryStore cleared
+[2026-10-20T13:49:03.121+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO BlockManager: BlockManager stopped
+[2026-10-20T13:49:03.124+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2026-10-20T13:49:03.126+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2026-10-20T13:49:03.138+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO SparkContext: Successfully stopped SparkContext
+[2026-10-20T13:49:03.420+0000] {docker.py:438} INFO - 2026-10-20 13:49:03,418 INFO bronze_ingestion: Batch f2405554-e240-4b0b-a114-5d6d77e062e4 complete
+[2026-10-20T13:49:03.421+0000] {docker.py:438} INFO - 2026-10-20 13:49:03,419 INFO py4j.clientserver: Closing down clientserver connection
+[2026-10-20T13:49:03.519+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO ShutdownHookManager: Shutdown hook called
+[2026-10-20T13:49:03.522+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-c7d319c6-168a-484c-b4af-e8f42620c7fc
+[2026-10-20T13:49:03.527+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-6b0339ba-b3b4-44f6-af88-75e0c2e5cc8f
+[2026-10-20T13:49:03.534+0000] {docker.py:438} INFO - 26/10/20 13:49:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-6b0339ba-b3b4-44f6-af88-75e0c2e5cc8f/pyspark-af5ff18c-9c65-4cb0-8d3f-5ab5cf6fb079
+[2026-10-20T13:49:06.645+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-10-20T13:49:06.646+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dfss_bsis_daily_pipeline, task_id=extract_daily_sources, run_id=manual__2026-10-20T13:12:49+00:00, execution_date=20261020T131249, start_date=20261020T134854, end_date=20261020T134906
+[2026-10-20T13:49:06.678+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-10-20T13:49:06.691+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-10-20T13:49:06.694+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

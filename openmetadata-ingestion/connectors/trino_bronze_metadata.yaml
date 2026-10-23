@@ -1,0 +1,37 @@
+# Same mechanism as trino_silver_metadata.yaml, pointed at the `bronze`
+# schema -- registered into Trino via trino/register_bronze_tables.sh.
+#
+# This replaces an earlier attempt to expose Bronze via OpenMetadata's S3
+# Datalake connector directly against MinIO: that connector has no concept
+# of a Hive-partitioned directory being ONE table, so it listed every
+# reporting_date partition FILE as its own "table" (355 of them for 12 real
+# datasets, confirmed via the OpenMetadata REST API). Bronze is Delta now
+# (bronze_ingestion.py), so it can go through Trino exactly like Silver/Gold:
+# one logical table per dataset, schema read from the Delta log.
+source:
+  type: trino
+  serviceName: lakehouse-trino-bronze
+  serviceConnection:
+    config:
+      type: Trino
+      hostPort: trino:8080
+      username: ${TRINO_USERNAME}
+      catalog: delta
+      databaseSchema: bronze
+  sourceConfig:
+    config:
+      type: DatabaseMetadata
+      includeViews: false
+      includeTags: true
+      markDeletedTables: true
+
+sink:
+  type: metadata-rest
+  config: {}
+
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: ${OM_SERVER_HOST_PORT}
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${OM_INGESTION_BOT_TOKEN}

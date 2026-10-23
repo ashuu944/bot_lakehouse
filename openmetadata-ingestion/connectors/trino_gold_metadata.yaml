@@ -1,0 +1,40 @@
+# Metadata ingestion (schema, tables, columns -- NOT quality tests, those are
+# a separate workflow type, see profiler_trino_gold.yaml) for the Gold layer,
+# via the same Trino endpoint Power BI/rooster will eventually use.
+#
+# Scoped to the `gold` schema only, deliberately -- this is the practical
+# starting point from the earlier architecture discussion ("Gold-only via
+# Trino, zero new registration work"). Silver/Bronze are not SQL-queryable
+# tables anywhere yet (only Gold is registered into Trino's metastore), so
+# they would need a Data Lake connector straight against MinIO instead of
+# this Trino connector -- a deliberate next step, not done here.
+#
+# ${OM_INGESTION_BOT_TOKEN} must be set (see .env) -- fetched once from the
+# OpenMetadata UI after first login: Settings -> Bots -> ingestion-bot -> token.
+source:
+  type: trino
+  serviceName: lakehouse-trino-gold
+  serviceConnection:
+    config:
+      type: Trino
+      hostPort: trino:8080
+      username: ${TRINO_USERNAME}
+      catalog: delta
+      databaseSchema: gold
+  sourceConfig:
+    config:
+      type: DatabaseMetadata
+      includeViews: false
+      includeTags: true
+      markDeletedTables: true
+
+sink:
+  type: metadata-rest
+  config: {}
+
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: ${OM_SERVER_HOST_PORT}
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${OM_INGESTION_BOT_TOKEN}

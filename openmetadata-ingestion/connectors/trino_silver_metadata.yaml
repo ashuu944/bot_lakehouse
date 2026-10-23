@@ -1,0 +1,35 @@
+# Same mechanism as trino_gold_metadata.yaml, pointed at the `silver` schema
+# instead of `gold` -- registered into Trino via trino/register_silver_tables.sh
+# specifically so this could be safe: Silver is Delta/MERGE-updated, and
+# OpenMetadata's own S3 Datalake connector doesn't support Delta format (only
+# JSON/CSV/TSV/Parquet, confirmed from its docs) -- reading Silver that way
+# would double-count superseded files, same reason Power BI can't read it
+# directly either. Going through Trino (which understands the Delta log) is
+# the only safe path for Silver.
+source:
+  type: trino
+  serviceName: lakehouse-trino-silver
+  serviceConnection:
+    config:
+      type: Trino
+      hostPort: trino:8080
+      username: ${TRINO_USERNAME}
+      catalog: delta
+      databaseSchema: silver
+  sourceConfig:
+    config:
+      type: DatabaseMetadata
+      includeViews: false
+      includeTags: true
+      markDeletedTables: true
+
+sink:
+  type: metadata-rest
+  config: {}
+
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: ${OM_SERVER_HOST_PORT}
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${OM_INGESTION_BOT_TOKEN}

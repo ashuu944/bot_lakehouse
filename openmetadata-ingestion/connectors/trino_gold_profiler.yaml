@@ -1,0 +1,28 @@
+source:
+  type: trino
+  serviceName: lakehouse-trino-gold
+  serviceConnection:
+    config:
+      type: Trino
+      hostPort: trino:8080
+      username: ${TRINO_USERNAME}
+      catalog: delta
+      databaseSchema: gold
+  sourceConfig:
+    config:
+      type: Profiler
+
+processor:
+  type: orm-profiler
+  config: {}
+
+sink:
+  type: metadata-rest
+  config: {}
+
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: ${OM_SERVER_HOST_PORT}
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${OM_INGESTION_BOT_TOKEN}

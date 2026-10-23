@@ -1,0 +1,635 @@
+[2026-10-23T05:54:35.227+0000] {processor.py:186} INFO - Started process (PID=6983) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:54:35.230+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:54:35.238+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:54:35.237+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:54:37.613+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:54:37.680+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:54:37.679+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:54:37.899+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 2.685 seconds
+[2026-10-23T05:55:09.446+0000] {processor.py:186} INFO - Started process (PID=7018) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:55:09.449+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:55:09.454+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:09.453+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:55:10.321+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:55:10.370+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:10.369+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:55:10.702+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 1.268 seconds
+[2026-10-23T05:55:41.215+0000] {processor.py:186} INFO - Started process (PID=7052) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:55:41.218+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:55:41.230+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:41.229+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:55:41.751+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:55:41.824+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:55:41.823+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:55:41.946+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.750 seconds
+[2026-10-23T05:56:12.385+0000] {processor.py:186} INFO - Started process (PID=7077) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:56:12.387+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:56:12.391+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:12.390+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:56:12.652+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:56:12.684+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:12.683+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:56:12.777+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.399 seconds
+[2026-10-23T05:56:43.686+0000] {processor.py:186} INFO - Started process (PID=7102) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:56:43.690+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:56:43.710+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:43.709+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:56:43.977+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:56:44.009+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:56:44.009+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:56:44.100+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.421 seconds
+[2026-10-23T05:57:14.338+0000] {processor.py:186} INFO - Started process (PID=7127) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:57:14.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:57:14.366+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:14.366+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:57:14.576+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:57:14.749+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:14.748+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:57:14.798+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.466 seconds
+[2026-10-23T05:57:45.525+0000] {processor.py:186} INFO - Started process (PID=7152) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:57:45.526+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:57:45.530+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:45.529+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:57:45.691+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:57:45.719+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:57:45.719+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:57:45.766+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.247 seconds
+[2026-10-23T05:58:16.500+0000] {processor.py:186} INFO - Started process (PID=7177) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:58:16.513+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:58:16.533+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:16.532+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:58:16.720+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:58:16.752+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:16.751+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:58:16.791+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.297 seconds
+[2026-10-23T05:58:47.745+0000] {processor.py:186} INFO - Started process (PID=7202) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:58:47.746+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:58:47.749+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:47.749+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:58:47.880+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:58:47.908+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:58:47.908+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:58:47.948+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.210 seconds
+[2026-10-23T05:59:18.251+0000] {processor.py:186} INFO - Started process (PID=7227) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:59:18.252+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:59:18.255+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:18.255+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:59:18.390+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:59:18.435+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:18.435+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:59:18.499+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.254 seconds
+[2026-10-23T05:59:48.756+0000] {processor.py:186} INFO - Started process (PID=7252) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:59:48.758+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T05:59:48.762+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:48.762+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:59:49.026+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T05:59:49.066+0000] {logging_mixin.py:190} INFO - [2026-10-23T05:59:49.065+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T05:59:49.126+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.376 seconds
+[2026-10-23T06:00:19.407+0000] {processor.py:186} INFO - Started process (PID=7277) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:00:19.408+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:00:19.419+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:19.418+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:00:19.655+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:00:19.729+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:19.728+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:00:19.792+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.391 seconds
+[2026-10-23T06:00:50.064+0000] {processor.py:186} INFO - Started process (PID=7302) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:00:50.066+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:00:50.072+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:50.071+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:00:50.233+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:00:50.259+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:00:50.259+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:00:50.356+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.298 seconds
+[2026-10-23T06:01:20.714+0000] {processor.py:186} INFO - Started process (PID=7330) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:01:20.716+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:01:20.723+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:20.723+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:01:20.876+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:01:20.909+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:20.909+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:01:20.967+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.259 seconds
+[2026-10-23T06:01:51.865+0000] {processor.py:186} INFO - Started process (PID=7355) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:01:51.867+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:01:51.885+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:51.885+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:01:52.039+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:01:52.070+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:01:52.069+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:01:52.130+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.272 seconds
+[2026-10-23T06:02:22.399+0000] {processor.py:186} INFO - Started process (PID=7380) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:02:22.400+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:02:22.404+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:22.404+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:02:22.527+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:02:22.555+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:22.555+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:02:22.594+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.201 seconds
+[2026-10-23T06:02:52.993+0000] {processor.py:186} INFO - Started process (PID=7405) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:02:52.997+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:02:53.003+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:53.002+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:02:53.175+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:02:53.200+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:02:53.200+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:02:53.239+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.252 seconds
+[2026-10-23T06:03:23.449+0000] {processor.py:186} INFO - Started process (PID=7430) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:03:23.458+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:03:23.461+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:23.461+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:03:23.599+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:03:23.630+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:23.630+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:03:23.676+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.233 seconds
+[2026-10-23T06:03:54.427+0000] {processor.py:186} INFO - Started process (PID=7455) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:03:54.429+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:03:54.435+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:54.431+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:03:54.550+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:03:54.576+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:03:54.576+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:03:54.617+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.196 seconds
+[2026-10-23T06:04:24.793+0000] {processor.py:186} INFO - Started process (PID=7480) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:04:24.795+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:04:24.798+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:24.798+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:04:24.914+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:04:24.947+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:24.946+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:04:24.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.202 seconds
+[2026-10-23T06:04:55.516+0000] {processor.py:186} INFO - Started process (PID=7505) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:04:55.518+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:04:55.521+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:55.520+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:04:55.643+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:04:55.668+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:04:55.668+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:04:55.707+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.196 seconds
+[2026-10-23T06:05:25.811+0000] {processor.py:186} INFO - Started process (PID=7530) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:05:25.813+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:05:25.816+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:25.816+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:05:25.934+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:05:25.962+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:25.962+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:05:26.009+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.203 seconds
+[2026-10-23T06:05:56.812+0000] {processor.py:186} INFO - Started process (PID=7555) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:05:56.813+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:05:56.816+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:56.816+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:05:56.943+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:05:56.970+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:05:56.970+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:05:57.015+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.211 seconds
+[2026-10-23T06:06:27.294+0000] {processor.py:186} INFO - Started process (PID=7583) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:06:27.296+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:06:27.298+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:27.298+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:06:27.419+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:06:27.447+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:27.447+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:06:27.470+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:27.470+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:06:27.488+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.200 seconds
+[2026-10-23T06:06:57.731+0000] {processor.py:186} INFO - Started process (PID=7608) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:06:57.732+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:06:57.735+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:57.735+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:06:57.852+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:06:57.881+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:57.881+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:06:57.907+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:06:57.907+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:06:57.931+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.207 seconds
+[2026-10-23T06:07:28.090+0000] {processor.py:186} INFO - Started process (PID=7633) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:07:28.091+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:07:28.098+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:28.098+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:07:28.218+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:07:28.248+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:28.248+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:07:28.273+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:28.273+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:07:28.301+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.218 seconds
+[2026-10-23T06:07:58.580+0000] {processor.py:186} INFO - Started process (PID=7658) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:07:58.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:07:58.589+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:58.588+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:07:58.713+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:07:58.740+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:58.739+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:07:58.763+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:07:58.763+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:07:58.785+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.211 seconds
+[2026-10-23T06:08:28.864+0000] {processor.py:186} INFO - Started process (PID=7683) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:08:28.865+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:08:28.867+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:28.867+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:08:28.987+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:08:29.012+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:29.012+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:08:29.033+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:29.033+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:08:29.070+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.212 seconds
+[2026-10-23T06:08:59.368+0000] {processor.py:186} INFO - Started process (PID=7708) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:08:59.369+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:08:59.372+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:59.371+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:08:59.483+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:08:59.509+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:59.509+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:08:59.532+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:08:59.532+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:08:59.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.192 seconds
+[2026-10-23T06:09:29.653+0000] {processor.py:186} INFO - Started process (PID=7733) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:09:29.654+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:09:29.657+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:29.657+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:09:29.785+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:09:29.818+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:29.818+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:09:29.849+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:09:29.848+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:09:29.893+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.247 seconds
+[2026-10-23T06:10:00.597+0000] {processor.py:186} INFO - Started process (PID=7758) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:10:00.599+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:10:00.602+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:00.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:10:00.711+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:10:00.735+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:00.735+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:10:00.759+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:00.759+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:10:00.793+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.202 seconds
+[2026-10-23T06:10:31.072+0000] {processor.py:186} INFO - Started process (PID=7783) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:10:31.073+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:10:31.076+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:31.076+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:10:31.188+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:10:31.216+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:31.215+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:10:31.238+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:10:31.238+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:10:31.258+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.192 seconds
+[2026-10-23T06:11:01.505+0000] {processor.py:186} INFO - Started process (PID=7808) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:11:01.508+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:11:01.512+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:01.512+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:11:01.752+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:11:01.786+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:01.786+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:11:01.816+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:01.816+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:11:01.846+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.353 seconds
+[2026-10-23T06:11:32.068+0000] {processor.py:186} INFO - Started process (PID=7833) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:11:32.069+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:11:32.072+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:32.072+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:11:32.191+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:11:32.217+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:32.217+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:11:32.239+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:11:32.239+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:11:32.258+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.196 seconds
+[2026-10-23T06:12:03.224+0000] {processor.py:186} INFO - Started process (PID=7858) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:12:03.227+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:12:03.232+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:03.232+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:12:03.389+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:12:03.417+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:03.417+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:12:03.444+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:03.444+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:12:03.467+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.248 seconds
+[2026-10-23T06:12:34.206+0000] {processor.py:186} INFO - Started process (PID=7883) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:12:34.208+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:12:34.213+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:34.210+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:12:34.334+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:12:34.365+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:34.365+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:12:34.390+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:12:34.390+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:12:34.418+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.218 seconds
+[2026-10-23T06:13:04.503+0000] {processor.py:186} INFO - Started process (PID=7908) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:13:04.504+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:13:04.506+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:04.506+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:13:04.627+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:13:04.658+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:04.657+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:13:04.685+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:04.685+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:13:04.707+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.210 seconds
+[2026-10-23T06:13:35.341+0000] {processor.py:186} INFO - Started process (PID=7933) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:13:35.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:13:35.346+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:35.345+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:13:35.462+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:13:35.490+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:35.490+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:13:35.516+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:13:35.516+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:13:35.538+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.203 seconds
+[2026-10-23T06:14:06.330+0000] {processor.py:186} INFO - Started process (PID=7958) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:14:06.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:14:06.334+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:06.333+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:14:06.455+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:14:06.482+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:06.481+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:14:06.508+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:06.508+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:14:06.528+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.203 seconds
+[2026-10-23T06:14:36.932+0000] {processor.py:186} INFO - Started process (PID=7983) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:14:36.933+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:14:36.936+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:36.936+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:14:37.169+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:14:37.201+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:37.200+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:14:37.227+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:14:37.227+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:14:37.251+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.326 seconds
+[2026-10-23T06:15:07.996+0000] {processor.py:186} INFO - Started process (PID=8008) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:15:07.997+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:15:08.000+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:08.000+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:15:08.125+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:15:08.166+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:08.165+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:15:08.208+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:08.208+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:15:08.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.247 seconds
+[2026-10-23T06:15:38.593+0000] {processor.py:186} INFO - Started process (PID=8033) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:15:38.595+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:15:38.597+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:38.597+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:15:38.709+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:15:38.734+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:38.734+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:15:38.758+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:15:38.758+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:15:38.778+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.190 seconds
+[2026-10-23T06:16:09.499+0000] {processor.py:186} INFO - Started process (PID=8058) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:16:09.501+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:16:09.503+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:09.503+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:16:09.616+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:16:09.644+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:09.644+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:16:09.667+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:09.667+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:16:09.687+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.194 seconds
+[2026-10-23T06:16:40.345+0000] {processor.py:186} INFO - Started process (PID=8083) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:16:40.347+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:16:40.349+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:40.349+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:16:40.466+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:16:40.495+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:40.495+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:16:40.521+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:16:40.520+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:16:40.542+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.203 seconds
+[2026-10-23T06:17:11.206+0000] {processor.py:186} INFO - Started process (PID=8108) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:17:11.208+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:17:11.210+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:11.210+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:17:11.320+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:17:11.347+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:11.347+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:17:11.367+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:11.367+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:17:11.387+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.187 seconds
+[2026-10-23T06:17:42.114+0000] {processor.py:186} INFO - Started process (PID=8133) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:17:42.115+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:17:42.118+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:42.117+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:17:42.234+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:17:42.260+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:42.260+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:17:42.284+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:17:42.283+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:17:42.303+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.195 seconds
+[2026-10-23T06:18:12.942+0000] {processor.py:186} INFO - Started process (PID=8158) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:18:12.945+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:18:12.947+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:12.947+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:18:13.060+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:18:13.085+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:13.085+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:18:13.108+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:13.108+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:18:13.126+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.190 seconds
+[2026-10-23T06:18:43.843+0000] {processor.py:186} INFO - Started process (PID=8183) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:18:43.845+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:18:43.847+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:43.847+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:18:43.962+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:18:43.987+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:43.987+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:18:44.011+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:18:44.011+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:18:44.032+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.195 seconds
+[2026-10-23T06:19:14.861+0000] {processor.py:186} INFO - Started process (PID=8208) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:19:14.862+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:19:14.865+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:19:14.864+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:19:14.978+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:19:15.008+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:19:15.008+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:19:15.030+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:19:15.030+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:19:15.060+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.205 seconds
+[2026-10-23T06:23:24.366+0000] {processor.py:186} INFO - Started process (PID=8219) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:23:24.377+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:23:24.382+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:24.382+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:23:24.739+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:23:24.770+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:24.769+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:23:24.800+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:24.800+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:23:24.846+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.495 seconds
+[2026-10-23T06:23:55.407+0000] {processor.py:186} INFO - Started process (PID=8244) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:23:55.408+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:23:55.409+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:55.409+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:23:55.488+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:23:55.562+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:55.561+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:23:55.575+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:23:55.575+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:23:55.707+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.304 seconds
+[2026-10-23T06:24:26.629+0000] {processor.py:186} INFO - Started process (PID=8274) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:24:26.629+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:24:26.631+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:26.631+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:24:26.705+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:24:26.725+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:26.725+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:24:26.741+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:26.741+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:24:26.753+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.128 seconds
+[2026-10-23T06:24:57.321+0000] {processor.py:186} INFO - Started process (PID=8299) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:24:57.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:24:57.325+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:57.325+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:24:57.436+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:24:57.469+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:57.469+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:24:57.495+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:24:57.495+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:24:57.516+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.201 seconds
+[2026-10-23T06:25:27.759+0000] {processor.py:186} INFO - Started process (PID=8324) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:25:27.760+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:25:27.762+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:27.762+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:25:27.998+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:25:28.031+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:28.031+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:25:28.055+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:28.055+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:25:28.076+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.324 seconds
+[2026-10-23T06:25:58.654+0000] {processor.py:186} INFO - Started process (PID=8349) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:25:58.656+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:25:58.661+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:58.661+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:25:58.793+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:25:58.820+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:58.820+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:25:58.847+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:25:58.846+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:25:58.867+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.219 seconds
+[2026-10-23T06:26:29.323+0000] {processor.py:186} INFO - Started process (PID=8374) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:26:29.325+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:26:29.327+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:29.327+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:26:29.648+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:26:29.679+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:29.679+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:26:29.707+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:26:29.706+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:26:29.814+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.497 seconds
+[2026-10-23T06:27:00.211+0000] {processor.py:186} INFO - Started process (PID=8399) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:27:00.212+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:27:00.214+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:00.214+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:27:00.333+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:27:00.365+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:00.365+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:27:00.390+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:00.390+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:27:00.412+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.207 seconds
+[2026-10-23T06:27:31.190+0000] {processor.py:186} INFO - Started process (PID=8424) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:27:31.192+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:27:31.196+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:31.196+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:27:31.314+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:27:31.393+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:31.393+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:27:31.418+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:27:31.418+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:27:31.595+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.411 seconds
+[2026-10-23T06:28:01.711+0000] {processor.py:186} INFO - Started process (PID=8449) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:28:01.712+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:28:01.714+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:01.714+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:28:01.822+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:28:01.849+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:01.848+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:28:01.872+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:01.872+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:28:01.893+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.189 seconds
+[2026-10-23T06:28:32.830+0000] {processor.py:186} INFO - Started process (PID=8474) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:28:32.941+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:28:32.948+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:32.947+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:28:33.132+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:28:33.167+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:33.167+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:28:33.190+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:28:33.189+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:28:33.229+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.405 seconds
+[2026-10-23T06:29:03.673+0000] {processor.py:186} INFO - Started process (PID=8499) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:29:03.675+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:29:03.677+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:03.677+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:29:03.801+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:29:03.834+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:03.833+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:29:03.860+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:03.860+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:29:03.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.215 seconds
+[2026-10-23T06:29:35.635+0000] {processor.py:186} INFO - Started process (PID=8524) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:29:35.637+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:29:35.648+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:35.648+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:29:36.145+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:29:36.172+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:36.172+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:29:36.198+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:29:36.197+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:29:36.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.676 seconds
+[2026-10-23T06:30:06.740+0000] {processor.py:186} INFO - Started process (PID=8549) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:30:06.744+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:30:06.747+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:06.746+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:30:06.923+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:30:06.953+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:06.953+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:30:06.987+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:06.987+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:30:07.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.274 seconds
+[2026-10-23T06:30:37.333+0000] {processor.py:186} INFO - Started process (PID=8574) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:30:37.335+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:30:37.337+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:37.337+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:30:37.460+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:30:37.492+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:37.492+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:30:37.520+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:30:37.520+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:30:37.608+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.281 seconds
+[2026-10-23T06:31:07.880+0000] {processor.py:186} INFO - Started process (PID=8599) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:31:07.882+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:31:07.884+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:07.884+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:31:08.012+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:31:08.041+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:08.041+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:31:08.063+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:08.063+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:31:08.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.207 seconds
+[2026-10-23T06:31:38.225+0000] {processor.py:186} INFO - Started process (PID=8624) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:31:38.227+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:31:38.229+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:38.229+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:31:38.340+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:31:38.367+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:38.366+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:31:38.387+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:31:38.386+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:31:38.405+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.186 seconds
+[2026-10-23T06:32:08.973+0000] {processor.py:186} INFO - Started process (PID=8639) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:32:08.974+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:32:08.977+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:08.976+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:32:09.097+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:32:09.131+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:09.131+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:32:09.154+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:09.154+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:32:09.173+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.206 seconds
+[2026-10-23T06:32:39.540+0000] {processor.py:186} INFO - Started process (PID=8664) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:32:39.541+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:32:39.545+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:39.545+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:32:39.679+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:32:39.709+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:39.709+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:32:39.734+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:32:39.734+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:32:39.754+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.221 seconds
+[2026-10-23T06:33:10.719+0000] {processor.py:186} INFO - Started process (PID=8689) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:33:10.720+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:33:10.723+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:10.722+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:33:10.877+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:33:10.909+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:10.908+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:33:10.934+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:10.934+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:33:10.955+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.241 seconds
+[2026-10-23T06:33:41.046+0000] {processor.py:186} INFO - Started process (PID=8714) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:33:41.047+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:33:41.050+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:41.049+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:33:41.158+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:33:41.187+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:41.187+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:33:41.209+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:33:41.209+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:33:41.227+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.187 seconds
+[2026-10-23T06:34:11.392+0000] {processor.py:186} INFO - Started process (PID=8739) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:34:11.393+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:34:11.396+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:11.395+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:34:11.514+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:34:11.548+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:11.548+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:34:11.572+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:11.572+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:34:11.592+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.206 seconds
+[2026-10-23T06:34:41.682+0000] {processor.py:186} INFO - Started process (PID=8764) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:34:41.684+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:34:41.686+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:41.686+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:34:41.804+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:34:41.829+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:41.828+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:34:41.849+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:34:41.848+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:34:41.869+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.193 seconds
+[2026-10-23T06:35:12.676+0000] {processor.py:186} INFO - Started process (PID=8789) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:35:12.677+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:35:12.680+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:12.680+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:35:12.816+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:35:12.850+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:12.849+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:35:12.874+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:12.874+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:35:12.893+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.225 seconds
+[2026-10-23T06:35:43.815+0000] {processor.py:186} INFO - Started process (PID=8814) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:35:43.817+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:35:43.819+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:43.819+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:35:43.979+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:35:44.012+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:44.012+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:35:44.035+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:35:44.035+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:35:44.054+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.245 seconds
+[2026-10-23T06:36:14.862+0000] {processor.py:186} INFO - Started process (PID=8839) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:36:14.863+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:36:14.866+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:14.865+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:36:14.988+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:36:15.020+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:15.020+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:36:15.045+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:15.045+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:36:15.066+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.210 seconds
+[2026-10-23T06:36:45.980+0000] {processor.py:186} INFO - Started process (PID=8864) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:36:45.981+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:36:45.983+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:45.983+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:36:46.094+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:36:46.126+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:46.126+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:36:46.150+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:36:46.150+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:36:46.172+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.197 seconds
+[2026-10-23T06:37:16.262+0000] {processor.py:186} INFO - Started process (PID=8889) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:37:16.264+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:37:16.266+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:16.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:37:16.382+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:37:16.413+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:16.413+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:37:16.439+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:16.439+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:37:16.458+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.202 seconds
+[2026-10-23T06:37:46.663+0000] {processor.py:186} INFO - Started process (PID=8914) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:37:46.664+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:37:46.667+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:46.666+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:37:46.798+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:37:46.831+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:46.831+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:37:46.854+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:37:46.853+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:37:46.873+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.216 seconds
+[2026-10-23T06:38:17.723+0000] {processor.py:186} INFO - Started process (PID=8939) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:38:17.724+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:38:17.726+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:17.726+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:38:17.845+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:38:17.872+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:17.872+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:38:17.895+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:17.895+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:38:17.914+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.196 seconds
+[2026-10-23T06:38:48.741+0000] {processor.py:186} INFO - Started process (PID=8964) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:38:48.742+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:38:48.744+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:48.744+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:38:48.920+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:38:48.953+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:48.953+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:38:48.980+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:38:48.980+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:38:49.002+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.267 seconds
+[2026-10-23T06:39:19.201+0000] {processor.py:186} INFO - Started process (PID=8989) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:39:19.202+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:39:19.205+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:19.204+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:39:19.323+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:39:19.350+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:19.349+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:39:19.374+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:19.374+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:39:19.398+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.203 seconds
+[2026-10-23T06:39:50.386+0000] {processor.py:186} INFO - Started process (PID=9014) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:39:50.387+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:39:50.390+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:50.389+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:39:50.542+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:39:50.576+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:50.576+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:39:50.604+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:39:50.604+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:39:50.630+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.250 seconds
+[2026-10-23T06:40:21.538+0000] {processor.py:186} INFO - Started process (PID=9039) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:40:21.539+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:40:21.541+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:21.541+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:40:21.655+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:40:21.688+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:21.688+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:40:21.711+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:21.710+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:40:21.728+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.196 seconds
+[2026-10-23T06:40:52.572+0000] {processor.py:186} INFO - Started process (PID=9064) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:40:52.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:40:52.577+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:52.576+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:40:52.719+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:40:52.753+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:52.753+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:40:52.779+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:40:52.779+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:40:52.802+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.235 seconds
+[2026-10-23T06:41:23.035+0000] {processor.py:186} INFO - Started process (PID=9089) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:41:23.036+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:41:23.038+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:23.038+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:41:23.201+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:41:23.231+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:23.231+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:41:23.254+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:23.254+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:41:23.272+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.242 seconds
+[2026-10-23T06:41:53.390+0000] {processor.py:186} INFO - Started process (PID=9114) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:41:53.396+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:41:53.399+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:53.399+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:41:53.512+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:41:53.542+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:53.542+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:41:53.564+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:41:53.564+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:41:53.599+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.215 seconds
+[2026-10-23T06:42:23.714+0000] {processor.py:186} INFO - Started process (PID=9139) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:42:23.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:42:23.717+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:23.717+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:42:23.843+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:42:23.872+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:23.872+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:42:23.895+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:23.895+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:42:23.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.224 seconds
+[2026-10-23T06:42:54.081+0000] {processor.py:186} INFO - Started process (PID=9164) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:42:54.083+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:42:54.085+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:54.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:42:54.209+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:42:54.238+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:54.238+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:42:54.261+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:42:54.261+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:42:54.297+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.222 seconds
+[2026-10-23T06:43:24.508+0000] {processor.py:186} INFO - Started process (PID=9189) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:43:24.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:43:24.513+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:24.512+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:43:24.638+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:43:24.666+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:24.666+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:43:24.690+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:24.689+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:43:24.727+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.225 seconds
+[2026-10-23T06:43:54.828+0000] {processor.py:186} INFO - Started process (PID=9214) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:43:54.830+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:43:54.833+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:54.832+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:43:54.940+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:43:54.967+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:54.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:43:54.988+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:43:54.988+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:43:55.011+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.188 seconds
+[2026-10-23T06:44:25.152+0000] {processor.py:186} INFO - Started process (PID=9239) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:44:25.153+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:44:25.156+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:25.155+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:44:25.258+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:44:25.282+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:25.282+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:44:25.302+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:25.302+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:44:25.340+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.194 seconds
+[2026-10-23T06:44:55.974+0000] {processor.py:186} INFO - Started process (PID=9264) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:44:55.977+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:44:55.981+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:55.981+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:44:56.170+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:44:56.217+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:56.217+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:44:56.251+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:44:56.251+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:44:56.289+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.323 seconds
+[2026-10-23T06:45:26.401+0000] {processor.py:186} INFO - Started process (PID=9289) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:45:26.403+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:45:26.406+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:26.406+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:45:26.537+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:45:26.568+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:26.568+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:45:26.600+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:26.600+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:45:26.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.231 seconds
+[2026-10-23T06:45:57.592+0000] {processor.py:186} INFO - Started process (PID=9314) to work on /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:45:57.594+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/openmetadata_ingestion_dag.py for tasks to queue
+[2026-10-23T06:45:57.596+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:57.596+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:45:57.722+0000] {processor.py:925} INFO - DAG(s) 'openmetadata_lakehouse_ingestion' retrieved from /opt/airflow/dags/openmetadata_ingestion_dag.py
+[2026-10-23T06:45:57.756+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:57.755+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-10-23T06:45:57.783+0000] {logging_mixin.py:190} INFO - [2026-10-23T06:45:57.783+0000] {dag.py:4180} INFO - Setting next_dagrun for openmetadata_lakehouse_ingestion to 2026-10-23 05:00:00+00:00, run_after=2026-10-24 05:00:00+00:00
+[2026-10-23T06:45:57.805+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/openmetadata_ingestion_dag.py took 0.218 seconds
