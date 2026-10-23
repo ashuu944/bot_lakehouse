@@ -1,0 +1,13 @@
+dataset_type_id,dataset_type_name,dataset_type_code,return_type,is_active
+DT001,Statutory Minimum Reserve,SMR,FORM16,TRUE
+DT002,Liquidity Coverage Ratio,LCR,FORM16,TRUE
+DT003,Net Stable Funding Ratio,NSFR,FORM16,TRUE
+DT004,Net Open Position,NOP,FORM16,TRUE
+DT005,Capital Adequacy,CAR,FORM16,TRUE
+DT006,Credit Exposure,CE,FORM16,TRUE
+DT007,Balance Sheet,BS,FORM16,TRUE
+DT008,Income Statement,IS,FORM16,TRUE
+DT009,Liquidity Compliance,LC,FORM16,TRUE
+DT010,Sensitivity to Market Risk,SMK,FORM16,TRUE
+DT011,Asset Quality,AQ,FORM16,TRUE
+DT012,Earnings,ERN,FORM16,TRUE

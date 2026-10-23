@@ -1,0 +1,3 @@
+type_id,type_name,type_code,category_id,is_active
+TYPE_BANK_T1,Tier 1,T1,CAT_BANK,TRUE
+TYPE_BANK_T2,Tier 2,T2,CAT_BANK,TRUE

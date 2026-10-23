@@ -70,19 +70,53 @@ def om_ingest_operator(task_id: str, config_file: str):
     )
 
 
-def _om_script_operator(task_id: str, script_name: str):
+def _om_script_operator(task_id: str, script_name: str, extra_spark_job_files: tuple[str, ...] = ()):
     """A DockerOperator that runs `python /opt/ingestion/<script_name>` --
     shared by every openmetadata-ingestion/*.py script that (like
     set_governance.py and set_lineage.py) needs spark/config +
     source_config.py mounted too, since they're driven by the exact same
     per-directorate/source-system YAML the Spark jobs use, not a second copy
     of the directorate/domain/dataset mapping.
+
+    extra_spark_job_files: additional pyspark-free modules under spark/jobs/
+    to bind-mount read-only into /opt/spark-jobs/ alongside source_config.py,
+    for scripts (like set_catalog_metadata.py) that need more than just the
+    directorate/source-system index -- e.g. catalog_descriptions.py's
+    curated text or bsis_frequency.py's cadence lookup.
     """
     from docker.types import Mount
 
     from airflow.providers.docker.operators.docker import DockerOperator
 
     host_dir = _host_project_dir()
+    mounts = [
+        Mount(
+            source=f"{host_dir}/openmetadata-ingestion/{script_name}",
+            target=f"/opt/ingestion/{script_name}",
+            type="bind",
+        ),
+        Mount(
+            source=f"{host_dir}/spark/jobs/source_config.py",
+            target="/opt/spark-jobs/source_config.py",
+            type="bind",
+            read_only=True,
+        ),
+        Mount(
+            source=f"{host_dir}/spark/config",
+            target="/opt/spark-config",
+            type="bind",
+            read_only=True,
+        ),
+    ]
+    for filename in extra_spark_job_files:
+        mounts.append(
+            Mount(
+                source=f"{host_dir}/spark/jobs/{filename}",
+                target=f"/opt/spark-jobs/{filename}",
+                type="bind",
+                read_only=True,
+            )
+        )
     return DockerOperator(
         task_id=task_id,
         image=OM_INGESTION_IMAGE,
@@ -90,25 +124,7 @@ def _om_script_operator(task_id: str, script_name: str):
         docker_url="unix://var/run/docker.sock",
         network_mode=DOCKER_NETWORK,
         environment=_om_container_environment(),
-        mounts=[
-            Mount(
-                source=f"{host_dir}/openmetadata-ingestion/{script_name}",
-                target=f"/opt/ingestion/{script_name}",
-                type="bind",
-            ),
-            Mount(
-                source=f"{host_dir}/spark/jobs/source_config.py",
-                target="/opt/spark-jobs/source_config.py",
-                type="bind",
-                read_only=True,
-            ),
-            Mount(
-                source=f"{host_dir}/spark/config",
-                target="/opt/spark-config",
-                type="bind",
-                read_only=True,
-            ),
-        ],
+        mounts=mounts,
         mount_tmp_dir=False,
         auto_remove="success",
         do_xcom_push=False,
@@ -125,3 +141,14 @@ def om_governance_operator(task_id: str = "enrich_governance"):
 def om_lineage_operator(task_id: str = "enrich_lineage"):
     """Draws Bronze->Silver->Gold lineage edges -- see set_lineage.py."""
     return _om_script_operator(task_id, "set_lineage.py")
+
+
+def om_catalog_metadata_operator(task_id: str = "enrich_catalog_metadata"):
+    """Sets descriptions and suggested-analysis/cadence/row-count/institution-
+    count/date-coverage info on every table -- see set_catalog_metadata.py.
+    """
+    return _om_script_operator(
+        task_id,
+        "set_catalog_metadata.py",
+        extra_spark_job_files=("catalog_descriptions.py", "bsis_frequency.py"),
+    )

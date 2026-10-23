@@ -1,0 +1,24 @@
+sector_id,sector_name,sector_code,is_active
+SEC_AGR,Agriculture,AGR,TRUE
+SEC_FSH,Fishing,FSH,TRUE
+SEC_FOR,Forest,FOR,TRUE
+SEC_HNT,Hunting,HNT,TRUE
+SEC_FIM,Financial Intermediaries,FIM,TRUE
+SEC_MIN,Mining and quarrying,MIN,TRUE
+SEC_MFG,Manufacturing,MFG,TRUE
+SEC_CON,Building & construction,CON,TRUE
+SEC_REA,Real Estate,REA,TRUE
+SEC_MTG,Mortgage,MTG,TRUE
+SEC_LSG,Leasing,LSG,TRUE
+SEC_TRP,Transport and communication,TRP,TRUE
+SEC_TRD,Trade,TRD,TRUE
+SEC_TOR,Tourism,TOR,TRUE
+SEC_HOR,Hotels and Restaurants,HOR,TRUE
+SEC_WHS,Warehousing and Storage,WHS,TRUE
+SEC_ELC,Electricity,ELC,TRUE
+SEC_GAS,Gas,GAS,TRUE
+SEC_WAT,Water,WAT,TRUE
+SEC_EDU,Education,EDU,TRUE
+SEC_HLT,Health,HLT,TRUE
+SEC_OTH,Other Services,OTH,TRUE
+SEC_PER,Personal (Private),PER,TRUE

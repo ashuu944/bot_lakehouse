@@ -1,6 +1,7 @@
 """OpenMetadata ingestion: schema metadata, ownership/domain governance,
-Bronze->Silver->Gold lineage, and data quality profiling for the whole
-lakehouse, via Trino -- scheduled from our own Airflow instead of
+Bronze->Silver->Gold lineage, curated descriptions/suggested-analysis/
+cadence/row-institution-counts/date-coverage, and data quality profiling for
+the whole lakehouse, via Trino -- scheduled from our own Airflow instead of
 OpenMetadata's bundled ingestion-Airflow (see om_ingestion_helpers.py).
 
 Lineage is drawn by set_lineage.py, NOT OpenLineage/Spark-listener-based
@@ -26,10 +27,11 @@ reporting_date partition FILE as its own "table" (355 of them for 12 real
 datasets). Bronze is Delta now (bronze_ingestion.py), so it's visible the
 same safe way Silver/Gold always have been.
 
-Ingestion order matters: ingest_*_schema must run before enrich_governance
-and enrich_lineage (both patch tables that must already exist), which must
-run before profile_gold (profiling needs the tables to exist too, though it
-doesn't depend on governance/lineage specifically -- ordered after them here
+Ingestion order matters: ingest_*_schema must run before enrich_governance,
+enrich_lineage, and enrich_catalog_metadata (all three patch tables that must
+already exist), which must run before profile_gold (profiling needs the
+tables to exist too, though it doesn't depend on
+governance/lineage/catalog-metadata specifically -- ordered after them here
 just to keep the DAG a single chain rather than a wider fan-in/out for no
 real benefit).
 
@@ -57,7 +59,12 @@ from datetime import timedelta
 import pendulum
 from airflow import DAG
 
-from om_ingestion_helpers import om_governance_operator, om_ingest_operator, om_lineage_operator
+from om_ingestion_helpers import (
+    om_catalog_metadata_operator,
+    om_governance_operator,
+    om_ingest_operator,
+    om_lineage_operator,
+)
 
 TZ = "Africa/Dar_es_Salaam"
 
@@ -100,10 +107,17 @@ with DAG(
 
     enrich_governance = om_governance_operator()
     enrich_lineage = om_lineage_operator()
+    enrich_catalog_metadata = om_catalog_metadata_operator()
 
     profile_gold = om_ingest_operator(
         task_id="profile_gold",
         config_file="trino_gold_profiler.yaml",
     )
 
-    [ingest_bronze, ingest_silver, ingest_gold] >> enrich_governance >> enrich_lineage >> profile_gold
+    (
+        [ingest_bronze, ingest_silver, ingest_gold]
+        >> enrich_governance
+        >> enrich_lineage
+        >> enrich_catalog_metadata
+        >> profile_gold
+    )

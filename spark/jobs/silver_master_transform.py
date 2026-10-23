@@ -2,11 +2,12 @@
 
 Thin pass-through — the master CSVs already use lowercase snake_case headers
 and have no date dimension, so there isn't much to clean. This mainly:
-normalizes column names defensively, trims strings, dedupes, and switches
-from Parquet to Delta so silver_transform.py's institution join gets a
-stable, schema-enforced table underneath it.
+normalizes column names defensively, trims strings, and dedupes. Bronze
+master is Delta too now (master_data_ingestion.py), so this is Delta-to-Delta
+-- kept as its own step regardless, same as before, since dropDuplicates()
+and coalesce(1) are still real transforms, not a pure format change.
 
-Run this BEFORE silver_transform.py — it reads silver/master/institutions.
+Run this BEFORE silver_transform.py — it reads silver/DFSS/BSIS/master/institutions.
 
 Usage:
     docker compose exec spark spark-submit /opt/spark-jobs/silver_master_transform.py
@@ -41,11 +42,11 @@ def main():
     spark = get_spark("silver-master-transform")
 
     for dataset in MASTER_DATASETS:
-        in_path = lakehouse_path("bronze", "master", dataset)
-        out_path = lakehouse_path("silver", "master", dataset)
+        in_path = lakehouse_path("bronze", "DFSS", "BSIS", "master", dataset)
+        out_path = lakehouse_path("silver", "DFSS", "BSIS", "master", dataset)
         logger.info("Transforming %s", dataset)
 
-        df = normalize_column_names(spark.read.parquet(in_path))
+        df = normalize_column_names(spark.read.format("delta").load(in_path))
         for field in df.schema.fields:
             if field.dataType.typeName() == "string":
                 df = df.withColumn(field.name, F.trim(F.col(field.name)))

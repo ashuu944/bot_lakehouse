@@ -3,7 +3,8 @@ generically -- driven entirely by spark/config/sources/**/*.yaml, not by a
 per-dataset Python function.
 
 Run silver_master_transform.py FIRST -- most datasets join against
-silver/master/institutions (and credit_exposure against silver/master/sectors).
+silver/DFSS/BSIS/master/institutions (and credit_exposure against
+silver/DFSS/BSIS/master/sectors).
 
 Every dataset here is pipeline_type "structured_tabular", which runs this
 fixed skeleton (see run_structured_tabular below):

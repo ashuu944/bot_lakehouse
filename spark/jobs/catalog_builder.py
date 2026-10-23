@@ -1,22 +1,24 @@
-"""Builds catalog.json: a snapshot of every Bronze/Silver/Gold table for the
-data portal (catalog/index.html, served by the catalog-portal nginx
-container) -- lets a human see what data exists, its schema, how much
-history it covers, and what it's actually for, without needing MinIO
-credentials or a Parquet/Delta reader.
+"""Builds catalog.json: a snapshot of every Bronze/Silver/Gold table -- schema,
+row/institution counts, date coverage, and curated description/suggested-
+analysis text for each.
+
+NOTE: the catalog-portal nginx container that used to serve this as a static
+page (catalog/index.html) has been removed -- OpenMetadata is now the single
+catalog UI. This job (and the BSIS_DESCRIPTIONS/MASTER_DESCRIPTIONS/
+GOLD_DESCRIPTIONS/suggested-analysis text below) is kept as the source data
+for pushing that same curated info into OpenMetadata (descriptions, and a
+custom property for suggested-analysis/row counts/institution counts/date
+range, since OpenMetadata's own profiler can't currently produce those for
+Bronze/Silver -- see openmetadata_ingestion_dag.py's profile_gold docstring
+for the upstream bug) -- not for catalog/index.html, which is unused now.
 
 Reuses the dataset lists already defined elsewhere (bsis_frequency,
 silver_master_transform, silver_transform, gold_transform) instead of
 redeclaring them, so the catalog can't silently drift out of sync with the
 datasets those jobs actually produce.
 
-Written to a local path (not MinIO) because this is metadata ABOUT the
-lakehouse, not lakehouse data itself, and the static file server serving the
-portal needs it on a plain filesystem path.
-
 Usage:
     docker compose exec spark spark-submit /opt/spark-jobs/catalog_builder.py
-    (then refresh http://localhost:8090 -- re-run any time after a Bronze/
-    Silver/Gold job, no restart needed)
 """
 
 import json
@@ -28,6 +30,7 @@ from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
 
 from bsis_frequency import frequency_of
+from catalog_descriptions import BSIS_DESCRIPTIONS, GOLD_DESCRIPTIONS, MASTER_DESCRIPTIONS
 from gold_transform import BUILDERS as GOLD_TABLES
 from silver_master_transform import MASTER_DATASETS
 from source_config import build_dataset_index
@@ -48,58 +51,6 @@ BSIS_DATASETS = sorted(
     if entry["directorate"] == "DFSS" and entry["source_system"] == "BSIS"
 )
 DATASET_DOMAIN = {name: _DATASET_INDEX[name]["domain"] for name in BSIS_DATASETS}
-
-BSIS_DESCRIPTIONS = {
-    "smr_daily_compliance": ("Daily statutory minimum reserve (SMR) compliance per institution.",
-                              "Day-to-day SMR breach detection, compliance trend."),
-    "liquidity_compliance": ("Daily liquid-assets-to-demand-liabilities compliance ratio.",
-                              "Daily liquidity compliance trend, breach alerts."),
-    "net_open_position": ("Daily net open foreign-exchange position.",
-                           "FX risk exposure monitoring."),
-    "lcr": ("Monthly Liquidity Coverage Ratio (Basel III).",
-             "Liquidity risk trend analysis, regulatory threshold breaches."),
-    "nsfr": ("Monthly Net Stable Funding Ratio (Basel III).",
-              "Funding stability trend analysis."),
-    "capital_adequacy": ("Monthly capital adequacy ratios (Tier 1, Total Capital, Leverage).",
-                          "Solvency/capital-strength trend analysis -- CAMELS 'C'."),
-    "sensitivity_market_risk": ("Monthly market risk sensitivity measures.",
-                                 "Interest-rate / market-risk exposure analysis."),
-    "asset_quality": ("Monthly asset quality rating and related metrics.",
-                       "Asset quality trend analysis -- CAMELS 'A'."),
-    "credit_exposure": ("Monthly credit exposure by economic sector, with performing/non-performing breakdown.",
-                         "Sector concentration risk, NPL-by-sector, institution-sector exposure graphs."),
-    "balance_sheet": ("Monthly full balance sheet, one column per line item (pivoted from Oracle's long format).",
-                       "Balance sheet structure analysis, peer comparison."),
-    "earnings": ("Monthly earnings/profitability metrics.",
-                 "Profitability trend analysis -- CAMELS 'E'."),
-    "income_statement": ("Monthly income statement, monthly + year-to-date amount per line item (pivoted).",
-                          "P&L trend analysis, revenue/expense breakdown."),
-}
-
-MASTER_DESCRIPTIONS = {
-    "institutions": "Registered financial institutions (code, name, status) -- the join key for every BSIS fact table.",
-    "institution_categories": "Institution category reference (e.g. commercial bank, community bank).",
-    "institution_types": "Institution type reference.",
-    "sectors": "Economic sector reference -- joined against credit_exposure.",
-    "risk_types": "Risk type reference used across risk datasets.",
-    "regulatory_thresholds": "Regulatory minimum/maximum thresholds per ratio (e.g. minimum LCR).",
-    "reporting_frequencies": "Reference for how often each BSIS report is submitted.",
-    "reporting_obligations": "Which institutions must submit which reports.",
-    "dataset_types": "BSIS dataset/report type reference.",
-    "camels_rating_criteria": "CAMELS rating scale/criteria reference.",
-    "holidays": "Bank holiday calendar -- relevant for daily-report date logic.",
-}
-
-GOLD_DESCRIPTIONS = {
-    "sector_exposure": (
-        "Institution x sector x month credit exposure, with total_exposure and npl_ratio derived.",
-        "Sector concentration risk, NPL-by-sector; edge-shaped for a future Neo4j institution-sector graph.",
-    ),
-    "institution_risk_trends": (
-        "Institution x month view of LCR, NSFR, and capital-adequacy ratios side by side.",
-        "Power BI trend dashboards: one ratio's trend per institution, or compare institutions.",
-    ),
-}
 
 
 def _find_column(columns: list[str], candidates: list[str]) -> str | None:
@@ -134,18 +85,19 @@ def inspect_table(df: DataFrame) -> dict:
 
 def bronze_entry(
     spark: SparkSession, source: str, dataset: str, description: str, suggested_analysis: str | None,
-    path_parts: tuple[str, ...] | None = None, fmt: str = "delta",
+    path_parts: tuple[str, ...] | None = None,
 ) -> dict | None:
     # path_parts is the real physical location (e.g. ("DFSS", "BSIS")); source
-    # stays the catalog.json grouping key the portal already renders -- the
-    # directorate/source split lives in storage, not in the portal's JSON shape.
-    # fmt: BSIS Bronze is Delta (one logical table per dataset, schema from the
-    # Delta log); master data Bronze is still plain Parquet -- it's an
-    # overwrite-each-run reference snapshot, not append-only history, so it
-    # never needed Delta's MERGE/schema-enforcement in the first place.
+    # stays the catalog.json grouping key this module's own layers dict is
+    # organized by -- the directorate/source split lives in storage, not in
+    # that grouping.
+    # Both BSIS and master Bronze are Delta now (one logical table per
+    # dataset, schema from the Delta log) -- master used to be plain Parquet,
+    # moved to Delta so it could be registered into Trino/OpenMetadata the
+    # same way BSIS Bronze already was (see trino/register_bronze_tables.sh).
     path = lakehouse_path("bronze", *(path_parts or (source,)), dataset)
     try:
-        df = spark.read.format(fmt).load(path) if fmt == "delta" else spark.read.parquet(path)
+        df = spark.read.format("delta").load(path)
     except Exception:
         logger.warning("Skipping bronze/%s/%s -- no data yet (%s)", source, dataset, path)
         return None
@@ -209,9 +161,13 @@ def main():
     bronze_bsis = [
         bronze_entry(spark, "bsis", ds, *BSIS_DESCRIPTIONS[ds], path_parts=("DFSS", "BSIS")) for ds in BSIS_DATASETS
     ]
-    logger.info("Inspecting bronze/master (%d datasets)", len(MASTER_DATASETS))
+    logger.info("Inspecting bronze/DFSS/BSIS/master (%d datasets)", len(MASTER_DATASETS))
     bronze_master = [
-        bronze_entry(spark, "master", ds, MASTER_DESCRIPTIONS.get(ds, ""), None, fmt="parquet") for ds in MASTER_DATASETS
+        bronze_entry(
+            spark, "master", ds, MASTER_DESCRIPTIONS.get(ds, ""), None,
+            path_parts=("DFSS", "BSIS", "master"),
+        )
+        for ds in MASTER_DATASETS
     ]
 
     logger.info("Inspecting silver/DFSS/<domain> (%d datasets)", len(BSIS_DATASETS))
@@ -219,9 +175,13 @@ def main():
         delta_entry(spark, "silver", "bsis", ds, *BSIS_DESCRIPTIONS[ds], path_parts=("DFSS", DATASET_DOMAIN[ds]))
         for ds in BSIS_DATASETS
     ]
-    logger.info("Inspecting silver/master (%d datasets)", len(MASTER_DATASETS))
+    logger.info("Inspecting silver/DFSS/BSIS/master (%d datasets)", len(MASTER_DATASETS))
     silver_master = [
-        delta_entry(spark, "silver", "master", ds, MASTER_DESCRIPTIONS.get(ds, ""), None) for ds in MASTER_DATASETS
+        delta_entry(
+            spark, "silver", "master", ds, MASTER_DESCRIPTIONS.get(ds, ""), None,
+            path_parts=("DFSS", "BSIS", "master"),
+        )
+        for ds in MASTER_DATASETS
     ]
 
     logger.info("Inspecting gold/bsis (%d tables)", len(GOLD_TABLES))

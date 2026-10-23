@@ -1,0 +1,7 @@
+frequency_id,frequency_name,is_active
+RP001,Daily,TRUE
+RP002,Weekly,TRUE
+RP003,Monthly,TRUE
+RP004,Quarterly,TRUE
+RP005,Annually,TRUE
+RP006,Fortnightly,TRUE

@@ -1,0 +1,14 @@
+threshold_id,indicator_name,indicator_code,report_type,threshold_value,unit,direction,effective_from,effective_to,is_active
+TH_LIQ_001,Minimum Liquidity Ratio,liquidity_ratio,LIQUIDITY,20,PERCENTAGE,MIN,1/1/2015,,TRUE
+TH_LCR_001,Minimum Liquidity Coverage Ratio,lcr,LCR,70,PERCENTAGE,MIN,1/1/2020,2026-06-30,FALSE
+TH_LCR_002,Minimum Liquidity Coverage Ratio,lcr,LCR,80,PERCENTAGE,MIN,2026-07-01,,TRUE
+TH_NSFR_001,Minimum Net Stable Funding Ratio,nsfr,NSFR,70,PERCENTAGE,MIN,1/1/2020,,TRUE
+TH_SMR_100C,Statutory Minimum Reserve Full Compliance (Compliance Period),smr_100_required,SMR,100,PERCENTAGE,MIN,1/1/2010,,TRUE
+TH_SMR_080,Statutory Minimum Reserve Daily,smr_80_required,SMR,80,PERCENTAGE,MIN,1/1/2010,,TRUE
+TH_NOP_001,Absolute Net Open Position (% of Tier 1 Capital),nop_percent_of_tier1,NOP,10,PERCENTAGE,ABS_MAX ,1/1/2014,,TRUE
+TH_CAP_CET1_T1,Minimum CET1 Ratio Tier 1 Banks,common_equity_tier1_ratio,CAPITAL_ADEQUACY,8.5,PERCENTAGE,MIN,1/1/2015,,TRUE
+TH_CAP_T1_T1,Minimum Tier 1 Capital Ratio,tier1_capital_ratio,CAPITAL_ADEQUACY,10,PERCENTAGE,MIN,1/1/2015,,TRUE
+TH_CAP_TOT_T1,Minimum Total Capital Ratio,total_capital_ratio,CAPITAL_ADEQUACY,12,PERCENTAGE,MIN,1/1/2015,,TRUE
+TH_CAP_CCB_001,Minimum Capital Conservation Buffer,capital_conservation_buffer,CAPITAL_ADEQUACY,2.5,PERCENTAGE,MIN,1/1/2019,,TRUE
+TH_CAP_LEV_001,Minimum Leverage Ratio,leverage_ratio,CAPITAL_ADEQUACY,7,PERCENTAGE,MIN,1/1/2018,,TRUE
+TH_CRE_NPL_001,NPL Ratio,npl_ratio,CREDIT_EXPOSURE,5,PERCENTAGE,MAX,1/2/2018,,TRUE

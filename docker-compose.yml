@@ -134,14 +134,6 @@ services:
     tty: true
     stdin_open: true
 
-  catalog-portal:
-    image: nginx:alpine
-    container_name: lakehouse-catalog-portal
-    ports:
-      - "8890:80"   # Data portal -- what's in bronze/silver/gold, for demos
-    volumes:
-      - ./catalog:/usr/share/nginx/html:ro
-
   trino:
     image: trinodb/trino:latest
     container_name: lakehouse-trino
@@ -316,8 +308,11 @@ services:
       discovery.type: single-node
       ES_JAVA_OPTS: "-Xms1024m -Xmx1024m"
       xpack.security.enabled: "false"
-    ports:
-      - "9200:9200"
+    # No host port published: only om-server talks to this (via the
+    # om-elasticsearch:9200 service name on the docker network), and
+    # xpack.security is off, so publishing 9200 on a network-reachable test
+    # host would expose an unauthenticated Elasticsearch to anyone who can
+    # reach that port.
     healthcheck:
       test: "curl -s http://localhost:9200/_cluster/health?pretty | grep status | grep -qE 'green|yellow' || exit 1"
       interval: 15s

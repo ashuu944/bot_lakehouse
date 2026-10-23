@@ -1,0 +1,6 @@
+category_id,category_name,category_code,has_types,is_active
+CAT_BANK,Commercial Bank,BNK,TRUE,TRUE
+CAT_MFB,Microfinance Bank,MFB,FALSE,TRUE
+CAT_COM,Community Bank,CMB,FALSE,TRUE
+CAT_DFI,Development Finance Institution,DFI,FALSE,TRUE
+CAT_SPL,Specialized Financial Institution,SPL,FALSE,TRUE

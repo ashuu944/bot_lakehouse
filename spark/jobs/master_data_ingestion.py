@@ -10,13 +10,19 @@ each file here is written with mode "overwrite": there's no date dimension,
 and a run represents the current state of the reference file, not a new
 event.
 
+Written as Delta, not plain Parquet -- same reasoning bronze_ingestion.py's
+own Parquet->Delta move had: a plain Parquet directory has no transaction
+log for Trino's `delta.system.register_table` to read, so it can't be
+registered into Trino (and from there, OpenMetadata) at all. See
+trino/register_bronze_tables.sh.
+
 Usage (run from the project root, containers already up via
 `docker compose up -d minio spark`; requires MASTER_DATA_PATH in .env):
 
     docker compose exec spark spark-submit /opt/spark-jobs/master_data_ingestion.py
 
 No arguments — it always processes every CSV under MASTER_DATA_PATH and
-overwrites all 11 bronze/master/<dataset>/ tables in one run.
+overwrites all 11 bronze/DFSS/BSIS/master/<dataset>/ tables in one run.
 """
 
 import logging
@@ -60,9 +66,9 @@ def main():
             .withColumn("ingestion_batch_id", F.lit(batch_id))
         )
 
-        out_path = lakehouse_path("bronze", "master", dataset)
+        out_path = lakehouse_path("bronze", "DFSS", "BSIS", "master", dataset)
         logger.info("Writing %d rows to %s", sdf.count(), out_path)
-        sdf.coalesce(1).write.mode("overwrite").format("parquet").save(out_path)
+        sdf.coalesce(1).write.mode("overwrite").format("delta").save(out_path)
 
     spark.stop()
     logger.info("Batch %s complete", batch_id)
