@@ -17,3 +17,11 @@ _delta_log/
 
 # docker volumes mounted locally (if any)
 data/
+
+# Airflow's own runtime output (scheduler/task logs, dag-processor state) --
+# pure generated state, re-created on every run. Tracking it means every
+# fresh clone inherits stale logs owned by whoever ran `git clone`/`git pull`
+# instead of the AIRFLOW_UID (50000 by default) the containers actually run
+# as, which breaks the dag file processor outright (PermissionError on
+# dag_processor_manager.log) until the directory is rechown'd by hand.
+airflow/logs/
