@@ -51,24 +51,43 @@ remote deployment.
      to the host's Docker daemon, so copying this value from another
      machine's `.env` will break the Spark/OpenMetadata-ingestion DAGs.
    - `OM_INGESTION_BOT_TOKEN` can't be filled in until after first boot (see
-     step 4) — a fresh deployment always starts with this blank/stale.
-2. Build and start everything:
+     step 5) — a fresh deployment always starts with this blank/stale.
+2. **On Linux (including a fresh clone on a remote server), fix `airflow/logs`
+   permissions before first boot:**
+   ```
+   mkdir -p airflow/logs
+   sudo chown -R 50000:0 airflow/logs
+   sudo chmod -R 775 airflow/logs
+   ```
+   Airflow's containers run as UID `50000`, group `0` (`AIRFLOW_UID` in
+   `docker-compose.yml`). If this directory doesn't already have group-write
+   permission for group `0` -- the default for a directory Docker
+   auto-creates for a missing bind mount is `root:root` mode `755`, which
+   isn't enough -- the DAG file processor crash-loops on a `PermissionError`
+   writing its own log file, and **no DAGs will show up in the Airflow UI at
+   all** (not even as an import error -- the component that would report one
+   never gets that far). Not needed on Docker Desktop (Windows/Mac), which
+   doesn't enforce host-side UID ownership on bind mounts the same way.
+3. Build and start everything:
    ```
    docker compose up -d
    ```
-3. On a remote test server, open these ports on the host firewall /
+4. On a remote test server, open these ports on the host firewall /
    security group so teammates can reach the stack: `9000`, `9001`, `8880`,
    `8810`, `8895`, `8585`, `8586`. (`om-elasticsearch`'s `9200` is
    intentionally **not** published — it has no auth and nothing outside the
    docker network needs to reach it directly.)
-4. Log into OpenMetadata (http://\<HOST\>:8585, `admin@open-metadata.org` /
+5. Log into OpenMetadata (http://\<HOST\>:8585, `admin@open-metadata.org` /
    `admin`), go to Settings → Bots → ingestion-bot, generate a token, and
    put it in `.env` as `OM_INGESTION_BOT_TOKEN`, then
    `docker compose up -d airflow-webserver airflow-scheduler` to pick it up.
-5. Airflow DAGs (`daily_bsis_pipeline_dag`, `monthly_bsis_pipeline_dag`,
-   `backfill_bsis_pipeline_dag`, `openmetadata_ingestion_dag`) handle running
-   the Spark jobs and keeping OpenMetadata's catalog in sync — trigger them
-   from the Airflow UI.
+6. Airflow DAGs (`daily_bsis_pipeline_dag`, `monthly_bsis_pipeline_dag`,
+   `backfill_bsis_pipeline_dag`, `master_data_pipeline_dag`,
+   `openmetadata_ingestion_dag`) handle running the Spark jobs and keeping
+   OpenMetadata's catalog in sync — trigger them from the Airflow UI.
+   `dfss_bsis_master_data` (master/reference data) and `dfss_bsis_backfill`
+   are both on-demand only (`schedule=None`) — trigger them by hand whenever
+   needed, they don't run on their own.
 
 Note: the `bsis_extractor` DB connection (`DB_DSN`) assumes network access to
 the BSIS Oracle DB that only exists on the original dev machine/network. If

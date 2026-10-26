@@ -66,16 +66,32 @@ def _host_project_dir() -> str:
     return host_dir.rstrip("\\/")
 
 
-def spark_job_operator(task_id: str, job_script: str, arguments: list[str]):
+def spark_job_operator(task_id: str, job_script: str, arguments: list[str], extra_mounts: list | None = None):
     """A DockerOperator that runs `spark-submit /opt/spark-jobs/<job_script> <arguments>`
     in a fresh container from the image the `spark`/`spark-thriftserver`
     services already use, on the same Docker network as the rest of the stack.
+
+    extra_mounts: additional docker.types.Mount entries, for jobs that need
+    more than spark/jobs + spark/config -- e.g. master_data_ingestion.py also
+    needs the master-data CSVs the `spark` compose service itself mounts via
+    MASTER_DATA_PATH (DockerOperator spawns an independent container, so it
+    doesn't inherit that service's volumes any more than it inherits its
+    environment -- see _spark_container_environment's docstring above).
     """
     from docker.types import Mount
 
     from airflow.providers.docker.operators.docker import DockerOperator
 
     host_dir = _host_project_dir()
+    mounts = [
+        Mount(source=f"{host_dir}/spark/jobs", target="/opt/spark-jobs", type="bind"),
+        # Per-directorate/source-system dataset configs (source_config.py) --
+        # bronze_ingestion.py/silver_transform.py need this the same way
+        # the `spark` compose service does (docker-compose.yml).
+        Mount(source=f"{host_dir}/spark/config", target="/opt/spark-config", type="bind", read_only=True),
+    ]
+    if extra_mounts:
+        mounts.extend(extra_mounts)
     return DockerOperator(
         task_id=task_id,
         image=SPARK_IMAGE,
@@ -83,14 +99,32 @@ def spark_job_operator(task_id: str, job_script: str, arguments: list[str]):
         docker_url="unix://var/run/docker.sock",
         network_mode=DOCKER_NETWORK,
         environment=_spark_container_environment(),
-        mounts=[
-            Mount(source=f"{host_dir}/spark/jobs", target="/opt/spark-jobs", type="bind"),
-            # Per-directorate/source-system dataset configs (source_config.py) --
-            # bronze_ingestion.py/silver_transform.py need this the same way
-            # the `spark` compose service does (docker-compose.yml).
-            Mount(source=f"{host_dir}/spark/config", target="/opt/spark-config", type="bind", read_only=True),
-        ],
+        mounts=mounts,
         mount_tmp_dir=False,
         auto_remove="success",
         do_xcom_push=False,
+    )
+
+
+def master_data_ingest_operator(task_id: str = "ingest_master_bronze"):
+    """spark_job_operator for master_data_ingestion.py specifically -- the one
+    job in this project that reads local CSVs (spark/master_data/DFSS/BSIS/,
+    fixed path -- see master_data_ingestion.py's own docstring) rather than
+    just MinIO/the BSIS DB, so it needs that directory mounted too.
+    """
+    from docker.types import Mount
+
+    host_dir = _host_project_dir()
+    return spark_job_operator(
+        task_id=task_id,
+        job_script="master_data_ingestion.py",
+        arguments=[],
+        extra_mounts=[
+            Mount(
+                source=f"{host_dir}/spark/master_data/DFSS/BSIS",
+                target="/opt/master-data",
+                type="bind",
+                read_only=True,
+            ),
+        ],
     )
