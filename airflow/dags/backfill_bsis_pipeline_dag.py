@@ -101,7 +101,7 @@ with DAG(
             description="Which cadence to backfill. Ignored if 'datasets' is set.",
         ),
         "datasets": Param(
-            "", type="string",
+            "", type=["string", "null"],
             description="Comma-separated dataset keys, overrides 'frequency' entirely (e.g. 'lcr,nsfr'). Leave blank to use 'frequency'.",
         ),
         "start_date": Param(
@@ -109,7 +109,7 @@ with DAG(
             description="Backfill start date, YYYY-MM-DD (inclusive).",
         ),
         "end_date": Param(
-            "", type="string",
+            "", type=["string", "null"],
             description="Backfill end date, YYYY-MM-DD (inclusive). Leave blank for today.",
         ),
     },
