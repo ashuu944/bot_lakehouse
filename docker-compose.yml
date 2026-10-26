@@ -43,6 +43,17 @@ x-airflow-common: &airflow-common
     context: .
     dockerfile: airflow/Dockerfile
   user: "${AIRFLOW_UID:-50000}:0"
+  # On Linux, /var/run/docker.sock is owned by root:<docker-group>, some GID
+  # that isn't 0 -- without this, DockerOperator (ingest_master_bronze and
+  # every other DockerOperator task) fails with "Failed to establish
+  # connection to Docker host ... PermissionError(13, 'Permission denied')",
+  # since this container's group (0) doesn't match. Find the right value
+  # with `stat -c '%g' /var/run/docker.sock` on the host and set DOCKER_GID
+  # in .env -- it varies per host/distro, no safe universal default. Not
+  # needed on Docker Desktop (Windows/Mac), which doesn't enforce host-side
+  # socket group ownership the same way.
+  group_add:
+    - "${DOCKER_GID:-0}"
   environment:
     <<: *airflow-common-env
   volumes:
