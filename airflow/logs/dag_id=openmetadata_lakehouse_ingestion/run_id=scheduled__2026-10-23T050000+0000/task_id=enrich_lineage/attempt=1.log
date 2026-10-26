@@ -1,0 +1,38 @@
+[2026-10-26T04:24:21.554+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-10-26T04:24:21.573+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openmetadata_lakehouse_ingestion.enrich_lineage scheduled__2026-10-23T05:00:00+00:00 [queued]>
+[2026-10-26T04:24:21.581+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openmetadata_lakehouse_ingestion.enrich_lineage scheduled__2026-10-23T05:00:00+00:00 [queued]>
+[2026-10-26T04:24:21.582+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2026-10-26T04:24:21.593+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): enrich_lineage> on 2026-10-23 05:00:00+00:00
+[2026-10-26T04:24:21.600+0000] {standard_task_runner.py:72} INFO - Started process 25593 to run task
+[2026-10-26T04:24:21.603+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'openmetadata_lakehouse_ingestion', 'enrich_lineage', 'scheduled__2026-10-23T05:00:00+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/openmetadata_ingestion_dag.py', '--cfg-path', '/tmp/tmp3qssmtjy']
+[2026-10-26T04:24:21.606+0000] {standard_task_runner.py:105} INFO - Job 66: Subtask enrich_lineage
+[2026-10-26T04:24:21.657+0000] {task_command.py:467} INFO - Running <TaskInstance: openmetadata_lakehouse_ingestion.enrich_lineage scheduled__2026-10-23T05:00:00+00:00 [running]> on host c722b3213d78
+[2026-10-26T04:24:21.726+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lakehouse-platform' AIRFLOW_CTX_DAG_ID='openmetadata_lakehouse_ingestion' AIRFLOW_CTX_TASK_ID='enrich_lineage' AIRFLOW_CTX_EXECUTION_DATE='2026-10-23T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-10-23T05:00:00+00:00'
+[2026-10-26T04:24:21.728+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-10-26T04:24:21.793+0000] {docker.py:367} INFO - Starting docker container from image bot_lakehouse-openmetadata-ingestion
+[2026-10-26T04:24:25.451+0000] {docker.py:438} INFO - /usr/local/lib/python3.10/site-packages/google/api_core/_python_version_support.py:223: FutureWarning: You are using a non-supported Python version (3.10.22). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.11, and then update google.api_core.
+[2026-10-26T04:24:25.462+0000] {docker.py:438} INFO -   warnings.warn(message, FutureWarning)
+[2026-10-26T04:24:26.604+0000] {docker.py:438} INFO - /usr/local/lib/python3.10/site-packages/metadata/ingestion/source/database/postgres/models.py:20: UserWarning: Field name "schema" in "PostgresStoredProcedure" shadows an attribute in parent "BaseModel"
+[2026-10-26T04:24:26.606+0000] {docker.py:438} INFO -   class PostgresStoredProcedure(BaseModel):
+[2026-10-26T04:24:27.446+0000] {docker.py:438} INFO - 2026-10-26 04:24:27,400 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.smr_daily_compliance -> lakehouse-trino-silver.delta.silver.smr_daily_compliance
+[2026-10-26T04:24:27.597+0000] {docker.py:438} INFO - 2026-10-26 04:24:27,595 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.liquidity_compliance -> lakehouse-trino-silver.delta.silver.liquidity_compliance
+[2026-10-26T04:24:27.779+0000] {docker.py:438} INFO - 2026-10-26 04:24:27,776 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.net_open_position -> lakehouse-trino-silver.delta.silver.net_open_position
+[2026-10-26T04:24:27.933+0000] {docker.py:438} INFO - 2026-10-26 04:24:27,931 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.lcr -> lakehouse-trino-silver.delta.silver.lcr
+[2026-10-26T04:24:28.056+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,055 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.nsfr -> lakehouse-trino-silver.delta.silver.nsfr
+[2026-10-26T04:24:28.180+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,178 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.capital_adequacy -> lakehouse-trino-silver.delta.silver.capital_adequacy
+[2026-10-26T04:24:28.289+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,288 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.sensitivity_market_risk -> lakehouse-trino-silver.delta.silver.sensitivity_market_risk
+[2026-10-26T04:24:28.425+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,424 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.asset_quality -> lakehouse-trino-silver.delta.silver.asset_quality
+[2026-10-26T04:24:28.526+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,525 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.earnings -> lakehouse-trino-silver.delta.silver.earnings
+[2026-10-26T04:24:28.637+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,635 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.credit_exposure -> lakehouse-trino-silver.delta.silver.credit_exposure
+[2026-10-26T04:24:28.791+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,790 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.balance_sheet -> lakehouse-trino-silver.delta.silver.balance_sheet
+[2026-10-26T04:24:28.916+0000] {docker.py:438} INFO - 2026-10-26 04:24:28,914 INFO set_lineage: Linked lakehouse-trino-bronze.delta.bronze.income_statement -> lakehouse-trino-silver.delta.silver.income_statement
+[2026-10-26T04:24:29.025+0000] {docker.py:438} INFO - 2026-10-26 04:24:29,024 INFO set_lineage: Linked lakehouse-trino-silver.delta.silver.credit_exposure -> lakehouse-trino-gold.delta.gold.sector_exposure
+[2026-10-26T04:24:29.152+0000] {docker.py:438} INFO - 2026-10-26 04:24:29,150 INFO set_lineage: Linked lakehouse-trino-silver.delta.silver.lcr -> lakehouse-trino-gold.delta.gold.institution_risk_trends
+[2026-10-26T04:24:29.291+0000] {docker.py:438} INFO - 2026-10-26 04:24:29,289 INFO set_lineage: Linked lakehouse-trino-silver.delta.silver.nsfr -> lakehouse-trino-gold.delta.gold.institution_risk_trends
+[2026-10-26T04:24:29.602+0000] {docker.py:438} INFO - 2026-10-26 04:24:29,589 INFO set_lineage: Linked lakehouse-trino-silver.delta.silver.capital_adequacy -> lakehouse-trino-gold.delta.gold.institution_risk_trends
+[2026-10-26T04:24:29.605+0000] {docker.py:438} INFO - 2026-10-26 04:24:29,589 INFO set_lineage: Lineage applied.
+[2026-10-26T04:24:31.853+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-10-26T04:24:31.855+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=openmetadata_lakehouse_ingestion, task_id=enrich_lineage, run_id=scheduled__2026-10-23T05:00:00+00:00, execution_date=20261023T050000, start_date=20261026T042421, end_date=20261026T042431
+[2026-10-26T04:24:31.895+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-10-26T04:24:31.919+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-10-26T04:24:31.923+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

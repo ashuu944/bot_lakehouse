@@ -1,0 +1,296 @@
+[2026-10-26T04:40:32.366+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-10-26T04:40:32.381+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dfss_bsis_daily_pipeline.transform_daily_sources scheduled__2026-10-23T03:00:00+00:00 [queued]>
+[2026-10-26T04:40:32.388+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dfss_bsis_daily_pipeline.transform_daily_sources scheduled__2026-10-23T03:00:00+00:00 [queued]>
+[2026-10-26T04:40:32.391+0000] {taskinstance.py:2866} INFO - Starting attempt 4 of 4
+[2026-10-26T04:40:32.402+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): transform_daily_sources> on 2026-10-23 03:00:00+00:00
+[2026-10-26T04:40:32.409+0000] {standard_task_runner.py:72} INFO - Started process 26413 to run task
+[2026-10-26T04:40:32.411+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dfss_bsis_daily_pipeline', 'transform_daily_sources', 'scheduled__2026-10-23T03:00:00+00:00', '--job-id', '81', '--raw', '--subdir', 'DAGS_FOLDER/daily_bsis_pipeline_dag.py', '--cfg-path', '/tmp/tmpowz01khm']
+[2026-10-26T04:40:32.416+0000] {standard_task_runner.py:105} INFO - Job 81: Subtask transform_daily_sources
+[2026-10-26T04:40:32.479+0000] {task_command.py:467} INFO - Running <TaskInstance: dfss_bsis_daily_pipeline.transform_daily_sources scheduled__2026-10-23T03:00:00+00:00 [running]> on host c722b3213d78
+[2026-10-26T04:40:32.540+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='dfss-bsis' AIRFLOW_CTX_DAG_ID='dfss_bsis_daily_pipeline' AIRFLOW_CTX_TASK_ID='transform_daily_sources' AIRFLOW_CTX_EXECUTION_DATE='2026-10-23T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-10-23T03:00:00+00:00'
+[2026-10-26T04:40:32.543+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-10-26T04:40:32.606+0000] {docker.py:367} INFO - Starting docker container from image bot_lakehouse-spark
+[2026-10-26T04:40:33.519+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m04:40:33.51 [0m[38;5;2mINFO [0m ==>
+[2026-10-26T04:40:33.527+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m04:40:33.52 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami spark container[0m
+[2026-10-26T04:40:33.535+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m04:40:33.53 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[2026-10-26T04:40:33.543+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m04:40:33.54 [0m[38;5;2mINFO [0m ==> Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami/ for more information.
+[2026-10-26T04:40:33.550+0000] {docker.py:438} INFO - [38;5;6mspark [38;5;5m04:40:33.54 [0m[38;5;2mINFO [0m ==>
+[2026-10-26T04:40:33.582+0000] {docker.py:438} INFO - 
+[2026-10-26T04:40:36.050+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkContext: Running Spark version 3.5.6
+[2026-10-26T04:40:36.058+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-10-26T04:40:36.061+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkContext: Java version 17.0.15
+[2026-10-26T04:40:36.072+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO ResourceUtils: ==============================================================
+[2026-10-26T04:40:36.075+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-10-26T04:40:36.078+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO ResourceUtils: ==============================================================
+[2026-10-26T04:40:36.080+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkContext: Submitted application: silver-transform
+[2026-10-26T04:40:36.085+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-10-26T04:40:36.091+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO ResourceProfile: Limiting resource is cpu
+[2026-10-26T04:40:36.094+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-10-26T04:40:36.130+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SecurityManager: Changing view acls to: root,spark
+[2026-10-26T04:40:36.133+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SecurityManager: Changing modify acls to: root,spark
+[2026-10-26T04:40:36.136+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SecurityManager: Changing view acls groups to:
+[2026-10-26T04:40:36.139+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SecurityManager: Changing modify acls groups to:
+[2026-10-26T04:40:36.142+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+[2026-10-26T04:40:36.167+0000] {docker.py:438} INFO - 26/10/26 04:40:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-10-26T04:40:36.331+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Utils: Successfully started service 'sparkDriver' on port 39147.
+[2026-10-26T04:40:36.352+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkEnv: Registering MapOutputTracker
+[2026-10-26T04:40:36.379+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkEnv: Registering BlockManagerMaster
+[2026-10-26T04:40:36.392+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-10-26T04:40:36.395+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-10-26T04:40:36.398+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-10-26T04:40:36.409+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-10710cd4-8f66-4dfc-aa7f-d6bacf4fe169
+[2026-10-26T04:40:36.418+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2026-10-26T04:40:36.429+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-10-26T04:40:36.516+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-10-26T04:40:36.560+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-10-26T04:40:36.626+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Executor: Starting executor ID driver on host dc2f78857511
+[2026-10-26T04:40:36.630+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-10-26T04:40:36.633+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Executor: Java version 17.0.15
+[2026-10-26T04:40:36.636+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-10-26T04:40:36.639+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1708dbb0 for default.
+[2026-10-26T04:40:36.649+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42485.
+[2026-10-26T04:40:36.652+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO NettyBlockTransferService: Server created on dc2f78857511:42485
+[2026-10-26T04:40:36.654+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-10-26T04:40:36.663+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dc2f78857511, 42485, None)
+[2026-10-26T04:40:36.669+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManagerMasterEndpoint: Registering block manager dc2f78857511:42485 with 434.4 MiB RAM, BlockManagerId(driver, dc2f78857511, 42485, None)
+[2026-10-26T04:40:36.671+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dc2f78857511, 42485, None)
+[2026-10-26T04:40:36.674+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dc2f78857511, 42485, None)
+[2026-10-26T04:40:36.933+0000] {docker.py:438} INFO - 2026-10-26 04:40:36,931 INFO silver_transform: Transforming liquidity_compliance
+[2026-10-26T04:40:36.984+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2026-10-26T04:40:36.989+0000] {docker.py:438} INFO - 26/10/26 04:40:36 INFO SharedState: Warehouse path is 'file:/opt/spark-jobs/spark-warehouse'.
+[2026-10-26T04:40:37.761+0000] {docker.py:438} INFO - 26/10/26 04:40:37 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+[2026-10-26T04:40:37.771+0000] {docker.py:438} INFO - 26/10/26 04:40:37 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+[2026-10-26T04:40:37.774+0000] {docker.py:438} INFO - 26/10/26 04:40:37 INFO MetricsSystemImpl: s3a-file-system metrics system started
+[2026-10-26T04:40:38.379+0000] {docker.py:438} INFO - 26/10/26 04:40:38 INFO DelegatingLogStore: LogStore `LogStoreAdapter(io.delta.storage.S3SingleDriverLogStore)` is used for scheme `s3a`
+[2026-10-26T04:40:38.887+0000] {docker.py:438} INFO - 26/10/26 04:40:38 INFO DeltaLog: Loading version 104 starting from checkpoint version 100.
+[2026-10-26T04:40:39.961+0000] {docker.py:438} INFO - 26/10/26 04:40:39 INFO DeltaLogFileIndex: Created DeltaLogFileIndex(Parquet, numFilesInSegment: 1, totalFileSize: 52811)
+[2026-10-26T04:40:39.965+0000] {docker.py:438} INFO - 26/10/26 04:40:39 INFO DeltaLogFileIndex: Created DeltaLogFileIndex(Parquet, numFilesInSegment: 1, totalFileSize: 52811)
+[2026-10-26T04:40:40.279+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO DeltaLogFileIndex: Created DeltaLogFileIndex(JSON, numFilesInSegment: 4, totalFileSize: 8516)
+[2026-10-26T04:40:40.674+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO DataSourceStrategy: Pruning directories with:
+[2026-10-26T04:40:40.679+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO DataSourceStrategy: Pruning directories with:
+[2026-10-26T04:40:40.682+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO FileSourceStrategy: Pushed Filters: Or(IsNotNull(protocol.minReaderVersion),IsNotNull(metaData.id))
+[2026-10-26T04:40:40.684+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO FileSourceStrategy: Pushed Filters: Or(IsNotNull(checkpointMetadata.version),IsNotNull(sidecar.path))
+[2026-10-26T04:40:40.687+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO FileSourceStrategy: Post-Scan Filters: (isnotnull(protocol#13.minReaderVersion) OR isnotnull(metaData#11.id))
+[2026-10-26T04:40:40.690+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO FileSourceStrategy: Post-Scan Filters: (isnotnull(checkpointMetadata#20.version) OR isnotnull(sidecar#21.path))
+[2026-10-26T04:40:40.697+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO DataSourceStrategy: Pruning directories with:
+[2026-10-26T04:40:40.700+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO FileSourceStrategy: Pushed Filters:
+[2026-10-26T04:40:40.702+0000] {docker.py:438} INFO - 26/10/26 04:40:40 INFO FileSourceStrategy: Post-Scan Filters: ((isnotnull(protocol#50.minReaderVersion) OR isnotnull(metaData#49.id)) OR (isnotnull(commitInfo#51.inCommitTimestamp) AND (version#52L = 104)))
+[2026-10-26T04:40:41.057+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 221.909623 ms
+[2026-10-26T04:40:41.086+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 251.982336 ms
+[2026-10-26T04:40:41.116+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 205.3 KiB, free 434.0 MiB)
+[2026-10-26T04:40:41.119+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 207.1 KiB, free 434.0 MiB)
+[2026-10-26T04:40:41.160+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 36.1 KiB, free 433.9 MiB)
+[2026-10-26T04:40:41.163+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 36.5 KiB, free 433.9 MiB)
+[2026-10-26T04:40:41.164+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on dc2f78857511:42485 (size: 36.5 KiB, free: 434.4 MiB)
+[2026-10-26T04:40:41.167+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on dc2f78857511:42485 (size: 36.1 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:41.169+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Created broadcast 0 from $anonfun$submit$1 at <unknown>:0
+[2026-10-26T04:40:41.171+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Created broadcast 1 from $anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128
+[2026-10-26T04:40:41.181+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2026-10-26T04:40:41.184+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2026-10-26T04:40:41.320+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 66.123957 ms
+[2026-10-26T04:40:41.323+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Starting job: $anonfun$submit$1 at <unknown>:0
+[2026-10-26T04:40:41.326+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 202.4 KiB, free 433.7 MiB)
+[2026-10-26T04:40:41.334+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 433.7 MiB)
+[2026-10-26T04:40:41.338+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Got job 0 ($anonfun$submit$1 at <unknown>:0) with 1 output partitions
+[2026-10-26T04:40:41.341+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Final stage: ResultStage 0 ($anonfun$submit$1 at <unknown>:0)
+[2026-10-26T04:40:41.344+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Parents of final stage: List()
+[2026-10-26T04:40:41.346+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on dc2f78857511:42485 (size: 35.0 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:41.349+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Missing parents: List()
+[2026-10-26T04:40:41.352+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Created broadcast 2 from $anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128
+[2026-10-26T04:40:41.354+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[6] at $anonfun$submit$1 at <unknown>:0), which has no missing parents
+[2026-10-26T04:40:41.356+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2026-10-26T04:40:41.358+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 26.0 KiB, free 433.7 MiB)
+[2026-10-26T04:40:41.360+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.9 KiB, free 433.7 MiB)
+[2026-10-26T04:40:41.362+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on dc2f78857511:42485 (size: 8.9 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:41.364+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1611
+[2026-10-26T04:40:41.376+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[6] at $anonfun$submit$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2026-10-26T04:40:41.379+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2026-10-26T04:40:41.412+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (dc2f78857511, executor driver, partition 0, PROCESS_LOCAL, 9717 bytes)
+[2026-10-26T04:40:41.415+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Starting job: $anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128
+[2026-10-26T04:40:41.417+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Got job 1 ($anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128) with 5 output partitions
+[2026-10-26T04:40:41.419+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Final stage: ResultStage 1 ($anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128)
+[2026-10-26T04:40:41.421+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Parents of final stage: List()
+[2026-10-26T04:40:41.423+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Missing parents: List()
+[2026-10-26T04:40:41.426+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[11] at $anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128), which has no missing parents
+[2026-10-26T04:40:41.429+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2026-10-26T04:40:41.432+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 103.2 KiB, free 433.6 MiB)
+[2026-10-26T04:40:41.434+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 29.3 KiB, free 433.5 MiB)
+[2026-10-26T04:40:41.436+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on dc2f78857511:42485 (size: 29.3 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:41.438+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1611
+[2026-10-26T04:40:41.440+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Submitting 5 missing tasks from ResultStage 1 (MapPartitionsRDD[11] at $anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+[2026-10-26T04:40:41.443+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSchedulerImpl: Adding task set 1.0 with 5 tasks resource profile 0
+[2026-10-26T04:40:41.446+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (dc2f78857511, executor driver, partition 0, PROCESS_LOCAL, 9826 bytes)
+[2026-10-26T04:40:41.448+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (dc2f78857511, executor driver, partition 1, PROCESS_LOCAL, 9812 bytes)
+[2026-10-26T04:40:41.450+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (dc2f78857511, executor driver, partition 2, PROCESS_LOCAL, 9812 bytes)
+[2026-10-26T04:40:41.453+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (dc2f78857511, executor driver, partition 3, PROCESS_LOCAL, 9812 bytes)
+[2026-10-26T04:40:41.456+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 5) (dc2f78857511, executor driver, partition 4, PROCESS_LOCAL, 9812 bytes)
+[2026-10-26T04:40:41.458+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2026-10-26T04:40:41.460+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+[2026-10-26T04:40:41.463+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+[2026-10-26T04:40:41.466+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+[2026-10-26T04:40:41.469+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Running task 4.0 in stage 1.0 (TID 5)
+[2026-10-26T04:40:41.537+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 21.270554 ms
+[2026-10-26T04:40:41.544+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileScanRDD: Reading File path: s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000100.checkpoint.parquet, range: 0-52811, partition values: [100]
+[2026-10-26T04:40:41.552+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 37.022928 ms
+[2026-10-26T04:40:41.555+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileScanRDD: Reading File path: s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000102.json, range: 0-2127, partition values: [102]
+[2026-10-26T04:40:41.559+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileScanRDD: Reading File path: s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000101.json, range: 0-2133, partition values: [101]
+[2026-10-26T04:40:41.562+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileScanRDD: Reading File path: s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000103.json, range: 0-2116, partition values: [103]
+[2026-10-26T04:40:41.568+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileScanRDD: Reading File path: s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000104.json, range: 0-2140, partition values: [104]
+[2026-10-26T04:40:41.570+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 42.045563 ms
+[2026-10-26T04:40:41.572+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FileScanRDD: Reading File path: s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000100.checkpoint.parquet, range: 0-52811, partition values: [100]
+[2026-10-26T04:40:41.597+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodeGenerator: Code generated in 31.603012 ms
+[2026-10-26T04:40:41.605+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-10-26T04:40:41.608+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-10-26T04:40:41.686+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 2006 bytes result sent to driver
+[2026-10-26T04:40:41.689+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Finished task 4.0 in stage 1.0 (TID 5). 2006 bytes result sent to driver
+[2026-10-26T04:40:41.692+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 2006 bytes result sent to driver
+[2026-10-26T04:40:41.696+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 2006 bytes result sent to driver
+[2026-10-26T04:40:41.723+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 255 ms on dc2f78857511 (executor driver) (1/5)
+[2026-10-26T04:40:41.729+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 5) in 257 ms on dc2f78857511 (executor driver) (2/5)
+[2026-10-26T04:40:41.732+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 258 ms on dc2f78857511 (executor driver) (3/5)
+[2026-10-26T04:40:41.735+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 260 ms on dc2f78857511 (executor driver) (4/5)
+[2026-10-26T04:40:41.836+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO FilterCompat: Filtering using predicate: or(noteq(protocol.minReaderVersion, null), noteq(metaData.id, null))
+[2026-10-26T04:40:41.862+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1795 bytes result sent to driver
+[2026-10-26T04:40:41.865+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 459 ms on dc2f78857511 (executor driver) (1/1)
+[2026-10-26T04:40:41.868+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2026-10-26T04:40:41.871+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: ResultStage 0 ($anonfun$submit$1 at <unknown>:0) finished in 0.513 s
+[2026-10-26T04:40:41.874+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2026-10-26T04:40:41.876+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2026-10-26T04:40:41.879+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO DAGScheduler: Job 0 finished: $anonfun$submit$1 at <unknown>:0, took 0.546526 s
+[2026-10-26T04:40:41.882+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO S3AInputStream: Switching to Random IO seek policy
+[2026-10-26T04:40:41.917+0000] {docker.py:438} INFO - 26/10/26 04:40:41 INFO CodecPool: Got brand-new decompressor [.snappy]
+[2026-10-26T04:40:42.030+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2531 bytes result sent to driver
+[2026-10-26T04:40:42.033+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 594 ms on dc2f78857511 (executor driver) (5/5)
+[2026-10-26T04:40:42.036+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2026-10-26T04:40:42.039+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO DAGScheduler: ResultStage 1 ($anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128) finished in 0.611 s
+[2026-10-26T04:40:42.041+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2026-10-26T04:40:42.043+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2026-10-26T04:40:42.045+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO DAGScheduler: Job 1 finished: $anonfun$recordDeltaOperationInternal$1 at DatabricksLogging.scala:128, took 0.622172 s
+[2026-10-26T04:40:42.101+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO CodeGenerator: Code generated in 34.411469 ms
+[2026-10-26T04:40:42.153+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO Snapshot: [tableId=953ce640-b541-4d9b-800d-80c1559a72ff] Created snapshot Snapshot(path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log, version=104, metadata=Metadata(ebce87f9-4c39-4142-adb2-b5a324a950ed,null,null,Format(parquet,Map()),{"type":"struct","fields":[{"name":"INSTITUTIONCODE","type":"string","nullable":true,"metadata":{}},{"name":"INSTITUTIONNAME","type":"string","nullable":true,"metadata":{}},{"name":"DATEVAL","type":"timestamp","nullable":true,"metadata":{}},{"name":"AVAILABLE_LIQUID_ASSETS","type":"double","nullable":true,"metadata":{}},{"name":"DEMAND_LIABILITIES","type":"double","nullable":true,"metadata":{}},{"name":"REQUIRED_MINIMUM_LIQUID_ASSETS","type":"double","nullable":true,"metadata":{}},{"name":"EXCESS_DEFICIENCY_LIQUID_ASSETS","type":"double","nullable":true,"metadata":{}},{"name":"ASSET_LIABILITY_RATIO_PERCENT","type":"double","nullable":true,"metadata":{}},{"name":"PENALTY","type":"double","nullable":true,"metadata":{}},{"name":"source_system","type":"string","nullable":true,"metadata":{}},{"name":"source_dataset","type":"string","nullable":true,"metadata":{}},{"name":"reporting_date","type":"date","nullable":true,"metadata":{}},{"name":"extraction_ts","type":"timestamp","nullable":true,"metadata":{}},{"name":"ingestion_batch_id","type":"string","nullable":true,"metadata":{}}]},List(reporting_date),Map(),Some(1792501277608)), logSegment=LogSegment(s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log,104,WrappedArray(S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000101.json; isDirectory=false; length=2133; replication=1; blocksize=33554432; modification_time=1792504231643; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=e6d598be37575f527d743db9204724c7 versionId=null, S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000102.json; isDirectory=false; length=2127; replication=1; blocksize=33554432; modification_time=1792582321089; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=685e6972db079ec2cbad3a359cc98519 versionId=null, S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000103.json; isDirectory=false; length=2116; replication=1; blocksize=33554432; modification_time=1792658491863; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=9cd5b8b728fcd440984b7dcf5223cd19 versionId=null, S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000104.json; isDirectory=false; length=2140; replication=1; blocksize=33554432; modification_time=1792988681936; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=59712f8b0a58d436df8c32f58f743972 versionId=null),UninitializedV1OrV2ParquetCheckpointProvider(100,S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000100.checkpoint.parquet; isDirectory=false; length=52811; replication=1; blocksize=33554432; modification_time=1792501468339; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=536cc407a334e6192e590691158b7d7f versionId=null,s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log,Some(LastCheckpointInfo(100,103,None,Some(52811),Some(101),Some(StructType(StructField(txn,StructType(StructField(appId,StringType,true),StructField(version,LongType,true),StructField(lastUpdated,LongType,true)),true),StructField(add,StructType(StructField(path,StringType,true),StructField(partitionValues,MapType(StringType,StringType,true),true),StructField(size,LongType,true),StructField(modificationTime,LongType,true),StructField(dataChange,BooleanType,true),StructField(tags,MapType(StringType,StringType,true),true),StructField(deletionVector,StructType(StructField(storageType,StringType,true),StructField(pathOrInlineDv,StringType,true),StructField(offset,IntegerType,true),StructField(sizeInBytes,IntegerType,true),StructField(cardinality,LongType,true),StructField(maxRowIndex,LongType,true)),true),StructField(baseRowId,LongType,true),StructField(defaultRowCommitVersion,LongType,true),StructField(clusteringProvider,StringType,true),StructField(stats,StringType,true),StructField(partitionValues_parsed,StructType(StructField(reporting_date,DateType,true)),true)),true),StructField(remove,StructType(StructField(path,StringType,true),StructField(deletionTimestamp,LongType,true),StructField(dataChange,BooleanType,true),StructField(extendedFileMetadata,BooleanType,true),StructField(partitionValues,MapType(StringType,StringType,true),true),StructField(size,LongType,true),StructField(deletionVector,StructType(StructField(storageType,StringType,true),StructField(pathOrInlineDv,StringType,true),StructField(offset,IntegerType,true),StructField(sizeInBytes,IntegerType,true),StructField(cardinality,LongType,true),StructField(maxRowIndex,LongType,true)),true),StructField(baseRowId,LongType,true),StructField(defaultRowCommitVersion,LongType,true)),true),StructField(metaData,StructType(StructField(id,StringType,true),StructField(name,StringType,true),StructField(description,StringType,true),StructField(format,StructType(StructField(provider,StringType,true),StructField(options,MapType(StringType,StringType,true),true)),true),StructField(schemaString,StringType,true),StructField(partitionColumns,ArrayType(StringType,true),true),StructField(configuration,MapType(StringType,StringType,true),true),StructField(createdTime,LongType,true)),true),StructField(protocol,StructType(StructField(minReaderVersion,IntegerType,true),StructField(minWriterVersion,IntegerType,true),StructField(readerFeatures,ArrayType(StringType,true),true),StructField(writerFeatures,ArrayType(StringType,true),true)),true),StructField(domainMetadata,StructType(StructField(domain,StringType,true),StructField(configuration,StringType,true),StructField(removed,BooleanType,true)),true))),None,Some(43539ee3256354a8a33fd56b7f06296f)))),1792988681936), checksumOpt=None)
+[2026-10-26T04:40:42.161+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO DeltaLog: Updated snapshot to Snapshot(path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log, version=104, metadata=Metadata(ebce87f9-4c39-4142-adb2-b5a324a950ed,null,null,Format(parquet,Map()),{"type":"struct","fields":[{"name":"INSTITUTIONCODE","type":"string","nullable":true,"metadata":{}},{"name":"INSTITUTIONNAME","type":"string","nullable":true,"metadata":{}},{"name":"DATEVAL","type":"timestamp","nullable":true,"metadata":{}},{"name":"AVAILABLE_LIQUID_ASSETS","type":"double","nullable":true,"metadata":{}},{"name":"DEMAND_LIABILITIES","type":"double","nullable":true,"metadata":{}},{"name":"REQUIRED_MINIMUM_LIQUID_ASSETS","type":"double","nullable":true,"metadata":{}},{"name":"EXCESS_DEFICIENCY_LIQUID_ASSETS","type":"double","nullable":true,"metadata":{}},{"name":"ASSET_LIABILITY_RATIO_PERCENT","type":"double","nullable":true,"metadata":{}},{"name":"PENALTY","type":"double","nullable":true,"metadata":{}},{"name":"source_system","type":"string","nullable":true,"metadata":{}},{"name":"source_dataset","type":"string","nullable":true,"metadata":{}},{"name":"reporting_date","type":"date","nullable":true,"metadata":{}},{"name":"extraction_ts","type":"timestamp","nullable":true,"metadata":{}},{"name":"ingestion_batch_id","type":"string","nullable":true,"metadata":{}}]},List(reporting_date),Map(),Some(1792501277608)), logSegment=LogSegment(s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log,104,WrappedArray(S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000101.json; isDirectory=false; length=2133; replication=1; blocksize=33554432; modification_time=1792504231643; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=e6d598be37575f527d743db9204724c7 versionId=null, S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000102.json; isDirectory=false; length=2127; replication=1; blocksize=33554432; modification_time=1792582321089; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=685e6972db079ec2cbad3a359cc98519 versionId=null, S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000103.json; isDirectory=false; length=2116; replication=1; blocksize=33554432; modification_time=1792658491863; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=9cd5b8b728fcd440984b7dcf5223cd19 versionId=null, S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000104.json; isDirectory=false; length=2140; replication=1; blocksize=33554432; modification_time=1792988681936; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=59712f8b0a58d436df8c32f58f743972 versionId=null),UninitializedV1OrV2ParquetCheckpointProvider(100,S3AFileStatus{path=s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log/00000000000000000100.checkpoint.parquet; isDirectory=false; length=52811; replication=1; blocksize=33554432; modification_time=1792501468339; access_time=0; owner=root; group=root; permission=rw-rw-rw-; isSymlink=false; hasAcl=false; isEncrypted=true; isErasureCoded=false} isEmptyDirectory=FALSE eTag=536cc407a334e6192e590691158b7d7f versionId=null,s3a://lakehouse/bronze/DFSS/BSIS/liquidity_compliance/_delta_log,Some(LastCheckpointInfo(100,103,None,Some(52811),Some(101),Some(StructType(StructField(txn,StructType(StructField(appId,StringType,true),StructField(version,LongType,true),StructField(lastUpdated,LongType,true)),true),StructField(add,StructType(StructField(path,StringType,true),StructField(partitionValues,MapType(StringType,StringType,true),true),StructField(size,LongType,true),StructField(modificationTime,LongType,true),StructField(dataChange,BooleanType,true),StructField(tags,MapType(StringType,StringType,true),true),StructField(deletionVector,StructType(StructField(storageType,StringType,true),StructField(pathOrInlineDv,StringType,true),StructField(offset,IntegerType,true),StructField(sizeInBytes,IntegerType,true),StructField(cardinality,LongType,true),StructField(maxRowIndex,LongType,true)),true),StructField(baseRowId,LongType,true),StructField(defaultRowCommitVersion,LongType,true),StructField(clusteringProvider,StringType,true),StructField(stats,StringType,true),StructField(partitionValues_parsed,StructType(StructField(reporting_date,DateType,true)),true)),true),StructField(remove,StructType(StructField(path,StringType,true),StructField(deletionTimestamp,LongType,true),StructField(dataChange,BooleanType,true),StructField(extendedFileMetadata,BooleanType,true),StructField(partitionValues,MapType(StringType,StringType,true),true),StructField(size,LongType,true),StructField(deletionVector,StructType(StructField(storageType,StringType,true),StructField(pathOrInlineDv,StringType,true),StructField(offset,IntegerType,true),StructField(sizeInBytes,IntegerType,true),StructField(cardinality,LongType,true),StructField(maxRowIndex,LongType,true)),true),StructField(baseRowId,LongType,true),StructField(defaultRowCommitVersion,LongType,true)),true),StructField(metaData,StructType(StructField(id,StringType,true),StructField(name,StringType,true),StructField(description,StringType,true),StructField(format,StructType(StructField(provider,StringType,true),StructField(options,MapType(StringType,StringType,true),true)),true),StructField(schemaString,StringType,true),StructField(partitionColumns,ArrayType(StringType,true),true),StructField(configuration,MapType(StringType,StringType,true),true),StructField(createdTime,LongType,true)),true),StructField(protocol,StructType(StructField(minReaderVersion,IntegerType,true),StructField(minWriterVersion,IntegerType,true),StructField(readerFeatures,ArrayType(StringType,true),true),StructField(writerFeatures,ArrayType(StringType,true),true)),true),StructField(domainMetadata,StructType(StructField(domain,StringType,true),StructField(configuration,StringType,true),StructField(removed,BooleanType,true)),true))),None,Some(43539ee3256354a8a33fd56b7f06296f)))),1792988681936), checksumOpt=None)
+[2026-10-26T04:40:42.214+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO BlockManagerInfo: Removed broadcast_0_piece0 on dc2f78857511:42485 in memory (size: 36.1 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:42.221+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO BlockManagerInfo: Removed broadcast_3_piece0 on dc2f78857511:42485 in memory (size: 8.9 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:42.225+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO BlockManagerInfo: Removed broadcast_4_piece0 on dc2f78857511:42485 in memory (size: 29.3 KiB, free: 434.3 MiB)
+[2026-10-26T04:40:42.331+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO DelegatingLogStore: LogStore `LogStoreAdapter(io.delta.storage.S3SingleDriverLogStore)` is used for scheme `s3a`
+[2026-10-26T04:40:42.344+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO DeltaLog: Creating initial snapshot without metadata, because the directory is empty
+[2026-10-26T04:40:42.346+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO InitialSnapshot: [tableId=e4a7cc93-2f52-4ce4-89b6-9d4b8a9bb8f3] Created snapshot InitialSnapshot(path=s3a://lakehouse/silver/master/institutions/_delta_log, version=-1, metadata=Metadata(33e04810-4780-48a1-ae1a-d5bf55e70b48,null,null,Format(parquet,Map()),null,List(),Map(),Some(1792989642345)), logSegment=LogSegment(s3a://lakehouse/silver/master/institutions/_delta_log,-1,List(),org.apache.spark.sql.delta.EmptyCheckpointProvider$@6fe42199,-1), checksumOpt=None)
+[2026-10-26T04:40:42.443+0000] {docker.py:438} INFO - Traceback (most recent call last):
+[2026-10-26T04:40:42.446+0000] {docker.py:438} INFO -   File "/opt/spark-jobs/silver_transform.py", line 112, in <module>
+[2026-10-26T04:40:42.450+0000] {docker.py:438} INFO - main()
+[2026-10-26T04:40:42.453+0000] {docker.py:438} INFO -   File "/opt/spark-jobs/silver_transform.py", line 106, in main
+[2026-10-26T04:40:42.458+0000] {docker.py:438} INFO - runner(ctx, entry)
+[2026-10-26T04:40:42.460+0000] {docker.py:438} INFO -   File "/opt/spark-jobs/silver_transform.py", line 70, in run_structured_tabular
+[2026-10-26T04:40:42.465+0000] {docker.py:438} INFO - df = get_step("join_dimension")(df, ctx, **join_spec)
+[2026-10-26T04:40:42.468+0000] {docker.py:438} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-26T04:40:42.470+0000] {docker.py:438} INFO -   File "/opt/spark-jobs/pipeline_steps/structured.py", line 59, in join_dimension
+[2026-10-26T04:40:42.474+0000] {docker.py:438} INFO - dim = ctx.read_silver(lookup).select(join_key, *bring_cols)
+[2026-10-26T04:40:42.477+0000] {docker.py:438} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-26T04:40:42.480+0000] {docker.py:438} INFO -   File "/opt/spark-jobs/pipeline_steps/context.py", line 24, in read_silver
+[2026-10-26T04:40:42.483+0000] {docker.py:438} INFO - self._cache[path] = self.spark.read.format("delta").load(lakehouse_path("silver", *path.split("/")))
+[2026-10-26T04:40:42.485+0000] {docker.py:438} INFO - ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-26T04:40:42.488+0000] {docker.py:438} INFO -   File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 307, in load
+[2026-10-26T04:40:42.490+0000] {docker.py:438} INFO - File "/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2026-10-26T04:40:42.493+0000] {docker.py:438} INFO - File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+[2026-10-26T04:40:42.496+0000] {docker.py:438} INFO - pyspark.errors.exceptions.captured.AnalysisException
+[2026-10-26T04:40:42.499+0000] {docker.py:438} INFO - : [PATH_NOT_FOUND] Path does not exist: s3a://lakehouse/silver/master/institutions.
+[2026-10-26T04:40:42.501+0000] {docker.py:438} INFO - 2026-10-26 04:40:42,491 INFO py4j.clientserver: Closing down clientserver connection
+[2026-10-26T04:40:42.524+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO SparkContext: Invoking stop() from shutdown hook
+[2026-10-26T04:40:42.527+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2026-10-26T04:40:42.533+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO SparkUI: Stopped Spark web UI at http://dc2f78857511:4040
+[2026-10-26T04:40:42.541+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2026-10-26T04:40:42.560+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO MemoryStore: MemoryStore cleared
+[2026-10-26T04:40:42.563+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO BlockManager: BlockManager stopped
+[2026-10-26T04:40:42.566+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2026-10-26T04:40:42.568+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2026-10-26T04:40:42.584+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO SparkContext: Successfully stopped SparkContext
+[2026-10-26T04:40:42.587+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO ShutdownHookManager: Shutdown hook called
+[2026-10-26T04:40:42.590+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO ShutdownHookManager: Deleting directory /tmp/spark-113fd278-4b35-4b18-82fb-767854761db7
+[2026-10-26T04:40:42.599+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO ShutdownHookManager: Deleting directory /tmp/spark-681099cf-d835-4333-8458-cc833823321e
+[2026-10-26T04:40:42.613+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO ShutdownHookManager: Deleting directory /tmp/spark-113fd278-4b35-4b18-82fb-767854761db7/pyspark-65ea41c3-e792-4866-982e-041109cb66dd
+[2026-10-26T04:40:42.629+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO MetricsSystemImpl: Stopping s3a-file-system metrics system...
+[2026-10-26T04:40:42.631+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO MetricsSystemImpl: s3a-file-system metrics system stopped.
+[2026-10-26T04:40:42.633+0000] {docker.py:438} INFO - 26/10/26 04:40:42 INFO MetricsSystemImpl: s3a-file-system metrics system shutdown complete.
+[2026-10-26T04:40:43.298+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 512, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2026-10-26T04:40:43.303+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dfss_bsis_daily_pipeline, task_id=transform_daily_sources, run_id=scheduled__2026-10-23T03:00:00+00:00, execution_date=20261023T030000, start_date=20261026T044032, end_date=20261026T044043
+[2026-10-26T04:40:43.316+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-10-26T04:40:43.318+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 81 for task transform_daily_sources (Docker container failed: {'StatusCode': 1}; 26413)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 512, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 384, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/docker/operators/docker.py", line 446, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2026-10-26T04:40:43.375+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-10-26T04:40:43.390+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-10-26T04:40:43.395+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
